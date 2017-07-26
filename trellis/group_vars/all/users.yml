@@ -16,7 +16,7 @@ users:
       - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
       # - https://github.com/username.keys
 
-web_user: culture
-web_group: psacln
+web_user: web
+web_group: www-data
 web_sudoers:
   - "/usr/sbin/service php7.1-fpm *"
