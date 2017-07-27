@@ -1,0 +1,30 @@
+$travel--color: $white;
+$travel--background--color: $black;
+
+.travel {
+  &.travel__header {
+    padding-bottom: 2rem;
+  }
+  &.travel__header-color {
+    background-color: $travel--background--color;
+  }
+  .cc-row {
+    padding-top: 2.5rem;
+  }
+  .travel__header {
+    text-align: center;
+    color: $travel--color;
+    .travel__header__title {
+      font-size: 2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .travel__header__subtitle {
+
+    }
+  }
+  &.travel__detail__header {
+    margin: 2rem 1rem 1rem;
+    width: 100%;
+  }
+}

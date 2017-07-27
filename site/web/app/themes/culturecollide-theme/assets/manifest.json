@@ -1,0 +1,48 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js",
+        "scripts/app.js",
+        "scripts/div_marker.js",
+        "scripts/haversine.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
+    "map_data.js": {
+      "files": [
+        "scripts/map_data.js"
+      ]
+    },
+    "locate_user.js": {
+      "files": [
+        "scripts/locate_user.js"
+      ]
+    }
+  },
+  "overrides": {
+    "waypoints": {
+      "main": [
+        "./lib/jquery.waypoints.js",
+        "./lib/shortcuts/sticky.js"
+      ]
+    }
+  },
+  "config": {
+    "devUrl": "http://culturecollide.dev"
+  }
+}

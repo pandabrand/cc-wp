@@ -1,0 +1,920 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "410a1149cb6fdb146bcbc416e390c7c6",
+    "packages": [
+        {
+            "name": "composer/installers",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "d78064c68299743e0161004f2de3a0204e33b804"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d78064c68299743e0161004f2de3a0204e33b804",
+                "reference": "d78064c68299743e0161004f2de3a0204e33b804",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Hurad",
+                "ImageCMS",
+                "MODX Evo",
+                "Mautic",
+                "OXID",
+                "Plentymarkets",
+                "RadPHP",
+                "SMF",
+                "Thelia",
+                "WolfCMS",
+                "agl",
+                "aimeos",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "joomla",
+                "kohana",
+                "laravel",
+                "lithium",
+                "magento",
+                "mako",
+                "mediawiki",
+                "modulework",
+                "moodle",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "puppet",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "symfony",
+                "typo3",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "time": "2016-08-13T20:53:52+00:00"
+        },
+        {
+            "name": "elliotcondon/advanced-custom-fields-pro",
+            "version": "5.5.10",
+            "dist": {
+                "type": "path",
+                "url": "packages/advanced-custom-fields-pro",
+                "reference": "ff4dddbd4a975ec44670adca28854eb5f0e691af",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": ">=1.0.2",
+                "php": ">=5.3.2"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "johnpbloch/wordpress",
+            "version": "4.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress.git",
+                "reference": "24edf4daca6bc15ad3b78c5927468df487d47a37"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/24edf4daca6bc15ad3b78c5927468df487d47a37",
+                "reference": "24edf4daca6bc15ad3b78c5927468df487d47a37",
+                "shasum": ""
+            },
+            "require": {
+                "johnpbloch/wordpress-core": "4.8.0",
+                "johnpbloch/wordpress-core-installer": "^1.0",
+                "php": ">=5.3.2"
+            },
+            "type": "package",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress Community",
+                    "homepage": "http://wordpress.org/about/"
+                }
+            ],
+            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "homepage": "http://wordpress.org/",
+            "keywords": [
+                "blog",
+                "cms",
+                "wordpress"
+            ],
+            "time": "2017-06-08T15:12:19+00:00"
+        },
+        {
+            "name": "johnpbloch/wordpress-core",
+            "version": "4.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress-core.git",
+                "reference": "58f209dfd66f61c4398a47cf53e90d378abc25d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/58f209dfd66f61c4398a47cf53e90d378abc25d7",
+                "reference": "58f209dfd66f61c4398a47cf53e90d378abc25d7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "wordpress-core",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress Community",
+                    "homepage": "http://wordpress.org/about/"
+                }
+            ],
+            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "homepage": "http://wordpress.org/",
+            "keywords": [
+                "blog",
+                "cms",
+                "wordpress"
+            ],
+            "time": "2017-06-08T15:12:14+00:00"
+        },
+        {
+            "name": "johnpbloch/wordpress-core-installer",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress-core-installer.git",
+                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/e9e767f2d9f994f358c34b41def2c410ad8717f2",
+                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "conflict": {
+                "composer/installers": "<1.0.6"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0",
+                "phpunit/phpunit": ">=4.8.35"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "johnpbloch\\Composer\\WordPressCorePlugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "johnpbloch\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John P. Bloch",
+                    "email": "me@johnpbloch.com"
+                }
+            ],
+            "description": "A custom installer to handle deploying WordPress with composer",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2017-05-31T18:42:33+00:00"
+        },
+        {
+            "name": "oscarotero/env",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oscarotero/env.git",
+                "reference": "0f676e41d758fa984806c32e27f0cf7afa63d8db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oscarotero/env/zipball/0f676e41d758fa984806c32e27f0cf7afa63d8db",
+                "reference": "0f676e41d758fa984806c32e27f0cf7afa63d8db",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Env": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oscar Otero",
+                    "email": "oom@oscarotero.com",
+                    "homepage": "http://oscarotero.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple library to consume environment variables",
+            "homepage": "https://github.com/oscarotero/env",
+            "keywords": [
+                "env"
+            ],
+            "time": "2017-07-17T20:41:59+00:00"
+        },
+        {
+            "name": "pandabrand/cc-plugin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pandabrand/cc-plugin.git",
+                "reference": "origin/master"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pandabrand/cc-plugin/zipball/origin/master",
+                "reference": "origin/master",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": ">=1.0.12",
+                "php": ">=5.3.2"
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frederick Wells",
+                    "email": "pandabrand@pandabrand.net",
+                    "homepage": "https://pandabrand.net"
+                }
+            ],
+            "description": "Plugin for Culture Collide website",
+            "homepage": "https://pandabrand.net",
+            "keywords": [
+                "collide",
+                "culture",
+                "pandabrand",
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/pandabrand/cc-plugin/tree/master",
+                "issues": "https://github.com/pandabrand/cc-plugin/issues"
+            },
+            "time": "2017-07-20T19:50:49+00:00"
+        },
+        {
+            "name": "roots/wp-password-bcrypt",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/wp-password-bcrypt.git",
+                "reference": "5cecd2e98ccc3193443cc5c5db9b3bc7abed5ffa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/wp-password-bcrypt/zipball/5cecd2e98ccc3193443cc5c5db9b3bc7abed5ffa",
+                "reference": "5cecd2e98ccc3193443cc5c5db9b3bc7abed5ffa",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "brain/monkey": "^1.3.1",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.8.23|^5.2.9",
+                "squizlabs/php_codesniffer": "^2.5.1"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "wp-password-bcrypt.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "qwp6t",
+                    "homepage": "https://github.com/qwp6t"
+                },
+                {
+                    "name": "Jan Pingel",
+                    "email": "jpingel@bitpiston.com",
+                    "homepage": "http://janpingel.com"
+                }
+            ],
+            "description": "WordPress plugin which replaces wp_hash_password and wp_check_password's phpass hasher with PHP 5.5's password_hash and password_verify using bcrypt.",
+            "homepage": "https://roots.io/plugins/wp-password-bcrypt",
+            "keywords": [
+                "wordpress wp bcrypt password"
+            ],
+            "time": "2016-03-01T16:27:06+00:00"
+        },
+        {
+            "name": "soflyy/wp-all-import-pro",
+            "version": "4.4.8",
+            "dist": {
+                "type": "path",
+                "url": "packages/wp-all-import-pro",
+                "reference": "3908e5c05d7e5cfadfb369cab5aa96dd12df4aa4",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": ">=1.0.2",
+                "php": ">=5.3.2"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "soflyy/wpai-acf-add-on",
+            "version": "3.1.3",
+            "dist": {
+                "type": "path",
+                "url": "packages/wpai-acf-add-on",
+                "reference": "e8d84cc845d5b9b44a74036ac78fabae5374fb78",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": ">=1.0.2",
+                "php": ">=5.3.2"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "v2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dotenv\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause-Attribution"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/all-in-one-wp-migration",
+            "version": "6.53",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/all-in-one-wp-migration/",
+                "reference": "tags/6.53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.6.53.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/all-in-one-wp-migration/"
+        },
+        {
+            "name": "wpackagist-plugin/bulk-delete",
+            "version": "5.5.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/bulk-delete/",
+                "reference": "tags/5.5.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/bulk-delete.5.5.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/bulk-delete/"
+        },
+        {
+            "name": "wpackagist-plugin/import-external-attachments",
+            "version": "1.5.12",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/import-external-attachments/",
+                "reference": "tags/1.5.12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/import-external-attachments.1.5.12.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/import-external-attachments/"
+        },
+        {
+            "name": "wpackagist-plugin/ninja-forms",
+            "version": "3.1.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ninja-forms/",
+                "reference": "tags/3.1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ninja-forms.3.1.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ninja-forms/"
+        },
+        {
+            "name": "wpackagist-plugin/regenerate-thumbnails",
+            "version": "2.2.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/regenerate-thumbnails/",
+                "reference": "tags/2.2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.2.2.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "xrstf/composer-php52",
+            "version": "v1.0.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer-php52/composer-php52.git",
+                "reference": "bd41459d5e27df8d33057842b32377c39e97a5a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer-php52/composer-php52/zipball/bd41459d5e27df8d33057842b32377c39e97a5a8",
+                "reference": "bd41459d5e27df8d33057842b32377c39e97a5a8",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-default": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "xrstf\\Composer52": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2016-04-16T21:52:24+00:00"
+        },
+        {
+            "name": "yoast/api-libs",
+            "version": "2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Yoast/api-libs.git",
+                "reference": "e7361081a1d6ae79c0b96c8363379435ea736ef8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Yoast/api-libs/zipball/e7361081a1d6ae79c0b96c8363379435ea736ef8",
+                "reference": "e7361081a1d6ae79c0b96c8363379435ea736ef8",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class-api-libs.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Team Yoast",
+                    "email": "support@yoast.com",
+                    "homepage": "https://yoast.com"
+                }
+            ],
+            "description": "Shared API libraries for Yoast projects.",
+            "homepage": "https://github.com/Yoast/api-libs",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2015-07-14T10:25:59+00:00"
+        },
+        {
+            "name": "yoast/i18n-module",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Yoast/i18n-module.git",
+                "reference": "c08da78bba4747dff960e31dda2be46aae6b30e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Yoast/i18n-module/zipball/c08da78bba4747dff960e31dda2be46aae6b30e8",
+                "reference": "c08da78bba4747dff960e31dda2be46aae6b30e8",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Team Yoast",
+                    "email": "support@yoast.com",
+                    "homepage": "https://yoast.com"
+                }
+            ],
+            "description": "Handle i18n for WordPress plugins.",
+            "homepage": "https://github.com/Yoast/i18n-module",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2017-02-02T11:32:53+00:00"
+        },
+        {
+            "name": "yoast/license-manager",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Yoast/License-Manager.git",
+                "reference": "bbd295b63a693d58ecb501b59b60a506a74aa225"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Yoast/License-Manager/zipball/bbd295b63a693d58ecb501b59b60a506a74aa225",
+                "reference": "bbd295b63a693d58ecb501b59b60a506a74aa225",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class-api-request.php",
+                    "class-license-manager.php",
+                    "class-plugin-license-manager.php",
+                    "class-plugin-update-manager.php",
+                    "class-product.php",
+                    "class-theme-license-manager.php",
+                    "class-theme-update-manager.php",
+                    "class-update-manager.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Team Yoast",
+                    "email": "support@yoast.com",
+                    "homepage": "https://yoast.com"
+                }
+            ],
+            "description": "Yoast License Manager.",
+            "homepage": "https://github.com/Yoast/License-Manager",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2017-02-28T09:22:38+00:00"
+        },
+        {
+            "name": "yoast/whip",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Yoast/whip.git",
+                "reference": "e9df81e3360c81e28a2cae4469ec6aa54f7fd434"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Yoast/whip/zipball/e9df81e3360c81e28a2cae4469ec6aa54f7fd434",
+                "reference": "e9df81e3360c81e28a2cae4469ec6aa54f7fd434",
+                "shasum": ""
+            },
+            "require": {
+                "xrstf/composer-php52": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^3.6.12"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/facades/wordpress.php"
+                ],
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Team Yoast",
+                    "email": "support@yoast.com"
+                }
+            ],
+            "description": "A WordPress package to nudge users to upgrade their software versions (starting with PHP)",
+            "time": "2017-06-27T13:36:33+00:00"
+        },
+        {
+            "name": "yoast/wordpress-seo",
+            "version": "5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Yoast/wordpress-seo.git",
+                "reference": "1f764c412d9c3fbb8a4313eacae555dd3e9405d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Yoast/wordpress-seo/zipball/1f764c412d9c3fbb8a4313eacae555dd3e9405d7",
+                "reference": "1f764c412d9c3fbb8a4313eacae555dd3e9405d7",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "xrstf/composer-php52": "^1.0.20",
+                "yoast/api-libs": "^2.0",
+                "yoast/i18n-module": "^2.0.1",
+                "yoast/license-manager": "^1.4.0",
+                "yoast/whip": "^1.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "yoast/php-development-environment": "^1.0",
+                "yoast/yoastcs": "0.3"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "classmap": [
+                    "admin/",
+                    "frontend/",
+                    "inc/",
+                    "deprecated/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Team Yoast",
+                    "email": "support@yoast.com",
+                    "homepage": "https://yoast.com"
+                }
+            ],
+            "description": "Improve your WordPress SEO: Write better content and have a fully optimized WordPress site using the Yoast SEO plugin.",
+            "homepage": "https://yoast.com/wordpress/plugins/seo/",
+            "keywords": [
+                "seo",
+                "wordpress"
+            ],
+            "time": "2017-07-25T06:55:27+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "2.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "dcbed1074f8244661eecddfc2a675430d8d33f62"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/dcbed1074f8244661eecddfc2a675430d8d33f62",
+                "reference": "dcbed1074f8244661eecddfc2a675430d8d33f62",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.1.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "bin": [
+                "scripts/phpcs",
+                "scripts/phpcbf"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "CodeSniffer.php",
+                    "CodeSniffer/CLI.php",
+                    "CodeSniffer/Exception.php",
+                    "CodeSniffer/File.php",
+                    "CodeSniffer/Fixer.php",
+                    "CodeSniffer/Report.php",
+                    "CodeSniffer/Reporting.php",
+                    "CodeSniffer/Sniff.php",
+                    "CodeSniffer/Tokens.php",
+                    "CodeSniffer/Reports/",
+                    "CodeSniffer/Tokenizers/",
+                    "CodeSniffer/DocGenerators/",
+                    "CodeSniffer/Standards/AbstractPatternSniff.php",
+                    "CodeSniffer/Standards/AbstractScopeSniff.php",
+                    "CodeSniffer/Standards/AbstractVariableSniff.php",
+                    "CodeSniffer/Standards/IncorrectPatternException.php",
+                    "CodeSniffer/Standards/Generic/Sniffs/",
+                    "CodeSniffer/Standards/MySource/Sniffs/",
+                    "CodeSniffer/Standards/PEAR/Sniffs/",
+                    "CodeSniffer/Standards/PSR1/Sniffs/",
+                    "CodeSniffer/Standards/PSR2/Sniffs/",
+                    "CodeSniffer/Standards/Squiz/Sniffs/",
+                    "CodeSniffer/Standards/Zend/Sniffs/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "http://www.squizlabs.com/php-codesniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "time": "2017-05-22T02:43:20+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "pandabrand/cc-plugin": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.6"
+    },
+    "platform-dev": []
+}

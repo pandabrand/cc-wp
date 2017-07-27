@@ -1,0 +1,37 @@
+.event-block-wrapper__square {
+  margin-top: 100%;
+  .event-block__square {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    right: 0;
+    bottom: 0;
+  }
+  .event-image__square {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    transition: all .17s;
+    margin: 0;
+  }
+  .event-block {
+    color: $white;
+    padding: 1.5rem;
+  }
+  .event-block__title {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    font-size: 600;
+  }
+  .event-block__details {
+    padding-bottom: 1.5rem;
+    font-size: .75rem;
+    .event-block__details-location {
+      text-align: right;
+    }
+  }
+  .event-block__excerpt {
+    padding-bottom: 1.5rem;
+  }
+}

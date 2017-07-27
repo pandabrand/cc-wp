@@ -1,0 +1,43 @@
+.social-icons {
+  .social-icons__cta {
+  }
+
+  .social-icons__list {
+  }
+}
+
+.social-icons__header {
+  .social-icons__cta__header {
+    font-family: $colfax;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: .6;
+    padding-right: 0;
+    color: $white;
+  }
+  .social-icons__list__header {
+    list-style: none;
+    display: inline-flex;
+    padding-right: 1rem;
+    margin: 0;
+    justify-content: flex-end;
+    .social-icons__item__header {
+      padding-left: 20px;
+      &:first-child {
+        padding-left: 0;
+      }
+      a {
+        color: $white;
+        opacity: .6;
+        &:link, &:visited {
+          color: $white;
+          opacity: .6;
+        }
+        &:hover, &:active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

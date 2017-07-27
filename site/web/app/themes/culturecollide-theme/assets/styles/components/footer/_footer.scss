@@ -1,0 +1,34 @@
+$footer-background_color: $white;
+$footer_color: $black;
+
+.footer-container {
+  .cc-row {
+    background-color: transparent;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+.footer {
+  background: $footer-background_color;
+  color: $footer_color;
+  margin: 46px 0;
+  height: 288px;
+  padding: 0 15px;
+  .footer-menu {
+    padding-top: 7.5%;
+    .footer-details {
+      font-size: 12px;
+    }
+    .footer-nav-menu {
+      font-size: 16px;
+    }
+    .navigation__list__footer {
+      font-weight: bold;
+      .navigation__item__footer {
+        // display: block;
+        padding: 0 1rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

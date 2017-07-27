@@ -1,0 +1,97 @@
+$travel__color:          $black;
+$travel__background:     $white;
+$travel__border__color:  $white;
+
+.travel {
+  &.travel-feature {
+    margin-top: 2rem;
+    &.cc-row {
+      background-color: transparent;
+      margin-bottom: 2rem;
+    }
+  }
+  .travel__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &.travel_1-2 {
+    position: relative;
+    height: 500px;
+    .travel__link {
+      @extend .block__link;
+      color: $white;
+      &:link, &:visited {
+        color: $white;
+      }
+      &:hover, &:active {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+    .travel__filter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      background: rgba($travel__background, .2);
+      -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 11%, 6% 11%, 6% 100%, 0% 100%);
+      clip-path: polygon(0% 0%, 100% 0%, 100% 11%, 6% 11%, 6% 100%, 0% 100%);
+    }
+    .travel__category-line {
+      display: block;
+      border: $travel__border__color solid 2px;
+      border-right: none;
+      border-bottom: none;
+      position: absolute;
+      min-height:83%;
+      min-width: 94%;
+      top: 11%;
+      left: 6%;
+    }
+    .travel__body {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: $travel__background;
+      color: $travel__color;
+      width: 82%;
+      padding: 45px 56px 45px;
+      height: 44%;
+      margin: 0;
+      .travel__title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        overflow: hidden;
+      }
+      .travel__text {
+        display: block;
+      }
+    }
+    .travel__category-block {
+      position: absolute;
+      top: 1.5%;
+      left: 7%;
+      height: 40px;
+      display: flex;
+      .travel__category-block__category-image {
+      }
+      .travel__category-block__category-details {
+        display: inline-block;
+        .travel__category-block__category-type {
+          font-weight: bold;
+          font-size: 10px;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+        }
+        .travel__category-block__category-info {
+          font-weight: bold;
+          font-size: 12px;
+          letter-spacing: 8px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

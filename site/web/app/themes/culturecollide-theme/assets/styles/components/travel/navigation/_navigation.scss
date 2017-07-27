@@ -1,0 +1,85 @@
+.travel {
+  &.travel__navigation {
+    width: 100%;
+    .row {
+      background-color: $white;
+      padding-top: 0;
+      padding-bottom: 0;
+      .btn-secondary {
+        border: 0;
+        background-color: transparent;
+        border-right: $black 1px solid;
+        border-radius: 0;
+        margin: 1rem;
+        padding: 0;
+        &.travel__navigation__button {
+          border: none;
+          margin: .5rem 1rem 0;
+          &:before {
+            font-family: FontAwesome;
+            font-size: 2rem;
+            margin-right: .5rem;
+            margin-left: .2rem;
+            content: "\f05b";
+            vertical-align: middle;
+          }
+        }
+      }
+      .btn {
+        padding: 0;
+        font-weight: 600;
+      }
+      .dropdown {
+        .dropdown-toggle {
+          &:before {
+            content:"";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+          }
+          &:after {
+            border: 0;
+            height: auto;
+            width: auto;
+            font-family: FontAwesome;
+            margin-right: 2.5rem;
+            margin-left: .2rem;
+            content: "\f078";
+          }
+        }
+        &.show {
+          .dropdown-toggle {
+            &:after {
+              content: "\f077";
+            }
+          }
+        }
+        &.full-width {
+          position: static;
+          .dropdown-menu {
+            right: 0;
+            background-color: $color__background;
+            border-radius: 0;
+            padding: 1rem;
+            a {
+              white-space: normal;
+              &:hover, &:active {
+                background-color: $color__background;
+                color: $dark-gray;
+              }
+            }
+            .dropdown-selections {
+              height: 21rem;
+              columns: 3;
+              column-fill: auto;
+              overflow: hidden;
+            }
+          }
+          .menu-feature {
+            padding-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.cc-marker {
+  position: relative;
+}
+.element {
+  position: absolute;
+  top: -15px;
+  left: -33px;
+  width: 100px;
+  height: 100px;
+  z-index: -5;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  animation: pulse 5s infinite;
+}
+
+.img-icon-anim {
+  animation: icon-pulse 5s infinite;
+}
+
+$light-brown: #e6e0da;
+$dark-brown: #9f8871;
+@keyframes pulse {
+  0% {
+    background-color: rgba($light-brown, .4);
+  }
+  50% {
+    background-color: rgba($dark-brown, .2);
+  }
+  100% {
+    background-color: rgba($light-brown, .4);
+  }
+}
+
+@keyframes icon-pulse {
+  0% {
+    filter: invert(.1);
+  }
+  50% {
+    filter: invert(.6);
+  }
+  100% {
+    filter: invert(.1);
+  }
+}

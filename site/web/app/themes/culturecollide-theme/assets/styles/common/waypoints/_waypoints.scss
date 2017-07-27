@@ -1,0 +1,11 @@
+.sticky-wrapper {
+  width: 100%;
+}
+
+.stuck {
+  position: fixed;
+  top: 0;
+  &.travel__navigation {
+    z-index: 25;
+  }
+}

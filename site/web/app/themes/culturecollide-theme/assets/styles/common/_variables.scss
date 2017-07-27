@@ -1,0 +1,50 @@
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px
+);
+
+$container-max-widths: (
+  sm: 420px,
+  md: 720px,
+  lg: 960px
+);
+
+// Colors
+$black:                 #000000;
+$white:                 #ffffff;
+
+$light-gray:            #f3f3f3;
+$gray:                  #d8d8d8;
+$dark-gray:             #979797;
+
+$off-black:             #222222;
+$off-white:             #fffefe;
+
+$red:                   #ef3e4a;
+$dark-red:              #8b0000;
+
+$black-point_1:         rgba($black, .1);
+
+$brand-primary:         $black;
+$color__background:     $light-gray;
+$color__text-main:      $black;
+$color__test:           $dark-red;
+$color__link:           $black;
+$color__link--active:   $gray;
+$color__border:         $black;
+
+
+$colfax: 'Colfax', 'Helvetica', sans-serif;
+$body-font: $colfax;
+$header-font: $colfax;
+$fa-font-path: '../../dist/fonts';
+$font__main: $body-font;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+$font-size: 16px;

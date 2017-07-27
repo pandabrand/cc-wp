@@ -1,0 +1,40 @@
+@import "common/variables";
+
+//manual bower
+@import "../../bower_components/normalize-css/normalize.css";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+// endbower
+
+@import "common/global";
+@import "components/header/header";
+@import "components/social_icons/social_icons";
+@import "common/icon_sprites/icon_sprites";
+@import "common/buttons/buttons";
+@import "components/navbar/navbar";
+@import "components/footer/footer";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/grid";
+@import "components/wp-classes";
+@import "components/search-form/search-form";
+@import "components/home/home";
+@import "components/feature/feature";
+@import "components/cards/cards";
+@import "components/editorial/editorial";
+@import "components/travel/travel";
+@import "components/maps/maps";
+@import "components/waypoints/waypoints";
+@import "components/page/page";
+@import "components/events/events";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";

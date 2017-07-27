@@ -1,0 +1,23 @@
+.travel {
+  &.travel__detail__map__row {
+    height: 90vh;
+    margin-top: 4rem;
+    .travel__detail__map__map {
+      border: $white solid 1rem;
+      height: 90vh;
+      width: 100%;
+    }
+    .travel__detail__map__list {
+      height: 90vh;
+      overflow-y: auto;
+      .travel__detail__map__item {
+        a {
+          display: block;
+        }
+        &:hover {
+          box-shadow: 0px 0px 24px 0px rgba($black, 0.21);
+        }
+      }
+    }
+  }
+}
