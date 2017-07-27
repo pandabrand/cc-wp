@@ -1,14 +1,14 @@
 # Application
-site/web/app/plugins/*
-!site/web/app/plugins/.gitkeep
-site/web/app/mu-plugins/*/
-site/web/app/upgrade
-site/web/app/uploads/*
-!site/web/app/uploads/.gitkeep
-site/web/app/ai1wm-backups
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/ai1wm-backups
 
 # WordPress
-site/web/wp
+web/wp
 # web/.htaccess
 
 # Dotenv
@@ -17,10 +17,10 @@ site/web/wp
 !.env.example
 
 # Composer
-site/vendor/*
+vendor/*
 !vendor/.gitkeep
 
 log
-site/web/app/debug.log
+web/app/debug.log
 
 **/.DS_Store
