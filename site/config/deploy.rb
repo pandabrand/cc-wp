@@ -32,8 +32,8 @@ set :gulp_file, -> { release_path.join('web/app/themes/culturecollide-theme/gulp
 set :linked_files, fetch(:linked_files, []).push('.env', 'web/.htaccess')
 set :linked_dirs, fetch(:linked_dirs, []).push('web/app/uploads')
 
-set :composer_install_flags, '--no-interaction --optimize-autoloader --ignore-platform-reqs'
 set :composer_working_dir, -> { current_path.join('site') }
+set :composer_install_flags, '--no-interaction --optimize-autoloader --ignore-platform-reqs'
 
 namespace :deploy do
   desc 'Restart application'
