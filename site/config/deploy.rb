@@ -13,7 +13,7 @@ set :deploy_to, "/var/www/vhosts/culturecollide.com/#{fetch(:application)}"
 set :tmp_dir, "/var/www/vhosts/culturecollide.com/#{fetch(:application)}/tmp"
 
 # Use :debug for more verbose output when troubleshooting
-set :log_level, :info
+set :log_level, :debug
 set :pty, true
 
 set :npm_target_path, -> { release_path.join('web/app/themes/culturecollide-theme') }
