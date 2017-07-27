@@ -5,6 +5,7 @@ site/web/app/mu-plugins/*/
 site/web/app/upgrade
 site/web/app/uploads/*
 !site/web/app/uploads/.gitkeep
+site/web/app/ai1wm-backups
 
 # WordPress
 site/web/wp
