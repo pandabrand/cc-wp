@@ -86,6 +86,15 @@
           $('.search-form').slideToggle('slow');
           e.stopPropagation();
         });
+
+        //automatic slick gallery creation
+        $('[id^=gallery-]').slick({
+          dots: true,
+          infinite: true,
+          slidesToShow: 1,
+          centerMode: true,
+          centerPadding: '50px'
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

@@ -229,6 +229,26 @@ function cc_archive_title() {
     return $title;
 }
 
+function cc_gallery_shortcode( $output = '', $atts, $instance ) {
+	$return = $output; // fallback
+
+	// retrieve content of your own gallery function
+  $gallery_id = 'gallery-'.$instance;
+  $return = '<div id="'.$gallery_id.'" class="gallery cc-gallery">';
+  $posts = get_posts(array('include' => $atts['ids'],'post_type' => 'attachment'));
+  foreach($posts as $galleryPost) {
+    $caption = wp_strip_all_tags( $galleryPost->post_excerpt );
+    $return .= '<div class="cc-gallery-item">';
+    $return .= '<a href="'.wp_get_attachment_image_src($galleryPost->ID, 'full')[0].'" data-fancybox="'.$gallery_id.'" data-caption="'.$caption.'">';
+    $return .= '<img src="'.wp_get_attachment_image_src($galleryPost->ID, 'large')[0].'" class="img-fluid" data-media="(min-width: 400px)" alt="'.$caption.'" />';
+    $return .= '</a></div>';
+  }
+  $return .= '</div>';
+	return $return;
+}
+
+add_filter( 'post_gallery', 'cc_gallery_shortcode', 10, 3 );
+
 function debug_var($var) {
   $var_dump = '';
    if(isset($var)) {

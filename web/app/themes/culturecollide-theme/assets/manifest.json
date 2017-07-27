@@ -4,7 +4,6 @@
       "files": [
         "scripts/main.js",
         "scripts/app.js",
-        "scripts/div_marker.js",
         "scripts/haversine.js"
       ],
       "main": true

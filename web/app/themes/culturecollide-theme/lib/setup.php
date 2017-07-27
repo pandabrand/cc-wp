@@ -40,15 +40,15 @@ function setup() {
   add_image_size( 'large-feature', 660, 720 );
   add_image_size( 'city-guide_thumbnail', 194, 213 );
   add_image_size( 'ad-space-image', 233, 428);
-  add_filter( 'image_size_names_choose', 'cc_custom_sizes' );
 
   function cc_custom_sizes( $sizes ) {
-      return array_merge( $sizes, array(
-          'large-feature' => __( 'Large Feature' ),
-          'city-guide_thumbnail' => __( 'City Guide Thumbnail' ),
-          'ad-space-image' => __( 'Ad Space Image' ),
-      ) );
+    return array_merge( $sizes, array(
+        'large-feature' => __( 'Large Feature' ),
+        'city-guide_thumbnail' => __( 'City Guide Thumbnail' ),
+        'ad-space-image' => __( 'Ad Space Image' ),
+    ) );
   }
+  add_filter( 'image_size_names_choose',  __NAMESPACE__ . '\\cc_custom_sizes', 10, 1 );
   // Enable post formats
   // http://codex.wordpress.org/Post_Formats
   add_theme_support('post-formats', ['aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio']);
