@@ -29,29 +29,25 @@
                   <?php echo $address['address']; ?>
                 </div>
                 <?php
-                  $args = array (
-                    "numberposts" => 3,
-                    "post_type" => "artist",
-                    "meta_query" => array (
-                      'key' => 'location',
-                      'compare' => 'LIKE',
-                      'value' => "'".$location->ID."'"
-                      )
-                    );
-
-                  $artist_posts = get_posts($args);
-                  if( false ) :
-                    write_log($artist_posts);
+                  $loc_id = $location->ID;
+                  // write_log($loc_id);
+                  global $wpdb;
+                  $artist_posts = $wpdb->get_results( "SELECT * FROM wp_postmeta WHERE meta_key LIKE 'artists_locations_%_location' AND meta_value LIKE '%{$loc_id}%'", OBJECT );
+                  // write_log($artist_posts);
+                  if( !empty( $artist_posts ) ) :
                 ?>
                   <div class="card_reccomendations">
-                    <h6>Artist Reccomendations</h6>
+                    <div><strong>Artist Reccomendations</strong></div>
+                    <div class="d-flex flex-row">
                 <?php foreach($artist_posts as $artist): ?>
-                    <div class="card_reccomendations__title">
-                      <!-- ?php echo get_the_title($artist->ID); ? -->
+                    <div class="card_reccomendations__title small_text pr-2">
+                      <?php echo get_the_title($artist->post_id); ?>
                     </div>
                 <?php endforeach; ?>
+                    </div>
                   </div>
                 <?php endif; ?>
+                <?php wp_reset_query(); ?>
                 <div class="card__links mt-auto d-flex justify-content-between">
                   <div class="card__link">
                     <a href="<?php the_permalink($location->ID); ?>" rel="external" target="_blank"><i class="fa fa-desktop"></i> website</a>
