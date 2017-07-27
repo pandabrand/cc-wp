@@ -246,6 +246,17 @@
       }
     }
   }
+  .billboard_sponsor-block {
+    color: $white;
+    width: 150px;
+    .billboard_sponsor-callout {
+      text-transform: uppercase;
+      font-size: .75rem;
+    }
+    .billboard_sponsor-title {
+      @extend .h3;
+    }
+  }
 }
 
 .billboard-two {
