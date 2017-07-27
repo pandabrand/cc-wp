@@ -1,5 +1,5 @@
 set :application, 'stage.culturecollide.com'
-set :repo_url, 'git@github.com:pandabrand/cc-site.git'
+set :repo_url, 'git@github.com:pandabrand/cc-wp.git'
 
 # Branch options
 # Prompts for the branch name (defaults to current branch)
