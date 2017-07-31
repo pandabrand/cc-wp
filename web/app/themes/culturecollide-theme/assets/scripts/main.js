@@ -72,6 +72,19 @@
           makepopup($(this));
         });
 
+        var $stickyElement = $('.travel__navigation');
+        var sticky;
+
+        if ($stickyElement.length) {
+          sticky = new Waypoint.Sticky({
+            element: $stickyElement[0],
+            wrapper: '<div class="sticky-wrapper waypoint" />'
+          });
+          $('button.destroy-sticky').on('click', function() {
+            sticky.destroy();
+          });
+        }
+
         // var travel__navigation = $('.travel__navigation');
         // $('travel__navigation').ready(function() {
         //   new Waypoint.Sticky({ element: this[0] },{ offset: '3%' });

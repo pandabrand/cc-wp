@@ -10,16 +10,24 @@
   <div class="col-12 travel travel__navigation">
     <div class="row cc-row text-right">
       <nav class="hidden-sm-up navbar col-6">
-        <a class="button button--outline button--outline" type="button" data-toggle="collapse" data-target="#travel-navigate" aria-controls="travel-navigate" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="button button--small button--narrow button--outline" type="button" data-toggle="collapse" data-target="#travel-navigate" aria-controls="travel-navigate" aria-expanded="false" aria-label="Toggle navigation">
           BROWSE
         </a>
       </nav>
+      <div class="hidden-sm-up col-6">
+        <a href="#" rel="noreferrer" class="btn btn-secondary travel__navigation__button">Near Me</a>
+      </div>
 
       <div class="collapsed row" id="travel-navigate">
-        <div class="dropdown full-width col-xs-12 col-sm-4">
+        <div class="dropdown full-width col-xs-4 col-4">
           <a href="#" class="btn btn-secondary dropdown-toggle" id="citiesMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cities</a>
           <div class="dropdown-menu" aria-labelledby="citiesMenuLink">
             <div class="row">
+              <div class="col-12 dropdown-search">
+                <div class="form-group">
+                  <input class="cc-autocomplete form-control" placeholder="search for a city name" data-post-type="city" />
+                </div>
+              </div>
               <div class="col-xs-12 col-sm-6 dropdown-selections">
                 <?php
                   $args = array(
@@ -59,10 +67,15 @@
             </div>
           </div>
         </div>
-        <div class="dropdown full-width col-xs-12 col-sm-4">
+        <div class="dropdown full-width col-xs-4 col-4">
           <a href="#" rel="nofollow" class="btn btn-secondary dropdown-toggle" id="artistsMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artists</a>
           <div class="dropdown-menu" aria-labelledby="artistsMenuLink">
             <div class="row">
+              <div class="col-12 dropdown-search">
+                <div class="form-group">
+                  <input class="cc-autocomplete form-control" placeholder="search for an artist name" data-post-type="artist" />
+                </div>
+              </div>
               <div class="col-xs-12 col-sm-6 dropdown-selections">
                 <?php
                   $args = array(
@@ -115,7 +128,7 @@
             </div>
           </div>
         </div>
-        <div class="dropdown full-width col-xs-12 col-sm-4">
+        <div class="dropdown full-width col-xs-4 col-4">
           <a href="#" rel="nofollow" class="btn btn-secondary dropdown-toggle" id="categoriesMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
           <div class="dropdown-menu" aria-labelledby="categoriesMenuLink">
             <div class="row">
@@ -158,7 +171,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6">
+      <div class="hidden-sm-down col-6">
         <a href="#" rel="noreferrer" class="btn btn-secondary travel__navigation__button">Near Me</a>
       </div>
     </div>

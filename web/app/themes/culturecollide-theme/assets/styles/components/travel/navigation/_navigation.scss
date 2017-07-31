@@ -1,6 +1,11 @@
 .travel {
   &.travel__navigation {
     width: 100%;
+    &.sticky-header {
+      position: sticky;
+      z-index: 1;
+      top: calc(-100% + 52px);
+    }
     .row {
       background-color: $white;
       padding-top: 0;
@@ -12,6 +17,10 @@
         border-radius: 0;
         margin: 1rem;
         padding: 0;
+        @media(max-width: 468px) {
+          border-right: none;
+          margin: 0;
+        }
         &.travel__navigation__button {
           border: none;
           margin: .5rem 1rem 0;
@@ -58,7 +67,7 @@
           position: static;
           .dropdown-menu {
             right: 0;
-            background-color: $color__background;
+            background-color: $white;
             border-radius: 0;
             padding: 1rem;
             a {

@@ -57,5 +57,8 @@
     "traverse": "^0.6.6",
     "vinyl-buffer": "^1.0.0",
     "wiredep": "^4.0.0"
+  },
+  "dependencies": {
+    "waypoints": "^4.0.1"
   }
 }

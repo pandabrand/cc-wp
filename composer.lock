@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "410a1149cb6fdb146bcbc416e390c7c6",
+    "content-hash": "e8125d5e0d30114195f2e25e7ded5f5c",
     "packages": [
         {
             "name": "composer/installers",
@@ -475,6 +475,26 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/adbutler",
+            "version": "1.13",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/adbutler/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/adbutler.zip?timestamp=1498780608",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/adbutler/"
         },
         {
             "name": "wpackagist-plugin/all-in-one-wp-migration",

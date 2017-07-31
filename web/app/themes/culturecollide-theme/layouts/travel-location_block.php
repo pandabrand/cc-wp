@@ -30,10 +30,8 @@
                 </div>
                 <?php
                   $loc_id = $location->ID;
-                  // write_log($loc_id);
                   global $wpdb;
                   $artist_posts = $wpdb->get_results( "SELECT * FROM wp_postmeta WHERE meta_key LIKE 'artists_locations_%_location' AND meta_value LIKE '%{$loc_id}%'", OBJECT );
-                  // write_log($artist_posts);
                   if( !empty( $artist_posts ) ) :
                 ?>
                   <div class="card_reccomendations">

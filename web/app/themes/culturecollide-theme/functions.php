@@ -18,7 +18,8 @@ $sage_includes = [
   'lib/customizer.php', // Theme customizer
   'lib/culturecollide.php',
   'lib/map_data.php',
-  'lib/locate_user.php'
+  'lib/locate_user.php',
+  'lib/autocomplete.php'
 ];
 
 foreach ($sage_includes as $file) {

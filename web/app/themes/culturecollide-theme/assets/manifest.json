@@ -31,13 +31,16 @@
       "files": [
         "scripts/locate_user.js"
       ]
-    }
-  },
-  "overrides": {
-    "waypoints": {
-      "main": [
-        "./lib/jquery.waypoints.js",
-        "./lib/shortcuts/sticky.js"
+    },
+    "vendor.js": {
+      "vendor": [
+        "assets/scripts/jquery.waypoints.js",
+        "assets/scripts/sticky.js"
+      ]
+    },
+    "cc-autocomplete.js": {
+      "files": [
+        "scripts/cc-autocomplete.js"
       ]
     }
   },
