@@ -1,5 +1,7 @@
 <?php
 
+use Roots\Sage\Assets;
+
 function load_map_data() {
   if( is_single() || is_tax( 'location_types' ) ):
     global $post;
@@ -86,7 +88,7 @@ function load_map_data() {
     );
     $json_locations['map_info'] = $map_info;
     $js_data = json_encode($json_locations);
-    wp_register_script('map_js', get_template_directory_uri() . '/dist/scripts/map_data.js', array(), null, true);
+    wp_register_script('map_js', Assets\asset_path('scripts/map_data.js'), array(), null, true);
     wp_localize_script( 'map_js', 'map_vars', $js_data );
     wp_enqueue_script('map_js');
   endif;
