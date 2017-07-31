@@ -1,5 +1,7 @@
 <?php
 
+use Roots\Sage\Assets;
+
 function enqueue_scripts_styles_init() {
   if( is_single() || is_tax( 'location_types' ) ): //|| is_page( [9972, 'travel'] )):
     $args = array(
@@ -18,7 +20,7 @@ function enqueue_scripts_styles_init() {
       $map_info['cities'][] = $city_output;
     }
 
-  	wp_register_script( 'ajax-script', get_stylesheet_directory_uri().'/dist/scripts/locate_user.js', array('jquery'), null, true ); // jQuery will be included automatically
+  	wp_register_script( 'ajax-script', Assets\asset_path('/dist/scripts/locate_user.js'), array('jquery'), null, true ); // jQuery will be included automatically
     wp_localize_script( 'ajax-script', 'map_info', $map_info );
     wp_enqueue_script('ajax-script');
 

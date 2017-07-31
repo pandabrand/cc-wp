@@ -1,8 +1,10 @@
 <?php
 
+use Roots\Sage\Assets;
+
 function cc_autocomplete_scripts() {
   wp_enqueue_script( 'jquery-ui-autocomplete' );
-  wp_register_script( 'cc-autocomplete', get_template_directory_uri().'/dist/scripts/cc-autocomplete.js', ['sage/js', 'jquery-ui-autocomplete'], null, true );
+  wp_register_script( 'cc-autocomplete', Assets\asset_path('scripts/cc-autocomplete.js'), ['sage/js', 'jquery-ui-autocomplete'], null, true );
   wp_localize_script( 'cc-autocomplete', 'ccAutocomplete', array( 'url' => admin_url( 'admin-ajax.php' ) ) );
   wp_enqueue_script( 'cc-autocomplete' );
 }
