@@ -227,7 +227,7 @@
           var mbURL = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=',
           mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>';
           L.tileLayer(mbURL + parsed_map_vars.map_info.api_key, {id: 'mapbox.light', attribution: mbAttr}).addTo(map);
-          markers = L.layerGroup();
+          markers = L.featureGroup();
           for(var x = 0; x < parsed_map_vars.locations.length; x++) {
             var feature = parsed_map_vars.locations[x];
             var marker_place = L.marker([feature.coords.lat, feature.coords.lng],{icon:ccIcon, riseOnHover:true});
@@ -288,7 +288,7 @@
               }
 
             },
-            offset: 10,
+            offset: 20,
             group: classname,
             context: $('.travel__detail__map__list')[0]
           });
@@ -327,7 +327,7 @@
          var mbURL = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=',
          mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>';
          L.tileLayer(mbURL + parsed_map_vars.map_info.api_key, {id: 'mapbox.light', attribution: mbAttr}).addTo(map);
-         markers = L.layerGroup();
+         markers = L.featureGroup();
          for(var x = 0; x < parsed_map_vars.locations.length; x++) {
            var feature = parsed_map_vars.locations[x];
            var marker_place = L.marker([feature.coords.lat, feature.coords.lng],{icon:ccIcon, riseOnHover:true});
@@ -388,7 +388,7 @@
              }
 
            },
-           offset: -10,
+           offset: 20,
            group: classname,
            context: $('.travel__detail__map__list')[0]
          });
@@ -427,7 +427,7 @@
          var mbURL = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=',
          mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>';
          L.tileLayer(mbURL + parsed_map_vars.map_info.api_key, {id: 'mapbox.light', attribution: mbAttr}).addTo(map);
-         markers = L.layerGroup();
+         markers = L.featureGroup();
          for(var x = 0; x < parsed_map_vars.locations.length; x++) {
            var feature = parsed_map_vars.locations[x];
            var marker_place = L.marker([feature.coords.lat, feature.coords.lng],{icon:ccIcon, riseOnHover:true});
@@ -488,7 +488,7 @@
              }
 
            },
-           offset: -10,
+           offset: 20,
            group: classname,
            context: $('.travel__detail__map__list')[0]
          });
