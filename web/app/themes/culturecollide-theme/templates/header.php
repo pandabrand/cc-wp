@@ -18,32 +18,32 @@
                 </a>
               </li>
               <li class="social-icons__item social-icons__item__header">
-                <a href="https://www.twitter.com/culturecollideofficial">
+                <a href="https://twitter.com/@culturecollide">
                   <i class="fa fa-twitter"></i>
                 </a>
               </li>
               <li class="social-icons__item social-icons__item__header">
-                <a href="https://www.instagram.com/culturecollideofficial">
+                <a href="https://www.instagram.com/officialculturecollide/">
                   <i class="fa fa-instagram"></i>
                 </a>
               </li>
               <li class="social-icons__item social-icons__item__header">
-                <a href="https://www.linkedin.com/culturecollideofficial">
+                <a href="https://www.linkedin.com/company-beta/3774623/">
                   <i class="fa fa-linkedin"></i>
                 </a>
               </li>
               <li class="social-icons__item social-icons__item__header">
-                <a href="https://www.tumblr.com/culturecollideofficial">
+                <a href="http://culturecollideofficial.tumblr.com">
                   <i class="fa fa-tumblr"></i>
                 </a>
               </li>
               <li class="social-icons__item social-icons__item__header">
-                <a href="https://www.youtube.com/culturecollideofficial">
+                <a href="https://www.youtube.com/user/culturecollide">
                   <i class="fa fa-youtube-play"></i>
                 </a>
               </li>
               <li class="social-icons__item social-icons__item__header">
-                <a href="https://www.spotify.com/culturecollideofficial">
+                <a href="https://open.spotify.com/user/culturecollide">
                   <i class="fa fa-spotify"></i>
                 </a>
               </li>

@@ -7,10 +7,11 @@
 }
 
 .social-icons__header {
+  margin-bottom: .75rem;
   .social-icons__cta__header {
     font-family: $colfax;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 500;
     text-transform: uppercase;
     opacity: .6;
     padding-right: 0;
@@ -30,6 +31,9 @@
       a {
         color: $white;
         opacity: .6;
+        i {
+          font-size: 1.25rem;
+        }
         &:link, &:visited {
           color: $white;
           opacity: .6;

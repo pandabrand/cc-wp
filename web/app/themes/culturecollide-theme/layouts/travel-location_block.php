@@ -35,11 +35,11 @@
                   if( !empty( $artist_posts ) ) :
                 ?>
                   <div class="card_reccomendations">
-                    <div><strong>Artist Reccomendations</strong></div>
+                    <div><strong>Reccomended by</strong></div>
                     <div class="d-flex flex-row">
                 <?php foreach($artist_posts as $artist): ?>
                     <div class="card_reccomendations__title small_text pr-2">
-                      <?php echo get_the_title($artist->post_id); ?>
+                      <a href="<?= get_the_permalink($artist->post_id) ?>"><?= get_the_title($artist->post_id); ?></a>
                     </div>
                 <?php endforeach; ?>
                     </div>

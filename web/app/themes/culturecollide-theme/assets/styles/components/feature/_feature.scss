@@ -30,7 +30,7 @@ $feature__border__color:  $white;
       display: inline-block;
       color: $white;
       .feature__category-block__category-type {
-        font-weight: bold;
+        font-weight: 500;
         font-size: .625rem;
         letter-spacing: 3px;
         text-transform: uppercase;
@@ -164,6 +164,7 @@ $feature__border__color:  $white;
       clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 11%, 6% 11%, 6% 94%, 100% 94%);
     }
     .feature__category-line {
+      border: 2px solid $white;
       border-right: none;
       height:83%;
       width: 94%;
