@@ -3,7 +3,7 @@
 use Roots\Sage\Assets;
 
 function enqueue_scripts_styles_init() {
-  if( is_single() || is_tax( 'location_types' ) ): //|| is_page( [9972, 'travel'] )):
+  if( is_single() || is_tax( 'location_types' ) || is_page( 9972 )):
     $args = array(
       "post_type" => "city",
       "numberposts" => -1,

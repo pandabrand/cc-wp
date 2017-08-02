@@ -1,5 +1,12 @@
-.cc-marker {
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
   position: relative;
+}
+.cc-map-marker {
+  position: absolute;
+  top: -50px;
+  left: 0;
 }
 .element {
   position: absolute;

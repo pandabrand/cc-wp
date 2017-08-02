@@ -222,7 +222,7 @@
             html: '<div class="cc-map-marker"><img class="img-fluid" src="/app/themes/culturecollide-theme/dist/images/map_icon.png" srcset="/app/themes/culturecollide-theme/dist/images/map_icon.png 1x, /app/themes/culturecollide-theme/dist/images/map_icon@2x.png 2x" /></div>',
         });
         $('#cc-map').ready(function() {
-          map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 14);
+          map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 15);
 
           var mbURL = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=',
           mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>';
@@ -238,10 +238,10 @@
             marker_place.on('click', scrollToDetail);
           }
           markers.addTo(map);
+          map.fitBounds( markers.getBounds() );
         });
 
       scrollToDetail = function() {
-        console.log(this._icon);
         Waypoint.disableAll();
         var _id = this._leaflet_id;
         var scrollItem = $('[data-cc-marker="'+_id+'"]');
@@ -277,7 +277,7 @@
               var _marker = markers.getLayer(_id);
               var _markerEl = $(_marker._icon);
               showIconDetails(_markerEl, _marker);
-              map.flyTo(_marker.getLatLng());
+              map.flyTo(_marker.getLatLng(), 17);
 
               if (nextWaypoint && direction === 'up') {
                 $(nextWaypoint.element).addClass('np-next');
@@ -322,7 +322,7 @@
            html: '<div class="cc-map-marker"><img class="img-fluid" src="/app/themes/culturecollide-theme/dist/images/map_icon.png" srcset="/app/themes/culturecollide-theme/dist/images/map_icon.png 1x, /app/themes/culturecollide-theme/dist/images/map_icon@2x.png 2x" /></div>',
        });
        $('#cc-map').ready(function() {
-         map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 14);
+         map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 15);
 
          var mbURL = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=',
          mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>';
@@ -338,10 +338,10 @@
            marker_place.on('click', scrollToDetail);
          }
          markers.addTo(map);
+         map.fitBounds( markers.getBounds() );
        });
 
      scrollToDetail = function() {
-       console.log(this._icon);
        Waypoint.disableAll();
        var _id = this._leaflet_id;
        var scrollItem = $('[data-cc-marker="'+_id+'"]');
@@ -377,7 +377,7 @@
              var _marker = markers.getLayer(_id);
              var _markerEl = $(_marker._icon);
              showIconDetails(_markerEl, _marker);
-             map.flyTo(_marker.getLatLng());
+             map.flyTo(_marker.getLatLng(), 17);
 
              if (nextWaypoint && direction === 'up') {
                $(nextWaypoint.element).addClass('np-next');
@@ -422,7 +422,7 @@
            html: '<div class="cc-map-marker"><img class="img-fluid" src="/app/themes/culturecollide-theme/dist/images/map_icon.png" srcset="/app/themes/culturecollide-theme/dist/images/map_icon.png 1x, /app/themes/culturecollide-theme/dist/images/map_icon@2x.png 2x" /></div>',
        });
        $('#cc-map').ready(function() {
-         map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 10);
+         map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 15);
 
          var mbURL = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=',
          mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>';
@@ -437,11 +437,11 @@
            $('#'+feature.location_id).addClass(feature.marker_id);
            marker_place.on('click', scrollToDetail);
          }
-         markers.addTo(map);
+         markers.addTo( map );
+         map.fitBounds( markers.getBounds() );
        });
 
      scrollToDetail = function() {
-       console.log(this._icon);
        Waypoint.disableAll();
        var _id = this._leaflet_id;
        var scrollItem = $('[data-cc-marker="'+_id+'"]');
@@ -477,7 +477,7 @@
              var _marker = markers.getLayer(_id);
              var _markerEl = $(_marker._icon);
              showIconDetails(_markerEl, _marker);
-             map.flyTo(_marker.getLatLng());
+             map.flyTo(_marker.getLatLng(), 17);
 
              if (nextWaypoint && direction === 'up') {
                $(nextWaypoint.element).addClass('np-next');
