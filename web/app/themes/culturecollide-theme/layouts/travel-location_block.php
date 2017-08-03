@@ -36,7 +36,7 @@
                 ?>
                   <div class="card_reccomendations">
                     <div><strong>Reccomended by</strong></div>
-                    <div class="d-flex flex-row">
+                    <div class="d-flex flex-row flex-wrap">
                 <?php foreach($artist_posts as $artist): ?>
                     <div class="card_reccomendations__title small_text pr-2">
                       <a href="<?= get_the_permalink($artist->post_id) ?>"><?= get_the_title($artist->post_id); ?></a>

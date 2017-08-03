@@ -27,4 +27,7 @@ $travel--background--color: $black;
     margin: 2rem 1rem 1rem;
     width: 100%;
   }
+  .travel__detail__text {
+    overflow: hidden;
+  }
 }
