@@ -224,6 +224,8 @@ function cc_archive_title() {
         $title = post_type_archive_title( '', false );
     } elseif ( is_tax() ) {
         $title = single_term_title( '', false );
+    } elseif ( is_page( ['terms-conditions','privacy-policy'] ) ) {
+        $title = get_the_title();
     }
 
     return $title;
