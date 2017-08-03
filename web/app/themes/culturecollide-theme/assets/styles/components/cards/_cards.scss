@@ -50,6 +50,9 @@ $card__border__color:  $white;
       .card__address, .card__link, .card_reccomendations__title {
         font-size: .75rem;
       }
+      .card__link {
+        @extend .pr-4;
+      }
     }
   }
   .card__category-block {

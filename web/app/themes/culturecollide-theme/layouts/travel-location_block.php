@@ -35,7 +35,7 @@
                   if( !empty( $artist_posts ) ) :
                 ?>
                   <div class="card_reccomendations">
-                    <div><strong>Reccomended by</strong></div>
+                    <div class="medium small_text pt-2">Reccomended by</div>
                     <div class="d-flex flex-row flex-wrap">
                 <?php foreach($artist_posts as $artist): ?>
                     <div class="card_reccomendations__title small_text pr-2">
@@ -46,9 +46,9 @@
                   </div>
                 <?php endif; ?>
                 <?php wp_reset_query(); ?>
-                <div class="card__links mt-auto d-flex justify-content-between">
+                <div class="card__links mt-auto d-flex flex-row justify-content-start">
                   <div class="card__link">
-                    <a href="<?php the_permalink($location->ID); ?>" rel="external" target="_blank"><i class="fa fa-desktop"></i> website</a>
+                    <a href="<?php the_permalink($location->ID); ?>" rel="external" target="_blank"><i class="fa fa-window-maximize"></i> website</a>
                   </div>
                   <div class="card__link">
                     <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo $address['lat'],',',$address['lng']; ?>" rel="external" target="_blank">

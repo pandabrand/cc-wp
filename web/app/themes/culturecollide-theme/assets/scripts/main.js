@@ -229,13 +229,19 @@
 
         var ccIcon = L.divIcon({
             html: '<div class="cc-map-marker"><img class="img-fluid" src="/app/themes/culturecollide-theme/dist/images/map_icon.png" srcset="/app/themes/culturecollide-theme/dist/images/map_icon.png 1x, /app/themes/culturecollide-theme/dist/images/map_icon@2x.png 2x" /></div>',
+            iconSize: [34, 50],
+            iconAnchor: [18, 49],
+            popupAnchor: [0, -26]
         });
         $('#cc-map').ready(function() {
-          map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 15);
+          map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 12);
 
-          var mbURL = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=',
+
+          var mbURL = 'https://api.mapbox.com/styles/v1/pandabrand/cj5wzm2s57tap2rocbuf8j6no/tiles/512/{z}/{x}/{y}?access_token=',
+          // var mbURL = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=',
           mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>';
-          L.tileLayer(mbURL + parsed_map_vars.map_info.api_key, {id: 'mapbox.light', attribution: mbAttr}).addTo(map);
+          L.tileLayer(mbURL + parsed_map_vars.map_info.api_key, {attribution: mbAttr}).addTo(map);
+          // L.tileLayer(mbURL + parsed_map_vars.map_info.api_key, {id: 'mapbox.light', attribution: mbAttr}).addTo(map);
           markers = L.featureGroup();
           for(var x = 0; x < parsed_map_vars.locations.length; x++) {
             var feature = parsed_map_vars.locations[x];
@@ -287,7 +293,7 @@
               var _marker = markers.getLayer(_id);
               var _markerEl = $(_marker._icon);
               showIconDetails(_markerEl, _marker);
-              map.flyTo(_marker.getLatLng(), 17);
+              map.flyTo(_marker.getLatLng(), 15);
 
               if (nextWaypoint && direction === 'up') {
                 $(nextWaypoint.element).addClass('np-next');
@@ -338,13 +344,16 @@
 
        var ccIcon = L.divIcon({
            html: '<div class="cc-map-marker"><img class="img-fluid" src="/app/themes/culturecollide-theme/dist/images/map_icon.png" srcset="/app/themes/culturecollide-theme/dist/images/map_icon.png 1x, /app/themes/culturecollide-theme/dist/images/map_icon@2x.png 2x" /></div>',
+           iconSize: [34, 50],
+           iconAnchor: [18, 49],
+           popupAnchor: [0, -26]
        });
        $('#cc-map').ready(function() {
-         map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 15);
+         map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 12);
 
-         var mbURL = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=',
+         var mbURL = 'https://api.mapbox.com/styles/v1/pandabrand/cj5wzm2s57tap2rocbuf8j6no/tiles/512/{z}/{x}/{y}?access_token=',
          mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>';
-         L.tileLayer(mbURL + parsed_map_vars.map_info.api_key, {id: 'mapbox.light', attribution: mbAttr}).addTo(map);
+         L.tileLayer(mbURL + parsed_map_vars.map_info.api_key, {attribution: mbAttr}).addTo(map);
          markers = L.featureGroup();
          for(var x = 0; x < parsed_map_vars.locations.length; x++) {
            var feature = parsed_map_vars.locations[x];
@@ -396,7 +405,7 @@
              var _marker = markers.getLayer(_id);
              var _markerEl = $(_marker._icon);
              showIconDetails(_markerEl, _marker);
-             map.flyTo(_marker.getLatLng(), 17);
+             map.flyTo(_marker.getLatLng(), 15);
 
              if (nextWaypoint && direction === 'up') {
                $(nextWaypoint.element).addClass('np-next');
@@ -448,13 +457,16 @@
 
        var ccIcon = L.divIcon({
            html: '<div class="cc-map-marker"><img class="img-fluid" src="/app/themes/culturecollide-theme/dist/images/map_icon.png" srcset="/app/themes/culturecollide-theme/dist/images/map_icon.png 1x, /app/themes/culturecollide-theme/dist/images/map_icon@2x.png 2x" /></div>',
+           iconSize: [34, 50],
+           iconAnchor: [18, 49],
+           popupAnchor: [0, -26]
        });
        $('#cc-map').ready(function() {
-         map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 15);
+         map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 12);
 
-         var mbURL = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=',
+         var mbURL = 'https://api.mapbox.com/styles/v1/pandabrand/cj5wzm2s57tap2rocbuf8j6no/tiles/512/{z}/{x}/{y}?access_token=',
          mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>';
-         L.tileLayer(mbURL + parsed_map_vars.map_info.api_key, {id: 'mapbox.light', attribution: mbAttr}).addTo(map);
+         L.tileLayer(mbURL + parsed_map_vars.map_info.api_key, {attribution: mbAttr}).addTo(map);
          markers = L.featureGroup();
          for(var x = 0; x < parsed_map_vars.locations.length; x++) {
            var feature = parsed_map_vars.locations[x];
@@ -506,7 +518,7 @@
              var _marker = markers.getLayer(_id);
              var _markerEl = $(_marker._icon);
              showIconDetails(_markerEl, _marker);
-             map.flyTo(_marker.getLatLng(), 17);
+             map.flyTo(_marker.getLatLng(), 15);
 
              if (nextWaypoint && direction === 'up') {
                $(nextWaypoint.element).addClass('np-next');

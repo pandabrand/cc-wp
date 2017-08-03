@@ -67,3 +67,12 @@ a {
   text-transform: uppercase;
   font-weight: 600;
 }
+
+.medium {
+  font-family: $font__main;
+  font-weight: 500;
+}
+
+.small_text {
+  font-size: .75rem;
+}
