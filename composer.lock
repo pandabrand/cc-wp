@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8125d5e0d30114195f2e25e7ded5f5c",
+    "content-hash": "22702bd78f1bbb0e9f506094c29b24d7",
     "packages": [
         {
             "name": "composer/installers",
@@ -575,6 +575,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/ninja-forms/"
+        },
+        {
+            "name": "wpackagist-plugin/quick-featured-images",
+            "version": "13.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/quick-featured-images/",
+                "reference": "tags/13.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/quick-featured-images.13.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/quick-featured-images/"
         },
         {
             "name": "wpackagist-plugin/regenerate-thumbnails",
