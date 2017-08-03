@@ -239,14 +239,13 @@
           markers = L.featureGroup();
           for(var x = 0; x < parsed_map_vars.locations.length; x++) {
             var feature = parsed_map_vars.locations[x];
-            var marker_place = L.marker([feature.coords.lat, feature.coords.lng],{icon:ccIcon, riseOnHover:true});
+            var marker_place = L.marker([feature.coords.lat, feature.coords.lng],{icon:ccIcon, riseOnHover:true, riseOffset: 3000});
             marker_place.bindPopup('<div class=" cc-marker__popup strong">'+feature.title+'</div>');
             markers.addLayer(marker_place);
             feature.marker_id = markers.getLayerId(marker_place);
             $('#'+feature.location_id).attr('data-cc-marker', feature.marker_id);
             $('#'+feature.location_id).addClass(feature.marker_id);
             marker_place.on('click', scrollToDetail);
-            // marker_place.on('click', openPopup);
           }
           markers.addTo(map);
           map.fitBounds( markers.getBounds() );
@@ -349,14 +348,13 @@
          markers = L.featureGroup();
          for(var x = 0; x < parsed_map_vars.locations.length; x++) {
            var feature = parsed_map_vars.locations[x];
-           var marker_place = L.marker([feature.coords.lat, feature.coords.lng],{icon:ccIcon, riseOnHover:true});
+           var marker_place = L.marker([feature.coords.lat, feature.coords.lng],{icon:ccIcon, riseOnHover:true, riseOffset: 3000});
            marker_place.bindPopup('<div class=" cc-marker__popup strong">'+feature.title+'</div>');
            markers.addLayer(marker_place);
            feature.marker_id = markers.getLayerId(marker_place);
            $('#'+feature.location_id).attr('data-cc-marker', feature.marker_id);
            $('#'+feature.location_id).addClass(feature.marker_id);
            marker_place.on('click', scrollToDetail);
-           marker_place.on('click', openPopup);
          }
          markers.addTo(map);
          map.fitBounds( markers.getBounds() );
@@ -460,14 +458,13 @@
          markers = L.featureGroup();
          for(var x = 0; x < parsed_map_vars.locations.length; x++) {
            var feature = parsed_map_vars.locations[x];
-           var marker_place = L.marker([feature.coords.lat, feature.coords.lng],{icon:ccIcon, riseOnHover:true});
+           var marker_place = L.marker([feature.coords.lat, feature.coords.lng],{icon:ccIcon, riseOnHover:true, riseOffset: 3000});
            marker_place.bindPopup('<div class=" cc-marker__popup strong">'+feature.title+'</div>');
            markers.addLayer(marker_place);
            feature.marker_id = markers.getLayerId(marker_place);
            $('#'+feature.location_id).attr('data-cc-marker', feature.marker_id);
            $('#'+feature.location_id).addClass(feature.marker_id);
            marker_place.on('click', scrollToDetail);
-           marker_place.on('click', openPopup);
          }
          markers.addTo( map );
          map.fitBounds( markers.getBounds() );
