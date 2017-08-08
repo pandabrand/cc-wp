@@ -1,5 +1,5 @@
 <div class="feature-block feature-block_element">
-  <div class="feature feature_1-2">
+  <div class="feature feature_mobile">
     <a class="feature__link" href="<?php echo get_permalink($post->ID); ?>"></a>
     <div class="img-fluid feature__image" style="background-image:url('<?php echo the_post_thumbnail_url('large-feature'); ?>')">
       <div class="feature__category-block">

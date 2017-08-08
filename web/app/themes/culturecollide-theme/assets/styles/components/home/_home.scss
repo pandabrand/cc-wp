@@ -12,6 +12,9 @@ body, html {
 .feature-block {
   &.home {
     padding-bottom: 11rem;
+    @media(max-width: 768px) {
+      padding-bottom: 5rem;
+    }
     .last-child {
       @media(max-width: 1024px) {
         display: flex;

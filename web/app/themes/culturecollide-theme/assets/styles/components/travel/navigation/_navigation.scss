@@ -10,6 +10,9 @@
       background-color: $white;
       padding-top: 0;
       padding-bottom: 0;
+      .navbar {
+        padding: 0;
+      }
       .btn-secondary {
         border: 0;
         background-color: transparent;
@@ -24,6 +27,8 @@
         &.travel__navigation__button {
           border: none;
           margin: .5rem 1rem 0;
+        }
+        &.travel__navigation__button--near-me {
           &:before {
             font-family: FontAwesome;
             font-size: 2rem;
@@ -33,10 +38,24 @@
             vertical-align: middle;
           }
         }
+        &.travel__navigation__button--browse {
+          &:before {
+            font-family: FontAwesome;
+            font-size: 2rem;
+            margin-right: .5rem;
+            margin-left: .2rem;
+            content: "\f1de";
+            vertical-align: middle;
+          }
+        }
+        &.navbar-toggler {
+          font-size: 1rem;
+          padding-top: .25rem;
+        }
       }
       .btn {
         padding: 0;
-        font-weight: 600;
+        font-weight: 500;
       }
       .dropdown {
         .dropdown-toggle {

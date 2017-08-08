@@ -18,6 +18,9 @@ $travel__border__color:  $white;
   &.travel_1-2 {
     position: relative;
     height: 500px;
+    @media(max-width: 768px) {
+      height: 350px;
+    }
     .travel__link {
       @extend .block__link;
       color: $white;
@@ -60,10 +63,17 @@ $travel__border__color:  $white;
       padding: 45px 56px 45px;
       height: 44%;
       margin: 0;
+      overflow: hidden;
+      @media(max-width: 768px) {
+        padding: 5px 6px;
+      }
       .travel__title {
         font-size: 1.5rem;
         font-weight: bold;
         overflow: hidden;
+        @media(max-width: 768px) {
+          font-size: 1rem;
+        }
       }
       .travel__text {
         display: block;

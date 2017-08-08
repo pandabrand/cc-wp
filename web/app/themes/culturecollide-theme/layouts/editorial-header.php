@@ -5,7 +5,7 @@
     <div class="billboard__image" style="background-image:url('<?php echo the_post_thumbnail_url('large-feature'); ?>')"></div>  <?php endif; ?>
   <div class="billboard__category-line"></div>
   <div class="billboard__filter"></div>
-  <div class="billboard__body">
+  <div class="billboard__body pl-2">
     <div class="billboard__copy">
       <div class="billboard__title h1">
         <?php echo get_the_title(); ?>
@@ -17,7 +17,7 @@
   </div>
   <div class="billboard__category-block">
     <div class="<?php echo get_post_icon_class(); ?>"></div>
-    <div class="billboard__category-block__category-details">
+    <div class="billboard__category-block__category-details pl-2">
       <div class="billboard__category-block__category-type">
         <?php echo get_category_type_title();?>
       </div>

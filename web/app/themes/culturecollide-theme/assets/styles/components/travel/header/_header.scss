@@ -10,6 +10,9 @@ $travel--background--color: $black;
   }
   .cc-row {
     padding-top: 2.5rem;
+    @media(max-width: 768px) {
+      padding-top: 0;
+    }
   }
   .travel__header {
     text-align: center;

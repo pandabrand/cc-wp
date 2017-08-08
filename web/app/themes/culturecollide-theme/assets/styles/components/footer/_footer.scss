@@ -24,10 +24,29 @@ $footer_color: $black;
     }
     .navigation__list__footer {
       font-weight: 500;
+      flex-direction: row;
+      justify-content: center;
+      @media(max-width: 768px) {
+        flex-direction: column;
+      }
       .navigation__item__footer {
         // display: block;
         padding: 0 1rem;
         text-transform: uppercase;
+        .nav-link {
+          text-align: center;
+        }
+      }
+    }
+    .menu-footer-two-container__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      @media(max-width: 768px) {
+        justify-content: flex-start;
+      }
+      .nav-link {
+        padding: 0;
       }
     }
   }

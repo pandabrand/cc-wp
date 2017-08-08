@@ -4,7 +4,7 @@
       <div class="img-fluid travel__image" style="background-image:url('<?php echo the_post_thumbnail_url('large-feature'); ?>')">
       <div class="travel__category-block">
         <div class="icon icon-travel-white"></div>
-        <div class="travel__category-block__category-details">
+        <div class="travel__category-block__category-details pl-2">
           <div class="travel__category-block__category-type">
             <?php echo get_category_type_title(); ?>
           </div>

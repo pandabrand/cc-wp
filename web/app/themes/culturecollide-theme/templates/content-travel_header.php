@@ -10,15 +10,15 @@
   <div class="col-12 travel travel__navigation">
     <div class="row cc-row text-right">
       <nav class="hidden-sm-up navbar col-6">
-        <a class="button button--small button--narrow button--outline" type="button" data-toggle="collapse" data-target="#travel-navigate" aria-controls="travel-navigate" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-toggler btn btn-secondary travel__navigation__button  travel__navigation__button--browse" data-toggle="collapse" data-target="#travel-navigate" aria-controls="travel-navigate" aria-expanded="false" aria-label="Toggle navigation">
           BROWSE
         </a>
       </nav>
       <div class="hidden-sm-up col-6">
-        <a href="#" rel="noreferrer" class="btn btn-secondary travel__navigation__button">Near Me</a>
+        <a href="#" rel="noreferrer" class="btn btn-secondary travel__navigation__button travel__navigation__button--near-me">Near Me</a>
       </div>
 
-      <div class="collapsed row" id="travel-navigate">
+      <div class="collapse row" id="travel-navigate">
         <div class="dropdown full-width col-xs-4 col-4">
           <a href="#" class="btn btn-secondary dropdown-toggle" id="citiesMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cities</a>
           <div class="dropdown-menu" aria-labelledby="citiesMenuLink">

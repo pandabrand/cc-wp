@@ -6,7 +6,7 @@
     <div class="home__city-guides-block__carousel-block__item-border"></div>
     <div class="home__city-guides-block__carousel-block__item__city-header">
       <div class="icon icon-travel-white"></div>
-      <div><?php echo esc_html( get_the_title() ); ?></div>
+      <div class="ml-2"><?php echo esc_html( get_the_title() ); ?></div>
     </div>
   </div>
 </div>

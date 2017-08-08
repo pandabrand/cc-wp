@@ -1,6 +1,12 @@
 .editorial__block {
   margin-top: 40px;
 }
+.editorial__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 2rem 0;
+  text-transform: uppercase;
+}
 
 .editorial__detail__header {
   height: 750px;
@@ -14,6 +20,9 @@
 
 .editorial__detail__article {
   margin-top: -9%;
+  @media(max-width: 786px) {
+    margin-top: 0;
+  }
   &.about {
     margin-top: -39%;
     main {
@@ -28,6 +37,9 @@
     min-height: 400px;
     p {
       line-height: 3rem;
+      @media(max-width: 768px) {
+        line-height: normal;
+      }
     }
     .editorial__detail__feature_media {
       padding: 2rem;
@@ -163,7 +175,10 @@
   .billboard__body {
     margin: 6rem;
     margin-top: -35rem;
-    padding: 1rem;
+    @media(max-width: 786px) {
+      margin: 2rem;
+      margin-top: -35rem;
+    }
     &.travel__detail__body {
       left: 8.5%;
       width: 83%;
@@ -203,6 +218,9 @@
     top: 8%;
     left: 6.5%;
     display: flex;
+    @media(max-width: 786px) {
+      left: 1.5%;
+    }
     .billboard__category-block__category-image {
     }
     .billboard__category-block__category-details {

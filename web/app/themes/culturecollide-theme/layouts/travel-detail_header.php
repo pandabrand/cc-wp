@@ -3,7 +3,7 @@
     <div class="billboard__image" style="background-image:url('<?php echo the_post_thumbnail_url('large-feature'); ?>')"></div>
     <div class="billboard__category-line travel__detail__category-line"></div>
     <div class="billboard__filter"></div>
-    <div class="billboard__body travel__detail__body">
+    <div class="billboard__body travel__detail__body pl-2">
       <div class="billboard__copy">
         <div class="billboard__title h1">
           <?php echo get_card_title(); ?>
@@ -11,11 +11,11 @@
       </div>
     </div>
     <div class="billboard__text travel__detail__text">
-      <?php (get_post_type() == 'artist') ? the_content() : the_excerpt(); ?>
+      <?php the_content(); ?>
     </div>
     <div class="billboard__category-block">
       <div class="<?php echo get_post_icon_class(); ?>"></div>
-      <div class="billboard__category-block__category-details">
+      <div class="billboard__category-block__category-details pl-2">
         <div class="billboard__category-block__category-type">
           city guide:
         </div>

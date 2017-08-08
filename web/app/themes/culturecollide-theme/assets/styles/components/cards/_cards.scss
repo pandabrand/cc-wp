@@ -34,8 +34,9 @@ $card__border__color:  $white;
     width: 100%;
     margin: 0;
     .card__copy {
-      height: 210px;
+      height: 205px;
       padding: 1rem;
+      overflow: hidden;
       &:last-child {
         margin-bottom: 1rem;
       }
@@ -45,7 +46,6 @@ $card__border__color:  $white;
       }
       .card__text {
         font-size: .75rem;
-        overflow: hidden;
       }
       .card__address, .card__link, .card_reccomendations__title {
         font-size: .75rem;

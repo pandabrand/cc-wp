@@ -56,6 +56,10 @@
            fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
 
+         $('.navbar-toggler > i.fa').click(function() {
+           $( '.navbar-toggler > i.fa' ).toggleClass( 'fa-bars fa-times' );
+         });
+
         $('.share-fb').click(function() {
           event.preventDefault();
           FB.ui({
@@ -85,13 +89,34 @@
           });
         }
 
-        // var travel__navigation = $('.travel__navigation');
-        // $('travel__navigation').ready(function() {
-        //   new Waypoint.Sticky({ element: this[0] },{ offset: '3%' });
-        // });
-        // console.log(travel__navigation);
-        // if(travel__navigation.length) {
-        //   new Waypoint.Sticky({ element: travel__navigation[0] },{ offset: '3%' });
+        var $mapStickyElement = $('.travel__detail__map__map-wrapper');
+        var mapSticky;
+
+        if ($mapStickyElement.length) {
+          mapSticky = new Waypoint.Sticky({
+            stuckClass: 'map-stuck',
+            element: $mapStickyElement[0],
+            wrapper: '<div class="sticky-wrapper waypoint" />',
+            offset: 48
+          });
+          $('button.destroy-sticky').on('click', function() {
+            sticky.destroy();
+          });
+        }
+
+        // var $mapListStickyElement = $('.travel__detail__map__list--wrapper');
+        // var mapListSticky;
+        //
+        // if ($mapListStickyElement.length) {
+        //   mapListSticky = new Waypoint.Sticky({
+        //     stuckClass: 'map-list-stuck',
+        //     element: $mapListStickyElement[0],
+        //     wrapper: '<div class="sticky-wrapper waypoint" />',
+        //     offset: 248
+        //   });
+        //   $('button.destroy-sticky').on('click', function() {
+        //     sticky.destroy();
+        //   });
         // }
 
         $('.link_search-form_opener > a').click(function(e) {
@@ -121,6 +146,21 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+        $('.feature-block__mobile').slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          mobileFirst: true,
+          arrows: false,
+          dots: true,
+          slide: '.feature-block_element',
+          responsive: [
+            {
+              breakpoint: 769,
+              settings: 'unslick'
+            }
+          ]
+        });
         $('.home__city-guides-block__carousel-block__list').slick({
           infinite: true,
           slidesToShow: 5,
@@ -150,7 +190,9 @@
                 arrows: false,
                 dots: true,
                 slidesToShow: 1,
+                slidesToScroll: 1,
                 centerMode: true,
+                centerPadding: '36px',
               }
             }
           ]
@@ -183,7 +225,6 @@
                 dots: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                centerMode: true,
               }
             }
           ]
@@ -272,6 +313,14 @@
       };
       $.each(['.travel__detail__map__item'], function(i, classname) {
         var $elements = $(classname);
+        var $v_context, $v_offset;
+        if($(window).width() < 767) {
+          $v_context = $(window)[0];
+          $v_offset = 280;
+        } else {
+          $v_context = $('.travel__detail__map__list')[0];
+          $v_offset = 20;
+        }
         $elements.each(function() {
           new Waypoint({
             element: this,
@@ -304,9 +353,9 @@
               }
 
             },
-            offset: 20,
+            offset: $v_offset,
             group: classname,
-            context: $('.travel__detail__map__list')[0]
+            context: $v_context,
           });
         });
       });
@@ -384,6 +433,14 @@
      };
      $.each(['.travel__detail__map__item'], function(i, classname) {
        var $elements = $(classname);
+       var $v_context, $v_offset;
+       if($(window).width() < 767) {
+         $v_context = $(window)[0];
+         $v_offset = 280;
+       } else {
+         $v_context = $('.travel__detail__map__list')[0];
+         $v_offset = 20;
+       }
        $elements.each(function() {
          new Waypoint({
            element: this,
@@ -416,9 +473,9 @@
              }
 
            },
-           offset: 20,
+           offset: $v_offset,
            group: classname,
-           context: $('.travel__detail__map__list')[0]
+           context: $v_context
          });
        });
      });
@@ -497,6 +554,14 @@
      };
      $.each(['.travel__detail__map__item'], function(i, classname) {
        var $elements = $(classname);
+       var $v_context, $v_offset;
+       if($(window).width() < 767) {
+         $v_context = $(window)[0];
+         $v_offset = 280;
+       } else {
+         $v_context = $('.travel__detail__map__list')[0];
+         $v_offset = 20;
+       }
        $elements.each(function() {
          new Waypoint({
            element: this,
@@ -529,9 +594,9 @@
              }
 
            },
-           offset: 20,
+           offset: $v_offset,
            group: classname,
-           context: $('.travel__detail__map__list')[0]
+           context: $v_context
          });
        });
      });
@@ -566,7 +631,6 @@
                dots: true,
                slidesToShow: 1,
                slidesToScroll: 1,
-               centerMode: true,
              }
            }
          ]

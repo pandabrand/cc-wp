@@ -21,9 +21,8 @@ $feature__border__color:  $white;
     position: absolute;
   }
   .feature__category-block {
-    display: flex;
-    align-items: flex-start;
-    position: absolute;
+    @extend .d-flex;
+    @extend .justify-content-start;
     .feature__category-block__category-image {
     }
     .feature__category-block__category-details {
@@ -90,7 +89,6 @@ $feature__border__color:  $white;
     .feature__category-block {
       margin-top: -20rem;
       margin-left: .5rem;
-      width: 250px;
       height: 40px;
       .feature__category-block__category-image {
       }
@@ -136,10 +134,8 @@ $feature__border__color:  $white;
       }
     }
     .feature__category-block {
-      top: 3%;
-      left: 3%;
+      padding: 3% 0 0 3%;
       width: 250px;
-      height: 40px;
       .feature__category-block__category-image {
       }
       .feature__category-block__category-details {
@@ -197,9 +193,7 @@ $feature__border__color:  $white;
       }
     }
     .feature__category-block {
-      top: 3%;
-      left: 6%;
-      height: 40px;
+      padding: 7% 0 0 7%;
       .feature__category-block__category-image {
       }
       .feature__category-block__category-details {
@@ -243,9 +237,64 @@ $feature__border__color:  $white;
       }
     }
     .feature__category-block {
+      padding: 7% 0 0 6%;
+      .feature__category-block__category-image {
+      }
+      .feature__category-block__category-details {
+        .feature__category-block__category-type {
+        }
+        .feature__category-block__category-info {
+        }
+      }
+    }
+  }
+  &.feature_mobile {
+    height: 520px;
+    .feature__filter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      background: rgba($feature__background, .2);
+      -webkit-clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 11%, 11% 11%, 11% 94%, 100% 94%);
+      clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 11%, 11% 11%, 11% 94%, 100% 94%);
+    }
+    .feature__category-line {
+      border: 2px solid $white;
+      border-right: none;
+      height:83%;
+      width: 94%;
       top: 11%;
-      left: 6%;
-      height: 40px;
+      left: 11%;
+    }
+    .feature__body {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: $feature__background;
+      color: $feature__color;
+      width: 27.75rem;
+      padding: 2.8rem 3.5rem;
+      max-height: 14.1875rem;
+      margin: 0;
+      .feature__title {
+        font-weight: bold;
+        overflow: hidden;
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+      }
+      .feature__text {
+        display: none;
+      }
+      @media(max-width: 768px) {
+        width: 100%;
+      }
+    }
+    .feature__category-block {
+      padding: 7% 0 0 12%;
       .feature__category-block__category-image {
       }
       .feature__category-block__category-details {
@@ -257,4 +306,24 @@ $feature__border__color:  $white;
     }
   }
 
+}
+
+.feature-block__mobile {
+  .slick-dots {
+    bottom: 5rem;
+    li {
+      button {
+        &:before {
+          color: $white;
+        }
+      }
+    }
+    li.slick-active {
+      button {
+        &:before {
+          color: $white;
+        }
+      }
+    }
+  }
 }

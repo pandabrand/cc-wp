@@ -1,5 +1,6 @@
 <header class="header banner">
   <nav class="navbar navbar-toggleable-md navbar-custom">
+    <div class="navbar-toggler navbar-toggler-right link_search-form_opener link_search-mobile_link"><a href="#" class="nav-link">search</a></div>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavigationListHeader" aria-controls="navbarNavigationListHeader" aria-expanded="false" aria-label="Toggle Navigation">
       <i class="fa fa-bars"></i>
     </button>
@@ -8,8 +9,8 @@
     </a>
     <div class="collapse navbar-collapse justify-content-end navbar__navigation__header" id="navbarNavigationListHeader">
       <div class="social-icons social-icons__header">
-        <div class="row justify-content-end">
-          <div class="social-icons__cta social-icons__cta__header text-right">
+        <div class="row social-icons__header-row">
+          <div class="social-icons__cta social-icons__cta__header">
             Follow
             <ul class="social-icons__list social-icons__list__header">
               <li class="social-icons__item social-icons__item__header">

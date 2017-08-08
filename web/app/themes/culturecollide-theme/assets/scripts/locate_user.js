@@ -21,7 +21,7 @@ function error() {
 }
 
 jQuery(function($){
-	$('.travel__navigation__button').click(function (e) {
+	$('.travel__navigation__button--near-me').click(function (e) {
     e.preventDefault();
     navigator.geolocation.getCurrentPosition(success, error);
 	});

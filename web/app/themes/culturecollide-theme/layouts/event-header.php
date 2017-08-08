@@ -1,7 +1,7 @@
 <div class="editorial__detail__header <?php add_billboard_class(); ?>">
     <div class="billboard__image" style="background-image:url('<?php echo the_post_thumbnail_url('large-feature'); ?>')"></div>
   <div class="billboard__filter"></div>
-  <div class="billboard__body">
+  <div class="billboard__body pl-2">
     <div class="billboard__copy">
       <div class="billboard__title h1">
         <?php echo get_the_title(); ?>

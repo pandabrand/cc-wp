@@ -100,7 +100,7 @@
 @import "icon-sprites";
 
 .icon {
-    margin-right: 1rem;
+    padding-right: 1rem;
   &.icon-art-black {
     @include retina-sprite($art-black-group);
   }

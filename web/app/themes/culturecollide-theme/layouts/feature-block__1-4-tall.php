@@ -5,7 +5,7 @@
     <?php $post_categories = wp_get_post_categories( $post->ID ); ?>
     <?php $category = get_category($post_categories[0]); ?>
     <div class="icon <?php echo 'icon-',$category->slug,'-white'; ?>"></div>
-    <div class="feature__category-block__category-details">
+    <div class="feature__category-block__category-details pl-2">
       <div class="feature__category-block__category-type">
         <?php $cat = $category->slug; echo ($cat == 'uncategorized') ? 'music' : $cat; ?>
       </div>

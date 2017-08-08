@@ -24,6 +24,14 @@ $search-form__color_hover: $gray;
     margin: .5rem;
   }
 }
+.navbar_navigation__item__header{
+  &.link_search-form_opener {
+    @media(max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
 .link_search-form_opener {
   margin-right: -12px;
   @media (max-width: 768px) {
@@ -38,7 +46,26 @@ $search-form__color_hover: $gray;
       content: "\f002";
     }
   }
+  &.link_search-mobile_link {
+    @media (max-width: 768px) {
+      padding-right: 3.25rem;
+      padding-top: .5rem;
+    }
+    .nav-link {
+      @include text-hide;
+      color: $white;
+      margin-top: .60rem;
+      &:after {
+        font-size: 2rem;
+        font-family: FontAwesome;
+        color: $white;
+        content: "\f002";
+      }
+    }
+  }
+
 }
+
 
 .search-page__results {
   background: $white;
