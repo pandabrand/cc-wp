@@ -104,21 +104,6 @@
           });
         }
 
-        // var $mapListStickyElement = $('.travel__detail__map__list--wrapper');
-        // var mapListSticky;
-        //
-        // if ($mapListStickyElement.length) {
-        //   mapListSticky = new Waypoint.Sticky({
-        //     stuckClass: 'map-list-stuck',
-        //     element: $mapListStickyElement[0],
-        //     wrapper: '<div class="sticky-wrapper waypoint" />',
-        //     offset: 248
-        //   });
-        //   $('button.destroy-sticky').on('click', function() {
-        //     sticky.destroy();
-        //   });
-        // }
-
         $('.link_search-form_opener > a').click(function(e) {
           e.preventDefault();
           $('.search-form').slideToggle('slow');
@@ -132,6 +117,20 @@
           slidesToShow: 1,
           centerMode: true,
           centerPadding: '50px'
+        });
+
+        $(window).on('load', function() {
+          if($(window).width() <= 768) {
+            $('#travel-navigate').addClass('collapse');
+          }
+        });
+
+        $(window).resize(function() {
+          if($(window).width() <= 768) {
+            $('#travel-navigate').collapse('hide');
+          } else {
+            $('#travel-navigate').collapse('show');
+          }
         });
       },
       finalize: function() {

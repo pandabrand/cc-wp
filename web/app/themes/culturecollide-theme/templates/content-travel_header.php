@@ -18,7 +18,7 @@
         <a href="#" rel="noreferrer" class="btn btn-secondary travel__navigation__button travel__navigation__button--near-me">Near Me</a>
       </div>
 
-      <div class="collapse row" id="travel-navigate">
+      <div class="row" id="travel-navigate">
         <div class="dropdown full-width col-xs-4 col-4">
           <a href="#" class="btn btn-secondary dropdown-toggle" id="citiesMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cities</a>
           <div class="dropdown-menu" aria-labelledby="citiesMenuLink">
@@ -172,7 +172,7 @@
         </div>
       </div>
       <div class="hidden-sm-down col-6">
-        <a href="#" rel="noreferrer" class="btn btn-secondary travel__navigation__button">Near Me</a>
+        <a href="#" rel="noreferrer" class="btn btn-secondary travel__navigation__button travel__navigation__button--near-me">Near Me</a>
       </div>
     </div>
   </div>
