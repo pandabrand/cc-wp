@@ -35,7 +35,7 @@
                   if( !empty( $artist_posts ) ) :
                 ?>
                   <div class="card_reccomendations">
-                    <div class="medium small_text pt-2">Reccomended by</div>
+                    <div class="medium small_text pt-2">Recommended by</div>
                     <div class="d-flex flex-row flex-wrap">
                 <?php foreach($artist_posts as $artist): ?>
                     <div class="card_reccomendations__title small_text pr-2">
