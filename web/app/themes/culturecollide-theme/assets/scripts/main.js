@@ -274,7 +274,7 @@
             popupAnchor: [0, -26]
         });
         $('#cc-map').ready(function() {
-          map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 12);
+          map = L.map('cc-map',{scrollWheelZoom:false}).setView([parsed_map_vars.city.location.lat, parsed_map_vars.city.location.lng], 15);
 
 
           var mbURL = 'https://api.mapbox.com/styles/v1/pandabrand/cj5wzm2s57tap2rocbuf8j6no/tiles/512/{z}/{x}/{y}?access_token=',
@@ -342,6 +342,7 @@
               var _markerEl = $(_marker._icon);
               showIconDetails(_markerEl, _marker);
               map.flyTo(_marker.getLatLng(), 15);
+
 
               if (nextWaypoint && direction === 'up') {
                 $(nextWaypoint.element).addClass('np-next');

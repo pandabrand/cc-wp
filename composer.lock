@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "22702bd78f1bbb0e9f506094c29b24d7",
+    "content-hash": "a9109dcd68f8323f1d22cc57ca8d6b4a",
     "packages": [
         {
             "name": "composer/installers",
@@ -337,7 +337,7 @@
                 "source": "https://github.com/pandabrand/cc-plugin/tree/master",
                 "issues": "https://github.com/pandabrand/cc-plugin/issues"
             },
-            "time": "2017-07-27T13:20:09+00:00"
+            "time": "2017-08-09T21:34:38+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -475,6 +475,21 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "wpUXsolutions/enhanced-media-library-pro",
+            "version": "2.4.5",
+            "dist": {
+                "type": "path",
+                "url": "packages/enhanced-media-library-pro",
+                "reference": "04176b077c661d36c2e2e0a65056cb3e11fbce82",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "^1.0.12",
+                "php": ">=5.3.2"
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "wpackagist-plugin/adbutler",
@@ -770,16 +785,16 @@
         },
         {
             "name": "yoast/whip",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast/whip.git",
-                "reference": "e9df81e3360c81e28a2cae4469ec6aa54f7fd434"
+                "reference": "f66106f5030a8f426ea2f0314bae814862336db1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast/whip/zipball/e9df81e3360c81e28a2cae4469ec6aa54f7fd434",
-                "reference": "e9df81e3360c81e28a2cae4469ec6aa54f7fd434",
+                "url": "https://api.github.com/repos/Yoast/whip/zipball/f66106f5030a8f426ea2f0314bae814862336db1",
+                "reference": "f66106f5030a8f426ea2f0314bae814862336db1",
                 "shasum": ""
             },
             "require": {
@@ -808,20 +823,20 @@
                 }
             ],
             "description": "A WordPress package to nudge users to upgrade their software versions (starting with PHP)",
-            "time": "2017-06-27T13:36:33+00:00"
+            "time": "2017-08-04T10:00:35+00:00"
         },
         {
             "name": "yoast/wordpress-seo",
-            "version": "5.1",
+            "version": "5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast/wordpress-seo.git",
-                "reference": "1f764c412d9c3fbb8a4313eacae555dd3e9405d7"
+                "reference": "496f6584cf246cd20be9168a5a55330a115bb2fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast/wordpress-seo/zipball/1f764c412d9c3fbb8a4313eacae555dd3e9405d7",
-                "reference": "1f764c412d9c3fbb8a4313eacae555dd3e9405d7",
+                "url": "https://api.github.com/repos/Yoast/wordpress-seo/zipball/496f6584cf246cd20be9168a5a55330a115bb2fe",
+                "reference": "496f6584cf246cd20be9168a5a55330a115bb2fe",
                 "shasum": ""
             },
             "require": {
@@ -830,7 +845,7 @@
                 "yoast/api-libs": "^2.0",
                 "yoast/i18n-module": "^2.0.1",
                 "yoast/license-manager": "^1.4.0",
-                "yoast/whip": "^1.0"
+                "yoast/whip": "^1.1.0"
             },
             "require-dev": {
                 "codeclimate/php-test-reporter": "dev-master",
@@ -863,7 +878,7 @@
                 "seo",
                 "wordpress"
             ],
-            "time": "2017-07-25T06:55:27+00:00"
+            "time": "2017-08-08T08:45:50+00:00"
         }
     ],
     "packages-dev": [

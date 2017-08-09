@@ -46,6 +46,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/pandabrand/cc-plugin.git"
+    },
+    {
+      "type": "path",
+      "url": "packages/enhanced-media-library-pro"
     }
   ],
   "require": {
@@ -66,6 +70,7 @@
     "wpackagist-plugin/ninja-forms": "3.1.6",
     "wpackagist-plugin/all-in-one-wp-migration": "6.53",
     "wpackagist-plugin/adbutler": "1.13",
+    "wpUXsolutions/enhanced-media-library-pro": "*",
     "wpackagist-plugin/quick-featured-images": "13.2"
   },
   "require-dev": {

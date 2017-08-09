@@ -1,8 +1,8 @@
 <a href="<?php echo the_permalink();?>" class="block__link">
   <div class="card__image"  style="background-image:url('<?php echo the_post_thumbnail_url('large-feature'); ?>')">
     <div class="card__category-block">
-      <div class="<?php echo get_post_icon_class(); ?>"></div>
-      <div class="card__category-block__category-details pl-4">
+      <div class="<?php echo get_post_icon_class(); ?> mr-2"></div>
+      <div class="card__category-block__category-details pl-3">
         <div class="card__category-block__category-type">
           <?php echo get_category_type_title();?>
         </div>

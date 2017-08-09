@@ -4,8 +4,8 @@
         <?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $location->ID ), 'large-feature' ); ?>
           <div class="card__image"  style="background-image:url('<?php echo esc_url( $large_image_url[0] ); ?>')">
             <div class="card__category-block">
-              <div class="<?php echo get_post_icon_class($location); ?>"></div>
-              <div class="card__category-block__category-details">
+              <div class="<?php echo get_post_icon_class($location); ?> mr-2"></div>
+              <div class="card__category-block__category-details pl-3">
                 <div class="card__category-block__category-type">
                   <?php echo get_category_type_title($location);?>
                 </div>

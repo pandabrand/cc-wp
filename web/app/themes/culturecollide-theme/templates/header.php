@@ -9,7 +9,7 @@
     </a>
     <div class="collapse navbar-collapse justify-content-end navbar__navigation__header" id="navbarNavigationListHeader">
       <div class="social-icons social-icons__header">
-        <div class="row social-icons__header-row">
+        <div class="social-icons__header-row">
           <div class="social-icons__cta social-icons__cta__header">
             Follow
             <ul class="social-icons__list social-icons__list__header">

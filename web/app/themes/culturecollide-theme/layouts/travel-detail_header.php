@@ -5,7 +5,7 @@
     <div class="billboard__filter"></div>
     <div class="billboard__body travel__detail__body pl-2">
       <div class="billboard__copy">
-        <div class="billboard__title h1">
+        <div class="billboard__title h1 ml-3">
           <?php echo get_card_title(); ?>
         </div>
       </div>
@@ -14,8 +14,8 @@
       <?php the_content(); ?>
     </div>
     <div class="billboard__category-block">
-      <div class="<?php echo get_post_icon_class(); ?>"></div>
-      <div class="billboard__category-block__category-details pl-2">
+      <div class="<?php echo get_post_icon_class(); ?> mr-2"></div>
+      <div class="billboard__category-block__category-details pl-3">
         <div class="billboard__category-block__category-type">
           city guide:
         </div>

@@ -25,3 +25,4 @@ log
 web/app/debug.log
 
 **/.DS_Store
+**/*.zip
