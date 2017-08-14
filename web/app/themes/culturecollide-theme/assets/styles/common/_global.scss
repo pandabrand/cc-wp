@@ -11,6 +11,11 @@ textarea {
   color: $color__text-main;
 }
 
+.cc-container {
+  // background-color: $black;
+  max-width: 1440px;
+}
+
 .row {
   &.cc-row {
     padding: 0 15px;
@@ -75,4 +80,20 @@ a {
 
 .small_text {
   font-size: .75rem;
+}
+
+.image--filter {
+  min-width: 100%;
+  min-height: 100%;
+  background: rgba($white, .2);
+}
+
+.image--filter_position-absolute_top_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image--filter_four_layer-blend {
+  background-blend-mode: normal, soft-light, normal, normal;
 }

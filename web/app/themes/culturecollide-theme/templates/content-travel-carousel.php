@@ -6,7 +6,7 @@
   $city_query = new WP_Query($args);
   if($city_query->have_posts()):
 ?>
-<div class="row cc-row">
+<div class="row home__city-guides-row">
   <div class="col-12 home__city-guides-block">
     <div class="home__city-guides-block__title">
       city guides

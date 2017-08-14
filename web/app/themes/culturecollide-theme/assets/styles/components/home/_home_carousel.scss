@@ -1,6 +1,12 @@
 $home__city-guides__color: $black;
 $home__city-guides__background: $white;
 
+.home__city-guides-row {
+  &.row {
+    padding: 0 2.5rem;
+  }
+}
+
 .home__city-guides-block {
   color: $home__city-guides__color;
   background: $home__city-guides__background;
@@ -9,6 +15,7 @@ $home__city-guides__background: $white;
   .home__city-guides-block__title {
     font-size: 1.125rem;
     letter-spacing: 3px;
+    font-weight: 500;
     text-align: center;
     text-transform: uppercase;
     padding-top: 2.5rem;
@@ -30,6 +37,7 @@ $home__city-guides__background: $white;
             background-repeat: no-repeat;
             background-position: top;
             background-size: cover;
+            @extend .image--filter_four_layer-blend;
           }
           .home__city-guides-block__carousel-block__item-filter {
             position: absolute;
@@ -57,9 +65,10 @@ $home__city-guides__background: $white;
             left: 0;
             color: $home__city-guides__background;
             font-weight: bold;
-            font-size: 12px;
+            font-size: .75rem;
             text-transform: uppercase;
-            padding: 5px 0 5px 23px;
+            padding: 5px 0 5px 1rem;
+            line-height: 1.35rem;
           }
         }
       }
@@ -71,10 +80,21 @@ $home__city-guides__background: $white;
 }
 
 .related-content__carousel {
+  @media(min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+  }
+  display: inherit;
   .related-content__carousel__item {
+    @media(min-width: 1024px) {
+      width: 33%;
+    }
+    margin: 0 2.5rem 0 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
 .related-content__item {
-  margin: 0 1rem;
 }

@@ -180,7 +180,7 @@
                 arrows: false,
                 dots: true,
                 slidesToShow: 3,
-                centerMode: true,
+                // centerMode: true,
               }
             },
             {
@@ -191,23 +191,30 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 centerMode: true,
-                centerPadding: '36px',
+                // centerPadding: '36px',
               }
             }
           ]
         });
 
-        $('.related-content__carousel').slick({
-          infinite: true,
+        var related_content__settings = {
+          arrows: false,
+          dots: true,
           slidesToShow: 3,
           slidesToScroll: 3,
+          infinite: true,
           responsive: [
             {
-              breakpoint: 1025,
-              settings: "noslick"
+              breakpoint: 480,
+              settings:  {
+                  arrows: false,
+                  dots: true,
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                }
             },
             {
-              breakpoint: 769,
+              breakpoint: 768,
               settings: {
                 infinite: true,
                 arrows: false,
@@ -217,17 +224,24 @@
               }
             },
             {
-              breakpoint: 481,
-              settings: {
-                infinite: true,
-                arrows: false,
-                dots: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              }
+              breakpoint: 1024,
+              settings: "noslick"
             }
           ]
+        };
+
+        if ($(window).width() < 1024) {
+          $('.related-content__carousel').slick(related_content__settings);
+        }
+
+        $(window).resize(function() {
+          if($(window).width() >= 1024) {
+            $('.related-content__carousel').unslick();
+          } else if ($(window).width() < 1024) {
+            $('.related-content__carousel').slick(related_content__settings);
+          }
         });
+
       }
     },
     // About us page, note the change from about-us to about_us.

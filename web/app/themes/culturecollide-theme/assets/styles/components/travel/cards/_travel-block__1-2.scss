@@ -14,6 +14,7 @@ $travel__border__color:  $white;
     height: 100%;
     width: 100%;
     object-fit: cover;
+    @extend .image--filter_four_layer-blend;
   }
   &.travel_1-2 {
     position: relative;
@@ -33,12 +34,8 @@ $travel__border__color:  $white;
       }
     }
     .travel__filter {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      background: rgba($travel__background, .2);
+      @extend .image--filter;
+      @extend .image--filter_position-absolute_top_left;
       -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 11%, 6% 11%, 6% 100%, 0% 100%);
       clip-path: polygon(0% 0%, 100% 0%, 100% 11%, 6% 11%, 6% 100%, 0% 100%);
     }

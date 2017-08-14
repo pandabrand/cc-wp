@@ -56,7 +56,7 @@
     "php": ">=5.6",
     "composer/installers": "~1.2.0",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.8.0",
+    "johnpbloch/wordpress": "~4.8.0",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "elliotcondon/advanced-custom-fields-pro":"*",
@@ -67,11 +67,11 @@
     "wpackagist-plugin/regenerate-thumbnails": "*",
     "pandabrand/cc-plugin":"dev-master",
     "yoast/wordpress-seo":"*",
-    "wpackagist-plugin/ninja-forms": "3.1.6",
-    "wpackagist-plugin/all-in-one-wp-migration": "6.53",
-    "wpackagist-plugin/adbutler": "1.13",
+    "wpackagist-plugin/ninja-forms": "~3.1.6",
+    "wpackagist-plugin/all-in-one-wp-migration": "~6.53",
+    "wpackagist-plugin/adbutler": "~1.13",
     "wpUXsolutions/enhanced-media-library-pro": "*",
-    "wpackagist-plugin/quick-featured-images": "13.2"
+    "wpackagist-plugin/quick-featured-images": "~13.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

@@ -14,8 +14,8 @@
       </div>
     </div>
   </div>
-  <div class="feature__category-line"></div>
   <div class="feature__filter"></div>
+  <div class="feature__category-line"></div>
   <div class="feature__body">
     <div class="feature__copy">
       <div class="feature__title">

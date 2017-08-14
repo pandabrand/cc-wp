@@ -16,7 +16,8 @@
   $args = array(
     "post_type" => "city",
     "numberposts" => "4",
-    "order" => "rand"
+    "orderby" => "rand",
+    "order" => "asc"
   );
   $city_guides = get_posts($args);
   if( !empty ( $city_guides ) ):

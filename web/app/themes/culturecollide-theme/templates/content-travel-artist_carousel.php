@@ -16,7 +16,8 @@
   $args = array(
     "post_type" => "artist",
     "numberposts" => "4",
-    "order" => "rand"
+    "orderby" => "rand",
+    "order" => "asc"
   );
   $artist_guides = get_posts($args);
   if( !empty ( $artist_guides ) ):

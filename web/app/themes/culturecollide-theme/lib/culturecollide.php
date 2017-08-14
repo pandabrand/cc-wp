@@ -4,6 +4,7 @@ if( ! function_exists('add_classes_on_li') ):
     if($args->menu_id == 'header-menu'):
       $class_str = 'nav-item navigation__item navigation__item__header navbar_navigation__item__header';
       $class_str = ($item->post_title == 'search') ? $class_str . ' link_search-form_opener' : $class_str . '';
+      $class_str .= in_array('current-menu-item', $item->classes, true) ? ' current-menu-item' : '';
       $classes = array($class_str);
     endif;
     if($args->menu_id == 'footer-menu-one' || $args->menu_id == 'footer-menu-two'):
@@ -210,6 +211,10 @@ function cc_category_archives( $query ) {
     $query->set( 'posts_per_page', 12 );
   }
 
+  if ( is_post_type_archive() ) {
+    $query->set( 'orderby', 'title' );
+    $query->set( 'order', 'asc' );
+  }
 }
 
 function cc_archive_title() {
@@ -261,4 +266,12 @@ function debug_var($var) {
       $var_dump .= "Variable doesn't exist!";
    }
    return $var_dump;
+}
+
+function cc_background_image_filter() {
+  return 'linear-gradient(-180deg, rgb(0,0,0) 0%, rgba(0,0,0,0.00) 40%), linear-gradient(rgba(109,114,163,0.80) 0%, rgba(109,114,163,0.80) 100%),linear-gradient(rgba(55,23,34,0.10) 0%, rgba(55,23,34,0.10) 100%)';
+}
+
+function cc_travel_background_image_filter() {
+  return 'linear-gradient(-180deg, rgb(0,0,0) 0%, rgba(0,0,0,0.00) 30%),linear-gradient(rgba(109,114,163,0.80) 0%, rgba(109,114,163,0.80) 100%), linear-gradient(rgba(55,23,34,0.10) 0%, rgba(55,23,34,0.10) 100%)';
 }
