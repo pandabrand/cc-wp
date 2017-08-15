@@ -23,7 +23,7 @@ $card__border__color:  $white;
     border-right: $card__border__color solid 2px;
     position: absolute;
     height:89%;
-    top: 11%;
+    top: 3rem;
     left: 10%;
   }
   .card__body {
@@ -59,7 +59,7 @@ $card__border__color:  $white;
   .card__category-block {
     position: absolute;
     top: 11%;
-    left: 6%;
+    left: 1.2rem;
     height: 40px;
     display: flex;
     .card__category-block__category-image {
@@ -83,7 +83,7 @@ $card__border__color:  $white;
   }
   &.card__1-1 {
     .card__category-line {
-      left: 17%;
+      left: 3rem;
     }
   }
   &.card__2-1 {
@@ -91,7 +91,7 @@ $card__border__color:  $white;
       width: 100%;
     }
     .card__category-line {
-      left: 11%;
+      left: 3rem;
     }
   }
   &.card__3-1 {

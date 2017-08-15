@@ -1,6 +1,17 @@
 .travel {
   &.travel__navigation {
     width: 100%;
+    .travel__navigation__wrapper {
+      @media(max-width: 480px) {
+        flex-wrap: wrap;
+      }
+    }
+    .travel__navigation__dropdowns {
+      @media(max-width: 480px) {
+        min-height: 3rem;
+        padding: 0 1rem;
+      }
+    }
     &.sticky-header {
       position: sticky;
       z-index: 1;
@@ -85,6 +96,11 @@
         }
         &.full-width {
           position: static;
+          margin-left: 1.5rem;
+          margin-right: 1.5rem;
+          @media(max-width: 768px) {
+            margin: auto 0;
+          }
           .dropdown-menu {
             right: 0;
             background-color: $white;

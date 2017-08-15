@@ -18,12 +18,13 @@ $travel--background--color: $black;
     text-align: center;
     color: $travel--color;
     .travel__header__title {
-      font-size: 2rem;
-      font-weight: 600;
+      font-size: 2.25rem;
+      font-weight: 500;
       text-transform: uppercase;
+      letter-spacing: 4.5px;
     }
     .travel__header__subtitle {
-
+      letter-spacing: 2px;
     }
   }
   &.travel__detail__header {

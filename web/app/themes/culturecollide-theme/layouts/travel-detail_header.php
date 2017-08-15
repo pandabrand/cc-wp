@@ -11,7 +11,9 @@
       </div>
     </div>
     <div class="billboard__text travel__detail__text">
-      <?php the_content(); ?>
+      <div class="travel__detail__text-wrapper">
+        <?php the_content(); ?>
+      </div>
     </div>
     <div class="billboard__category-block">
       <div class="<?php echo get_post_icon_class(); ?> mr-2"></div>
