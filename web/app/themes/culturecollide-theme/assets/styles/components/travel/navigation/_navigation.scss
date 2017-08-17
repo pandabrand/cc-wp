@@ -15,12 +15,12 @@
     &.sticky-header {
       position: sticky;
       z-index: 1;
-      top: calc(-100% + 52px);
+      top: calc(-100% + 82px);
     }
     .row {
-      background-color: $white;
-      padding-top: 0;
-      padding-bottom: 0;
+      background-color: $color__background;
+      padding-top: 15px;
+      padding-bottom: 15px;
       .navbar {
         padding: 0;
       }
@@ -44,7 +44,7 @@
             font-family: FontAwesome;
             font-size: 2rem;
             margin-right: .5rem;
-            margin-left: .2rem;
+            margin-left: 1.2rem;
             content: "\f05b";
             vertical-align: middle;
           }
@@ -54,7 +54,7 @@
             font-family: FontAwesome;
             font-size: 2rem;
             margin-right: .5rem;
-            margin-left: .2rem;
+            margin-left: 1.2rem;
             content: "\f1de";
             vertical-align: middle;
           }
@@ -71,6 +71,8 @@
       }
       .dropdown {
         .dropdown-toggle {
+          font-size: .875rem;
+          letter-spacing: 1.75px;
           &:before {
             content:"";
             display: inline-block;
@@ -82,8 +84,8 @@
             height: auto;
             width: auto;
             font-family: FontAwesome;
-            margin-right: 2.5rem;
-            margin-left: .2rem;
+            margin-right: 1.5rem;
+            margin-left: 1.2rem;
             content: "\f078";
           }
         }
@@ -103,7 +105,7 @@
           }
           .dropdown-menu {
             right: 0;
-            background-color: $white;
+            background-color: $color__background;
             border-radius: 0;
             padding: 1rem;
             a {

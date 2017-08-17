@@ -6,7 +6,8 @@
     $args = array(
       'posts_per_page' => 3,
       'post_type' => ['post', 'city', 'artist'],
-      'orderby' => 'rand'
+      'orderby' => ['rand', 'title'],
+      'order' => 'ASC'
     );
     $related_query = new WP_Query($args);
     if($related_query->have_posts()):

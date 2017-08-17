@@ -5,7 +5,8 @@ else { $paged = 1; }
 $args = array(
 'posts_per_page' => 12,
 'post_type' => 'post',
-'orderby' => 'rand',
+'orderby' => ['rand', 'title'],
+'order' => 'ASC',
 'paged' => $paged
 );
 $more_query = new WP_Query($args);
