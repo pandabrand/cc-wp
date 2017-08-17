@@ -1,8 +1,11 @@
 .navbar-custom {
   background-color: $black;
+  padding: 0 1rem;
   /* change the brand and text color */
   .navbar-brand, .navbar-text {
       color: $white;
+      padding-top: 0;
+      padding-bottom: 0;
   }
   /* change the link color */
   .navbar-nav .nav-link {

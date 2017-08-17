@@ -6,7 +6,7 @@
         $post = $feature['feature'];
         setup_postdata( $post );
   ?>
-  <div class="col-xs-12 col-sm-6 mb-4">
+  <div class="col-xs-12 col-sm-6">
     <?php get_template_part('layouts/travel', 'feature-block__1-2'); ?>
   </div>
   <?php

@@ -66,6 +66,8 @@ $travel__border__color:  $white;
       }
       .travel__title {
         font-size: 1.5rem;
+        line-height: 23px;
+        letter-spacing: 3px;
         font-weight: bold;
         overflow: hidden;
         @media(max-width: 768px) {

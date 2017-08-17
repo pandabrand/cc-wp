@@ -85,7 +85,7 @@ a {
 .image--filter {
   min-width: 100%;
   min-height: 100%;
-  background: rgba($white, .2);
+  background: rgba($black, .2);
 }
 
 .image--filter_position-absolute_top_left {
@@ -96,4 +96,8 @@ a {
 
 .image--filter_four_layer-blend {
   background-blend-mode: normal, soft-light, normal, normal;
+}
+
+.fa {
+	font-size: 1rem;
 }
