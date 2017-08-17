@@ -457,7 +457,7 @@
      $.each(['.travel__detail__map__item'], function(i, classname) {
        var $elements = $(classname);
        var $v_context, $v_offset;
-       if($(window).width() < 767) {
+       if($(window).width() < 769) {
          $v_context = $(window)[0];
          $v_offset = 280;
        } else {
@@ -578,7 +578,7 @@
      $.each(['.travel__detail__map__item'], function(i, classname) {
        var $elements = $(classname);
        var $v_context, $v_offset;
-       if($(window).width() < 767) {
+       if($(window).width() < 769) {
          $v_context = $(window)[0];
          $v_offset = 280;
        } else {
