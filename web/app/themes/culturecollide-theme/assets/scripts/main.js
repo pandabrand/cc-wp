@@ -132,6 +132,15 @@
             $('#travel-navigate').collapse('show');
           }
         });
+
+        var infinite;
+        if( $('.editorial__block').length ) {
+          infinite = new Waypoint.Infinite({
+            element: $('.editorial__block')[0],
+            more: '.infinite-more-link',
+            items: '.col-xs-12.col-sm-4'
+          });
+        }
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

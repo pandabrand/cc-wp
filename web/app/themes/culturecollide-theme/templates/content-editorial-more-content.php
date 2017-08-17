@@ -1,8 +1,12 @@
 <?php
+if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
+elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
+else { $paged = 1; }
 $args = array(
 'posts_per_page' => 12,
 'post_type' => 'post',
-'orderby' => 'rand'
+'orderby' => 'rand',
+'paged' => $paged
 );
 $more_query = new WP_Query($args);
 if($more_query->have_posts()): $counter = 1; ?>
@@ -36,3 +40,12 @@ if($more_query->have_posts()): $counter = 1; ?>
 </div>
 <?php endif; ?>
 <?php wp_reset_query(); ?>
+<?php
+  global $wp;
+  $current_url = home_url( $wp->query_vars['pagename'] );
+?>
+<div class="row cc-row d-flex justify-content-center">
+    <?php if( $paged + 1 < 11 ): ?>
+      <a class="infinite-more-link button button--outline" href="<?php echo trailingslashit($current_url), $paged + 1; ?>">More</a>
+    <?php endif; ?>
+</div>

@@ -35,7 +35,8 @@
     "vendor.js": {
       "vendor": [
         "assets/scripts/jquery.waypoints.js",
-        "assets/scripts/sticky.js"
+        "assets/scripts/sticky.js",
+        "assets/scripts/infinite.js"
       ]
     },
     "cc-autocomplete.js": {
