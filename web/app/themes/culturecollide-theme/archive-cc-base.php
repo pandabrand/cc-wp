@@ -14,7 +14,7 @@
     <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
   <?php endwhile; ?>
 </div>
-<div class="row cc-row">
+<div class="row cc-row archive__navigation-row">
   <?php the_posts_navigation(
     array(
       "prev_text" => sprintf( __( 'More: %s' ), get_post_type() ),

@@ -20,3 +20,11 @@
     }
   }
 }
+
+.row {
+  &.cc-row {
+    &.archive__navigation-row {
+      padding: 0 2rem;
+    }
+  }
+}
