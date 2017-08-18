@@ -17,8 +17,8 @@
 <div class="row cc-row">
   <?php the_posts_navigation(
     array(
-      "prev_text" => sprintf( __( 'Previous: %s' ), get_post_type() ),
-      "next_text" => sprintf( __( 'Next: %s' ), get_post_type() ),
+      "prev_text" => sprintf( __( 'More: %s' ), get_post_type() ),
+      "next_text" => sprintf( __( 'Previous: %s' ), get_post_type() ),
       'screen_reader_text' => sprintf( __( '%s Navigation' ), get_post_type() )
     )
   ); ?>

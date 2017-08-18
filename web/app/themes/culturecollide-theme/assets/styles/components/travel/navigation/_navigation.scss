@@ -43,11 +43,12 @@
           &:before {
             font-family: FontAwesome;
             font-size: 2rem;
-            margin-right: .5rem;
+            margin-right: .75rem;
             margin-left: 1.2rem;
             content: "\f05b";
             vertical-align: middle;
-          }
+            transform: rotate(-45deg);
+            display: inline-block;          }
         }
         &.travel__navigation__button--browse {
           &:before {
@@ -68,6 +69,7 @@
         padding: 0;
         font-weight: 500;
         font-size: .875rem;
+        letter-spacing: 1.75px;
       }
       .dropdown {
         .dropdown-toggle {
