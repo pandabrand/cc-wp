@@ -48,7 +48,7 @@
                 <?php wp_reset_query(); ?>
                 <div class="card__links mt-auto d-flex flex-row justify-content-start">
                   <div class="card__link">
-                    <a href="<?php the_permalink($location->ID); ?>" rel="external" target="_blank"><i class="fa fa-window-maximize"></i> website</a>
+                    <a href="<?php echo get_field('website', $location->ID); ?>" rel="external" target="_blank"><i class="fa fa-window-maximize"></i> website</a>
                   </div>
                   <div class="card__link">
                     <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo $address['lat'],',',$address['lng']; ?>" rel="external" target="_blank">

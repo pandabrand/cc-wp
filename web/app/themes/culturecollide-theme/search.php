@@ -1,4 +1,4 @@
-<?php get_template_part('templates/page', 'header'); ?>
+<?php get_template_part('templates/page', 'search-header'); ?>
 <div class="container-fluid">
   <div class="row cc-row justify-content-center search-page__results">
     <div class="col-10">

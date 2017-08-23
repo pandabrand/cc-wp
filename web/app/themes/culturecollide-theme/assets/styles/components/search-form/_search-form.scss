@@ -16,9 +16,10 @@ $search-form__color_hover: $gray;
   background-color: $white;
   .search-form__input {
     border-radius: 0;
-    padding: 1rem 5rem;
+    padding: .5rem 3rem;
     text-align: right;
     border: none;
+    color: $dark-gray;
   }
   .search-form__button {
     margin: .5rem;
@@ -67,12 +68,18 @@ $search-form__color_hover: $gray;
 }
 
 
-.search-page__results {
-  background: $white;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  @media(max-width: 768px) {
-    margin-top: 1rem;
-    padding-top: 1rem;
+.cc-row {
+  &.search-page__results {
+    background: $color__background;
+    // margin-top: 2rem;
+    padding-top: 2rem;
+    @media(max-width: 768px) {
+      // margin-top: 1rem;
+      padding-top: 1rem;
+    }
   }
+}
+
+.search-results-header {
+  background-color: $color__background;
 }

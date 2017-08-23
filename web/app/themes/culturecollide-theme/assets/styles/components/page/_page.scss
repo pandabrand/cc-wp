@@ -25,6 +25,13 @@
   &.cc-row {
     &.archive__navigation-row {
       padding: 0 2rem;
+      justify-content: space-between;
+      .prev, .next {
+        text-transform: uppercase;
+      }
+      .current {
+        font-weight: bold;
+      }
     }
   }
 }

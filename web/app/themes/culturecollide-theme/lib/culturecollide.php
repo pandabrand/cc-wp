@@ -52,8 +52,10 @@ function get_category_type_title($post = null) {
   }
 
   $category_type;
-  if($post->post_type == 'artist' || $post->post_type == 'city') {
+  if( $post->post_type == 'city' ) {
     $category_type = 'travel guide';
+  } elseif ( $post->post_type == 'artist' ) {
+    $category_type = 'artist guide';
   } elseif ($post->post_type == 'location') {
     $location_terms = get_the_terms( $post, 'location_types' );
     $category_type = (!empty($location_terms)) ? $location_terms[0]->name : '';
@@ -220,17 +222,19 @@ function cc_category_archives( $query ) {
 function cc_archive_title() {
   $title = '';
     if ( is_category() ) {
-        $title = single_cat_title( '', false );
+      $title = single_cat_title( '', false );
     } elseif ( is_tag() ) {
-        $title = single_tag_title( '', false );
+      $title = single_tag_title( '', false );
     } elseif ( is_author() ) {
-        $title = '<span class="vcard">' . get_the_author() . '</span>';
+      $title = '<span class="vcard">' . get_the_author() . '</span>';
     } elseif ( is_post_type_archive() ) {
-        $title = post_type_archive_title( '', false );
+      $title = post_type_archive_title( '', false );
     } elseif ( is_tax() ) {
-        $title = single_term_title( '', false );
+      $title = single_term_title( '', false );
     } elseif ( is_page( ['terms-conditions','privacy-policy'] ) ) {
-        $title = get_the_title();
+      $title = get_the_title();
+    } elseif ( is_search() ) {
+      $title = 'Search';
     }
 
     return $title;

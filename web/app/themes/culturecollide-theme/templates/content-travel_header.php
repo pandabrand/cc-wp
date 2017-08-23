@@ -1,10 +1,15 @@
 <div class="row cc-row travel travel__header-color">
   <div class="col-12 travel travel__header">
+    <?php
+      $travel_page = get_page_by_path( 'travel' );
+      $travel_title = get_the_title( $travel_page );
+      $travel_sub_title = wp_strip_all_tags( get_the_content( $travel_page ), true );
+    ?>
     <div class="travel__header__title">
-      travel with purpose
+      <?= $travel_title; ?>
     </div>
     <div class="travel__header__subtitle">
-      Take a tour with today's top bands, artists, and tastemakers
+      <?= $travel_sub_title; ?>
     </div>
   </div>
   <div class="col-12 travel travel__navigation">

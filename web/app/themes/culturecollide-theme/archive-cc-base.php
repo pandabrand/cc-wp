@@ -15,10 +15,11 @@
   <?php endwhile; ?>
 </div>
 <div class="row cc-row archive__navigation-row">
-  <?php the_posts_navigation(
+  <?php echo paginate_links(
     array(
-      "prev_text" => sprintf( __( 'More: %s' ), get_post_type() ),
-      "next_text" => sprintf( __( 'Previous: %s' ), get_post_type() ),
+      'prev_text'          => sprintf( __( '<< %s' ), get_post_type() ),
+      'next_text'          => sprintf( __( '%s >>' ), get_post_type() ),
+      'show_all'           => true,
       'screen_reader_text' => sprintf( __( '%s Navigation' ), get_post_type() )
     )
   ); ?>
