@@ -36,7 +36,7 @@ h3.about-h3 {
   @media(max-width: 786px) {
     flex-direction: column;
     margin-bottom: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
   &.left {
     margin-left: -7.5rem;
@@ -46,7 +46,14 @@ h3.about-h3 {
     .about-image {
       margin-right: 2.5rem;
       @media(max-width: 786px) {
-        margin-right: auto;
+        padding-right: 0;
+        margin-right: 0;
+      }
+      img {
+        @media(max-width: 768px) {
+          max-width: 100%;
+          height: auto;
+        }
       }
     }
   }
@@ -54,11 +61,19 @@ h3.about-h3 {
     margin-right: -7.5rem;
     @media(max-width: 786px) {
       margin-right: auto;
+      flex-direction: column-reverse !important;
     }
     .about-image {
       margin-left: 2.5rem;
       @media(max-width: 786px) {
-        margin-left: auto;
+        padding: 0;
+        margin-left: 0;
+      }
+      img {
+        @media(max-width: 768px) {
+          max-width: 100%;
+          height: auto;
+        }
       }
     }
   }
