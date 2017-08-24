@@ -30,19 +30,36 @@ h3.about-h3 {
 
 .about-section {
   @extend .d-flex;
-  @extend .flex-row;
+  flex-direction: row;
   margin-bottom: 3rem;
   margin-top: 3rem;
+  @media(max-width: 786px) {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
   &.left {
     margin-left: -7.5rem;
+    @media(max-width: 786px) {
+      margin-left: auto;
+    }
     .about-image {
       margin-right: 2.5rem;
+      @media(max-width: 786px) {
+        margin-right: auto;
+      }
     }
   }
   &.right {
     margin-right: -7.5rem;
+    @media(max-width: 786px) {
+      margin-right: auto;
+    }
     .about-image {
       margin-left: 2.5rem;
+      @media(max-width: 786px) {
+        margin-left: auto;
+      }
     }
   }
   .about-copy {
