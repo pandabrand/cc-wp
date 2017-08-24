@@ -10,7 +10,7 @@
         <div class="editorial__detail__feature_media">
         </div>
         <div class="row">
-          <div class="editorial__detail__article__copy col-8 offset-2">
+          <div class="editorial__detail__article__copy col-10 offset-1">
             <?php the_content(); ?>
           </div>
         </div>

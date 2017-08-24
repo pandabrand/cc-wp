@@ -1,5 +1,5 @@
 .about_call_out {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 500;
   letter-spacing: 4.5px;
   @media(max-width: 768px) {
@@ -8,16 +8,47 @@
     letter-spacing: 2.5px;
   }
   p {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 500;
     letter-spacing: 4.5px;
-    line-height: 1rem;
+    line-height: 3rem !important;
     @media(max-width: 768px) {
       font-size: 1rem;
       font-weight: 500;
       letter-spacing: 2.5px;
       line-height: 1rem;
     }
+  }
+}
+
+h3.about-h3 {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+  margin-bottom: 1.1875rem;
+}
+
+.about-section {
+  @extend .d-flex;
+  @extend .flex-row;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  &.left {
+    margin-left: -7.5rem;
+    .about-image {
+      margin-right: 2.5rem;
+    }
+  }
+  &.right {
+    margin-right: -7.5rem;
+    .about-image {
+      margin-left: 2.5rem;
+    }
+  }
+  .about-copy {
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .justify-content-between;
   }
 }
 
