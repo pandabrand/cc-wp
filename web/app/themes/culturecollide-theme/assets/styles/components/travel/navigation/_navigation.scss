@@ -119,10 +119,17 @@
               }
             }
             .dropdown-selections {
-              height: 21rem;
+              height: 28rem;
               columns: 3;
               column-fill: auto;
               overflow: hidden;
+              .dropdown-item {
+                font-size: .875rem;
+                letter-spacing: 1.75px;
+                padding-bottom: .75rem;
+                page-break-inside: avoid;
+                break-inside: avoid;
+              }
             }
           }
           .menu-feature {
@@ -132,4 +139,8 @@
       }
     }
   }
+}
+
+.ui-menu-item {
+  padding: .5rem 0;
 }

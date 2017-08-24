@@ -139,6 +139,11 @@
               <a href="#" rel="nofollow" class="btn btn-secondary dropdown-toggle" id="categoriesMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
               <div class="dropdown-menu" aria-labelledby="categoriesMenuLink">
                 <div class="row">
+                  <div class="col-12 dropdown-search">
+                    <div class="form-group">
+                      <input class="cc-autocomplete form-control" placeholder="search for an categories" data-post-type="location" />
+                    </div>
+                  </div>
                   <div class="col-xs-12 col-sm-6 dropdown-selections">
                     <?php
                       $args = array(

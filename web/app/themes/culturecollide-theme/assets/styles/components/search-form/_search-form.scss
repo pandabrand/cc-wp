@@ -83,3 +83,9 @@ $search-form__color_hover: $gray;
 .search-results-header {
   background-color: $color__background;
 }
+
+.dropdown-search {
+  .form-control {
+    color: $dark-gray;
+  }
+}
