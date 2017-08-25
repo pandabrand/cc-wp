@@ -13,8 +13,8 @@
               <img src="<?php echo the_post_thumbnail_url('large-feature'); ?>" class="img-fluid" />
             <?php endif; ?>
           </div>
-          <div class="row">
-            <div class="editorial__detail__article__copy col-8 offset-2">
+          <div class="row justify-content-center">
+            <div class="editorial__detail__article__copy col-9">
               <?php the_content(); ?>
             </div>
           </div>

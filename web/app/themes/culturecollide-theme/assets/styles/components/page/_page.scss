@@ -39,7 +39,7 @@ h3.about-h3 {
     margin-top: 2rem;
   }
   &.left {
-    margin-left: -7.5rem;
+    margin-left: -10rem;
     @media(max-width: 786px) {
       margin-left: auto;
     }
@@ -58,7 +58,7 @@ h3.about-h3 {
     }
   }
   &.right {
-    margin-right: -7.5rem;
+    margin-right: -10rem;
     @media(max-width: 786px) {
       margin-right: auto;
       flex-direction: column-reverse !important;

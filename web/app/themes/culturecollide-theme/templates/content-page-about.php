@@ -9,8 +9,8 @@
       <article <?php post_class(); ?>>
         <div class="editorial__detail__feature_media">
         </div>
-        <div class="row">
-          <div class="editorial__detail__article__copy col-10 offset-1">
+        <div class="row justify-content-center">
+          <div class="editorial__detail__article__copy col-9">
             <?php the_content(); ?>
           </div>
         </div>
