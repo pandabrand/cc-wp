@@ -170,7 +170,7 @@
     position: absolute;
     min-height: 92%;
     top: 8%;
-    left: 6.85rem;
+    left: 6.3rem;
     @media(max-width: 768px) {
       left: 3.5rem;
     }
@@ -182,7 +182,7 @@
     }
   }
   .billboard__body {
-    margin: 6rem;
+    margin: 4.5rem;
     margin-top: -35rem;
     @media(max-width: 786px) {
       margin: 2rem;
@@ -260,7 +260,7 @@
   .billboard__category-block {
     position: absolute;
     top: 8%;
-    left: 5rem;
+    left: 4.5rem;
     display: flex;
     @media(max-width: 786px) {
       left: 1.75rem;

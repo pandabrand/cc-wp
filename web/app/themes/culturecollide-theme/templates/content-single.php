@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="row cc-row justify-content-center editorial__detail__article">
-    <div class="col-sm-12 col-md-11">
+    <div class="col-sm-12 col-md-10">
       <main>
         <article <?php post_class(); ?>>
           <div class="editorial__detail__feature_media">
