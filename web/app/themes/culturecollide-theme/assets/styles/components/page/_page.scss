@@ -31,7 +31,7 @@ h3.about-h3 {
 .about-section {
   @extend .d-flex;
   flex-direction: row;
-  margin-bottom: 3rem;
+  margin-bottom: 5.125rem;
   margin-top: 3rem;
   @media(max-width: 786px) {
     flex-direction: column;
@@ -40,6 +40,7 @@ h3.about-h3 {
   }
   &.left {
     margin-left: -10rem;
+    margin-right: .3rem;
     @media(max-width: 786px) {
       margin-left: auto;
     }
@@ -59,6 +60,7 @@ h3.about-h3 {
   }
   &.right {
     margin-right: -10rem;
+    margin-left: -3rem;
     @media(max-width: 786px) {
       margin-right: auto;
       flex-direction: column-reverse !important;
@@ -80,7 +82,8 @@ h3.about-h3 {
   .about-copy {
     @extend .d-flex;
     @extend .flex-column;
-    @extend .justify-content-between;
+    // @extend .justify-content-between;
+    justify-content: space-evenly;
   }
 }
 
