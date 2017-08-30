@@ -39,7 +39,9 @@
                     <?php
                       $args = array(
                         "post_type" => "city",
-                        "numberposts" => "25"
+                        "numberposts" => "25",
+                        "orderby" => "title",
+                        "order" => "ASC"
                       );
                       $cities = get_posts( $args );
                       if( !empty( $cities ) ):
