@@ -1,9 +1,9 @@
 <div class="row cc-row">
   <div class="travel travel__detail__header billboard">
-    <div class="billboard__image" style="background-image:url('<?php echo the_post_thumbnail_url('large-feature'); ?>')"></div>
+    <div class="billboard__image" style="background-image:<?php echo cc_background_image_filter(); ?>, url('<?php echo the_post_thumbnail_url('editorial-feature'); ?>')"></div>
     <div class="billboard__category-line travel__detail__category-line"></div>
     <div class="billboard__filter"></div>
-    <div class="billboard__body travel__detail__body pl-2">
+    <div class="billboard__body travel__detail__body pl-4">
       <div class="billboard__copy">
         <div class="billboard__title h1 ml-3">
           <?php echo get_card_title(); ?>
