@@ -80,9 +80,14 @@ function get_category_type_subject($post = null) {
   }
 
   $subject = '';
-  if($post->post_type == 'artist' || $post->post_type == 'city') {
+  if($post->post_type == 'city') {
     $subject = $post->post_title;
-  } else {
+  }
+  elseif ($post->post_type == 'artist') {
+    $artist_city = get_field('artist_city', $post->ID)[0];
+    $subject = $artist_city->post_title;
+  }
+  else {
     $tag_terms = wp_get_post_terms($post->ID);
     if(!empty($tag_terms)) {
       $first_term = $tag_terms[0];
