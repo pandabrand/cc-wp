@@ -1,6 +1,6 @@
 <div class="editorial__detail__header <?php add_billboard_class(); ?>">
-  <?php $image = get_field('background_image'); if($image): $size = 'editorial-feature'; ?>
-    <div class="billboard__image" style="background-image:<?php echo cc_background_image_filter(); ?>, url('<?php echo $image["sizes"]["editorial-feature"]; ?>')"></div>
+  <?php $image = get_field('background_image'); if(!is_array($image)){} if($image): $size = 'editorial-feature'; ?>
+    <div class="billboard__image" style="background-image:<?php echo cc_background_image_filter(); ?>, url('<?php echo is_array($image) ? $image["sizes"]["editorial-feature"] : wp_get_attachment_image_url($image, $size); ?>')"></div>
   <?php else: ?>
     <div class="billboard__image" style="background-image:<?php echo cc_background_image_filter(); ?>, url('<?php echo the_post_thumbnail_url('editorial-feature'); ?>')"></div>  <?php endif; ?>
   <div class="billboard__category-line"></div>

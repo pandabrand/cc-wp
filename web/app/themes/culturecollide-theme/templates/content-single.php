@@ -8,15 +8,15 @@
     <div class="col-sm-12 col-md-10">
       <main>
         <article <?php post_class(); ?>>
-          <div class="editorial__detail__feature_media">
-            <?php if(get_field('background_image')): ?>
-              <img src="<?php echo the_post_thumbnail_url('large-feature'); ?>" class="img-fluid" />
-            <?php endif; ?>
-          </div>
           <div class="row justify-content-center">
             <div class="editorial__detail__article__copy col-9">
               <?php the_content(); ?>
             </div>
+          </div>
+          <div class="editorial__detail__feature_media">
+            <?php if(get_field('background_image')): ?>
+              <img src="<?php echo the_post_thumbnail_url('large-feature'); ?>" class="img-fluid" />
+            <?php endif; ?>
           </div>
         </article>
       </main>
