@@ -53,13 +53,13 @@
         </div>
       </div>
       <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu([
-          'theme_location' => 'primary_navigation',
-          'menu_class' => 'navbar-nav justify-content-end pull-right navigation__list navigation__list__header navbar__navigation__list__header',
-          'menu_id' => 'header-menu'
-        ]);
-      endif;
+        if (has_nav_menu('primary_navigation')):
+          wp_nav_menu([
+            'theme_location' => 'primary_navigation',
+            'menu_class' => 'navbar-nav justify-content-end pull-right navigation__list navigation__list__header navbar__navigation__list__header',
+            'menu_id' => 'header-menu'
+          ]);
+        endif;
       ?>
     </div>
   </nav>

@@ -1,4 +1,8 @@
-<div class="row travel__detail__map__item <?php $location->ID; ?>" id="<?php echo $location->ID; ?>">
+<?php
+  $location_city_id = get_field('location_city', $location->ID);
+  $location_city_object = get_post($location_city_id[0]);
+?>
+<div class="row travel__detail__map__item <?php $location->ID; ?>" id="<?php echo $location->ID; ?>" data-city="<?php echo $location_city_object->post_name; ?>" data-location-name="<?php echo $location->post_name; ?>">
   <div class="col-12">
     <div class="card card__2-1">
         <?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $location->ID ), 'large-feature' ); ?>

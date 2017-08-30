@@ -14,7 +14,13 @@
     <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
   <?php endwhile; ?>
 </div>
-<div class="row cc-row archive__navigation-row">
+<?php
+  $paginate_class = ' space-around';
+  if(get_post_type() == 'artist') {
+    $paginate_class = ' space-between';
+  }
+?>
+<div class="row cc-row archive__navigation-row<?php echo $paginate_class; ?>">
   <?php echo paginate_links(
     array(
       'prev_text'          => sprintf( __( '<< %s' ), get_post_type() ),

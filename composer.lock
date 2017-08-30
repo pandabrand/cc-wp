@@ -337,7 +337,7 @@
                 "source": "https://github.com/pandabrand/cc-plugin/tree/master",
                 "issues": "https://github.com/pandabrand/cc-plugin/issues"
             },
-            "time": "2017-08-09T21:34:38+00:00"
+            "time": "2017-08-30T00:04:26+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -593,15 +593,15 @@
         },
         {
             "name": "wpackagist-plugin/quick-featured-images",
-            "version": "13.2",
+            "version": "13.2.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/quick-featured-images/",
-                "reference": "tags/13.2"
+                "reference": "tags/13.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/quick-featured-images.13.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/quick-featured-images.13.2.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -740,16 +740,16 @@
         },
         {
             "name": "yoast/license-manager",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast/License-Manager.git",
-                "reference": "bbd295b63a693d58ecb501b59b60a506a74aa225"
+                "reference": "fbacabb06d788912fead4f32d0d1d8b9a2d883c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast/License-Manager/zipball/bbd295b63a693d58ecb501b59b60a506a74aa225",
-                "reference": "bbd295b63a693d58ecb501b59b60a506a74aa225",
+                "url": "https://api.github.com/repos/Yoast/License-Manager/zipball/fbacabb06d788912fead4f32d0d1d8b9a2d883c9",
+                "reference": "fbacabb06d788912fead4f32d0d1d8b9a2d883c9",
                 "shasum": ""
             },
             "type": "library",
@@ -781,7 +781,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2017-02-28T09:22:38+00:00"
+            "time": "2017-08-22T07:59:16+00:00"
         },
         {
             "name": "yoast/whip",
@@ -827,16 +827,16 @@
         },
         {
             "name": "yoast/wordpress-seo",
-            "version": "5.2",
+            "version": "5.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast/wordpress-seo.git",
-                "reference": "496f6584cf246cd20be9168a5a55330a115bb2fe"
+                "reference": "c1c648299afa300f316ad51f5301b58417e04d4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast/wordpress-seo/zipball/496f6584cf246cd20be9168a5a55330a115bb2fe",
-                "reference": "496f6584cf246cd20be9168a5a55330a115bb2fe",
+                "url": "https://api.github.com/repos/Yoast/wordpress-seo/zipball/c1c648299afa300f316ad51f5301b58417e04d4b",
+                "reference": "c1c648299afa300f316ad51f5301b58417e04d4b",
                 "shasum": ""
             },
             "require": {
@@ -844,7 +844,7 @@
                 "xrstf/composer-php52": "^1.0.20",
                 "yoast/api-libs": "^2.0",
                 "yoast/i18n-module": "^2.0.1",
-                "yoast/license-manager": "^1.4.0",
+                "yoast/license-manager": "1.6.0",
                 "yoast/whip": "^1.1.0"
             },
             "require-dev": {
@@ -878,7 +878,7 @@
                 "seo",
                 "wordpress"
             ],
-            "time": "2017-08-08T08:45:50+00:00"
+            "time": "2017-08-28T11:33:47+00:00"
         }
     ],
     "packages-dev": [

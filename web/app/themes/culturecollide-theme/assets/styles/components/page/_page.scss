@@ -90,8 +90,14 @@ h3.about-h3 {
 .row {
   &.cc-row {
     &.archive__navigation-row {
+      &.space-between {
+        justify-content: space-between;
+      }
+      &.space-around {
+        justify-content: space-around;
+      }
       padding: 0 2rem;
-      justify-content: space-between;
+      // justify-content: space-between;
       .prev, .next {
         text-transform: uppercase;
       }

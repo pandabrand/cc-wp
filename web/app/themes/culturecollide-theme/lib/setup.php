@@ -38,6 +38,7 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
+  add_image_size( 'editorial-feature', 1200, 750 );
   add_image_size( 'large-feature', 660, 720 );
   add_image_size( 'city-guide_thumbnail', 390, 213 );
   add_image_size( 'ad-space-image', 233, 428);

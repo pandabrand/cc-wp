@@ -2,8 +2,8 @@
   <div class="col-12 travel travel__header">
     <?php
       $travel_page = get_page_by_path( 'travel' );
-      $travel_title = get_the_title( $travel_page );
-      $travel_sub_title = wp_strip_all_tags( get_the_content( $travel_page ), true );
+      $travel_title = $travel_page->post_title;
+      $travel_sub_title = wp_strip_all_tags( $travel_page->post_content, true );
     ?>
     <div class="travel__header__title">
       <?= $travel_title; ?>
@@ -141,6 +141,20 @@
                 <div class="row">
                   <div class="col-12 dropdown-search">
                     <div class="form-group">
+                      <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                        <?php
+                          $dcargs = array(
+                            "post_type" => "city",
+                            "numberposts" => "-1"
+                          );
+                          $city_dropdowns = get_posts( $dcargs );
+                          // write_log($city_dropdowns);
+                        ?>
+                        <option selected>All Cities...</option>
+                        <?php foreach($city_dropdowns as $city_option): ?>
+                          <option value="<?php echo $city_option->post_name; ?>"><?php echo $city_option->post_title; ?></option>
+                        <?php endforeach; ?>
+                      </select>
                       <input class="cc-autocomplete form-control" placeholder="search for an categories" data-post-type="location" />
                     </div>
                   </div>
@@ -152,12 +166,13 @@
                         "orderby" => "name",
                         "order" => "ASC"
                       );
+                      $active_term = get_queried_object();
                       $locations_cats = get_terms($args);
                       if(!empty($locations_cats)):
                         foreach($locations_cats as $term):
                           $term_link = get_term_link( $term );
                     ?>
-                      <a href="<?php echo esc_url( $term_link ) ?>" rel="nofollow" class="dropdown-item"><?php echo $term->name ?></a>
+                      <a href="<?php echo esc_url( $term_link ); ?>" rel="nofollow" class="dropdown-item<?php echo $active_term->term_id == $term->term_id ? ' active' : ''; ?>"><?php echo $term->name ?></a>
                         <?php endforeach; ?>
                       <?php endif; ?>
                     </div>

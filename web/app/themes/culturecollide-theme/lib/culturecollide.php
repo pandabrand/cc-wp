@@ -1,9 +1,10 @@
 <?php
 if( ! function_exists('add_classes_on_li') ):
   function add_classes_on_li($classes, $item, $args) {
+    // write_log($classes);
     if($args->menu_id == 'header-menu'):
       $class_str = 'nav-item navigation__item navigation__item__header navbar_navigation__item__header';
-      $class_str = ($item->post_title == 'search') ? $class_str . ' link_search-form_opener' : $class_str . '';
+      $class_str .= ($item->post_title == 'search') ? ' link_search-form_opener' : '';
       $class_str .= in_array('current-menu-item', $item->classes, true) ? ' current-menu-item' : '';
       $classes = array($class_str);
     endif;
@@ -204,6 +205,19 @@ add_filter( 'tiny_mce_before_init', 'cc_mce_before_init_insert_formats' );
 add_action( 'pre_get_posts', 'cc_category_archives' );
 function cc_category_archives( $query ) {
   if ( is_tax( 'location_types') )  {
+    // $location_city_query = get_query_var('location-city');
+    // $location_city_object = get_page_by_path($location_city_query, OBJECT, 'city');
+    // write_log($location_city_object->ID);
+    // if($location_city_object) {
+    //   $meta_query = array(
+		// 		array(
+		// 			'key' => 'location_city', // name of custom field
+		// 			'value' => '"' . $location_city_object->ID . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
+		// 			'compare' => 'LIKE'
+		// 		)
+		// 	);
+    //   $query->set('meta_query', $meta_query);
+    // }
     $query->set( 'posts_per_page', -1 );
     $query->set( 'nopaging', true );
     $query->set( 'orderby', 'meta_value' );
@@ -271,6 +285,7 @@ function debug_var($var) {
    }
    return $var_dump;
 }
+// (.?.+?)(?:/([0-9]+))?/?$	pagename=$matches[1]&page=$matches[2]
 
 function cc_background_image_filter() {
   return 'linear-gradient(-180deg, rgb(0,0,0) 0%, rgba(0,0,0,0.00) 40%), linear-gradient(rgba(109,114,163,0.80) 0%, rgba(109,114,163,0.80) 100%),linear-gradient(rgba(55,23,34,0.10) 0%, rgba(55,23,34,0.10) 100%)';
@@ -279,3 +294,9 @@ function cc_background_image_filter() {
 function cc_travel_background_image_filter() {
   return 'linear-gradient(-180deg, rgb(0,0,0) 0%, rgba(0,0,0,0.00) 30%),linear-gradient(rgba(109,114,163,0.80) 0%, rgba(109,114,163,0.80) 100%), linear-gradient(rgba(55,23,34,0.10) 0%, rgba(55,23,34,0.10) 100%)';
 }
+
+function cc_prefix_register_query_var( $vars ) {
+  $vars[] = 'location-city';
+  return $vars;
+}
+add_filter( 'query_vars', 'cc_prefix_register_query_var' );
