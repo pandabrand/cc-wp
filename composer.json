@@ -71,7 +71,8 @@
     "wpackagist-plugin/all-in-one-wp-migration": "~6.53",
     "wpackagist-plugin/adbutler": "~1.13",
     "wpUXsolutions/enhanced-media-library-pro": "*",
-    "wpackagist-plugin/quick-featured-images": "~13.2"
+    "wpackagist-plugin/quick-featured-images": "~13.2",
+    "wpackagist-plugin/query-monitor": "2.13.4"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

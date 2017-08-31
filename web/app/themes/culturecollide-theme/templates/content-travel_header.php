@@ -150,7 +150,6 @@
                             "numberposts" => "-1"
                           );
                           $city_dropdowns = get_posts( $dcargs );
-                          // write_log($city_dropdowns);
                         ?>
                         <option selected>All Cities...</option>
                         <?php foreach($city_dropdowns as $city_option): ?>
