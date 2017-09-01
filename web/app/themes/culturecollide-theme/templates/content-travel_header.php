@@ -8,7 +8,7 @@
     <div class="travel__header__title">
       <?= $travel_title; ?>
     </div>
-    <div class="travel__header__subtitle">
+    <div class="travel__header__subtitle mx-4">
       <?= $travel_sub_title; ?>
     </div>
   </div>

@@ -16,6 +16,12 @@
     object-fit: cover;
     background-size: cover;
   }
+  .billboard__category-line {
+    left: 5.8rem;
+  }
+  .billboard__category-block {
+    left: 4rem;
+  }
 }
 
 .editorial__detail__article {
@@ -43,14 +49,13 @@
       }
     }
     .editorial__detail__feature_media {
-      padding: 2rem;
       img {
         width: 100%;
       }
     }
     .editorial__detail__article__copy {
-      margin-top: 3rem;
-      // margin-bottom: 6.75rem;
+      margin-top: 6rem;
+      margin-bottom: 6rem;
     }
     .editorial__detail__article__lede {
       font-size: 1.5rem;
