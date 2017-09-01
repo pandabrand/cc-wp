@@ -210,24 +210,22 @@ add_filter( 'tiny_mce_before_init', 'cc_mce_before_init_insert_formats' );
 add_action( 'pre_get_posts', 'cc_category_archives' );
 function cc_category_archives( $query ) {
   if ( !is_admin() && $query->is_main_query() && is_tax( 'location_types') )  {
-    // $location_city_query = get_query_var('location-city');
-    // $location_city_object = get_page_by_path($location_city_query, OBJECT, 'city');
-    // write_log($location_city_object->ID);
-    // if($location_city_object) {
-    //   $meta_query = array(
-		// 		array(
-		// 			'key' => 'location_city', // name of custom field
-		// 			'value' => '"' . $location_city_object->ID . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
-		// 			'compare' => 'LIKE'
-		// 		)
-		// 	);
-    //   $query->set('meta_query', $meta_query);
-    // }
     $query->set( 'posts_per_page', -1 );
     $query->set( 'nopaging', true );
     $query->set( 'orderby', 'meta_value' );
     $query->set( 'meta_key', 'location_city');
     $query->set( 'order', 'asc' );
+    $cat_city = get_query_var('cat_city');
+    if($cat_city) {
+      $meta_query = array(
+        array(
+          'key' => 'location_city',
+          'value' => '"'.$cat_city.'"',
+          'compare' => 'LIKE'
+        )
+      );
+      $query->set('meta_query', $meta_query);
+    }
   } elseif( is_post_type_archive( ['city', 'artist'] ) ) {
     $query->set( 'posts_per_page', 12 );
   }
@@ -299,3 +297,10 @@ function cc_background_image_filter() {
 function cc_travel_background_image_filter() {
   return 'linear-gradient(-180deg, rgb(0,0,0) 0%, rgba(0,0,0,0.00) 30%),linear-gradient(rgba(109,114,163,0.80) 0%, rgba(109,114,163,0.80) 100%), linear-gradient(rgba(55,23,34,0.10) 0%, rgba(55,23,34,0.10) 100%)';
 }
+
+function add_query_vars_filter( $vars ){
+  $vars[] = "cat_city";
+  $vars[] = "cat_artist";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );

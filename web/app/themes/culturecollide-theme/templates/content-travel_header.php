@@ -142,22 +142,49 @@
               <div class="dropdown-menu" aria-labelledby="categoriesMenuLink">
                 <div class="row">
                   <div class="col-12 dropdown-search">
+                    <?php $cat_query_params = array(); ?>
+                    <?php if(is_tax('location_types')): ?>
                     <div class="form-group">
-                      <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                      Filter By City <select class="city-filter-select custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
                         <?php
                           $dcargs = array(
                             "post_type" => "city",
-                            "numberposts" => "-1"
+                            "numberposts" => "-1",
+                            "orderby" => "title",
+                            "order" => "ASC"
                           );
                           $city_dropdowns = get_posts( $dcargs );
+                          $selected_city = get_query_var('cat_city');
+                          $cat_query_params['cat_city'] = $selected_city;
                         ?>
                         <option selected>All Cities...</option>
                         <?php foreach($city_dropdowns as $city_option): ?>
-                          <option value="<?php echo $city_option->post_name; ?>"><?php echo $city_option->post_title; ?></option>
+                          <option <?php echo ($selected_city == $city_option->ID) ? 'selected' : ''; ?> value="<?php echo $city_option->ID; ?>"><?php echo $city_option->post_title; ?></option>
                         <?php endforeach; ?>
                       </select>
-                      <input class="cc-autocomplete form-control" placeholder="search for an categories" data-post-type="location" />
                     </div>
+                  <?php elseif (in_array(get_post_type(), ['artist','city'])): ?>
+                    <div class="dropdown_notice">
+                      <?php
+                        global $post;
+                        $cat_city_name;
+                        echo $post->post_title;
+                        if(get_post_type() == 'artist') {
+                          $artist_city = get_field('artist_city', $post->ID)[0];
+                          $subject = $artist_city->post_title;
+                          $cat_city_name = $artist_city->post_name;
+                          $cat_city_id = $artist_city->ID;
+                          $cat_query_params['cat_artist'] = $post->post_name;
+                          $cat_query_params['cat_city'] = $cat_city_id;
+                          echo ' : ', $subject;
+                        } else {
+                          $cat_city_name = $post->post_name;
+                          $cat_city_id = $post->ID;
+                          $cat_query_params['cat_city'] = $cat_city_id;
+                        }
+                      ?>
+                    </div>
+                  <?php endif; ?>
                   </div>
                   <div class="col-xs-12 col-sm-6 dropdown-selections">
                     <?php
@@ -173,7 +200,7 @@
                         foreach($locations_cats as $term):
                           $term_link = get_term_link( $term );
                     ?>
-                      <a href="<?php echo esc_url( $term_link ); ?>" rel="nofollow" class="dropdown-item<?php echo $active_term->term_id == $term->term_id ? ' active' : ''; ?>"><?php echo $term->name ?></a>
+                      <a href="<?php echo add_query_arg($cat_query_params, esc_url( $term_link )); ?>" rel="nofollow" class="dropdown-item<?php echo $active_term->term_id == $term->term_id ? ' active' : ''; ?>"><?php echo $term->name ?></a>
                         <?php endforeach; ?>
                       <?php endif; ?>
                     </div>
