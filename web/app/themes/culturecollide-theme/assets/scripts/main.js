@@ -156,7 +156,7 @@
             _url += '?'+$.param(_params);
           }
 
-          document.location.href = _url;
+          document.location.href = window.location.origin+_url;
         });
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
