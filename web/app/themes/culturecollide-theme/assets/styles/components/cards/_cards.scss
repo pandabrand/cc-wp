@@ -36,7 +36,6 @@ $card__border__color:  $white;
     margin: 0;
     padding: 2.65rem 2.65rem 2.25rem;
     height: 205px;
-    overflow: hidden;
     .card__copy {
       height: 100%;
       overflow: hidden;
@@ -54,8 +53,25 @@ $card__border__color:  $white;
         letter-spacing: 1.5px;
         line-height: 20px;
       }
+      .card_reccomendations {
+        margin-bottom: 1rem;
+      }
       .card__address, .card__link, .card_reccomendations__title {
         font-size: .75rem;
+      }
+      .card_reccomendations__title {
+        &:last-child {
+          a {
+            &:after {
+              content: "";
+            }
+          }
+        }
+        a {
+          &:after {
+            content: ",";
+          }
+        }
       }
       .card__link {
         @extend .pr-4;
@@ -93,11 +109,19 @@ $card__border__color:  $white;
     }
   }
   &.card__2-1 {
+    min-height: 430px;
+    height: auto;
     .card__image {
       width: 100%;
     }
     .card__category-line {
       left: 2.5rem;
+    }
+    .card__body {
+      position: relative;
+      margin-top: 40%;
+      min-height: 205px;
+      height: auto;
     }
   }
   &.card__3-1 {

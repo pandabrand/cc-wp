@@ -54,8 +54,8 @@
       }
     }
     .editorial__detail__article__copy {
-      margin-top: 6rem;
-      margin-bottom: 6rem;
+      margin-top: 2rem;
+      margin-bottom: 6.75rem;
     }
     .editorial__detail__article__lede {
       font-size: 1.5rem;
@@ -171,11 +171,13 @@
   }
   .billboard__category-line {
     display: block;
-    border-right: $white solid 2px;
+    @extend .col-2;
+    border-right: none;
+    border-left: $feature__border__color solid 2px;
     position: absolute;
     min-height: 92%;
     top: 8%;
-    left: 6.3rem;
+    // left: 6.3rem;
     @media(max-width: 768px) {
       left: 3.5rem;
     }
