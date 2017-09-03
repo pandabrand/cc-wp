@@ -156,7 +156,7 @@
             _params.cat_city = _val;
           }
           var new_params = $.param(_params);
-          window.location.search = new_params;
+          window.location.href = new_params;
         });
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
