@@ -154,10 +154,9 @@
             delete _params.cat_city;
           } else {
             _params.cat_city = _val;
-            _url += '?'+$.param(_params);
           }
-
-          window.location = _url;
+          var new_params = $.param(_params);
+          window.location.search = new_params;
         });
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
