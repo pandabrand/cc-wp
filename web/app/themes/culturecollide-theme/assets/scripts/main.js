@@ -144,7 +144,8 @@
       },
       finalize: function() {
         $( '.city-filter-select' ).change(function(event) {
-          var _url = window.location.pathname;
+          var _origin = window.location.origin;
+          var _url = _origin + window.location.pathname;
           var _params = getUrlVars();
           var _val = $( '.city-filter-select option:checked' ).val();
           // remove cat artist on new city filter change
@@ -156,7 +157,7 @@
             _url += '?'+$.param(_params);
           }
 
-          document.location = window.location.origin+_url;
+          window.location = _url;
         });
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
