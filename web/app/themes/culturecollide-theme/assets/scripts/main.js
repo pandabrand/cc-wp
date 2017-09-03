@@ -156,7 +156,7 @@
             _url += '?'+$.param(_params);
           }
 
-          document.location.href = window.location.origin+_url;
+          document.location = window.location.origin+_url;
         });
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
@@ -276,6 +276,10 @@
     },
     'artist_template_default': {
       init: function() {
+        $('.dropdown-menu').click(function(e) {
+                e.stopPropagation(); //This will prevent the event from bubbling up and close the dropdown when you type/click on text boxes.
+        });
+
         var map, mapoverlay, parsed_map_vars, markers;
         var pulseElement = document.createElement('div');
         pulseElement.classList.add('element');
@@ -401,6 +405,9 @@
    },
    'city_template_default': {
      init: function() {
+       $('.dropdown-menu').click(function(e) {
+               e.stopPropagation(); //This will prevent the event from bubbling up and close the dropdown when you type/click on text boxes.
+       });
        var map, mapoverlay, parsed_map_vars, markers;
        var pulseElement = document.createElement('div');
        pulseElement.classList.add('element');
@@ -521,6 +528,9 @@
   },
    'tax_location_types': {
      init: function() {
+       $('.dropdown-menu').click(function(e) {
+               e.stopPropagation(); //This will prevent the event from bubbling up and close the dropdown when you type/click on text boxes.
+       });
        var map, mapoverlay, parsed_map_vars, markers;
        var pulseElement = document.createElement('div');
        pulseElement.classList.add('element');
@@ -642,6 +652,9 @@
    },
    'travel': {
      init: function() {
+       $('.dropdown-menu').click(function(e) {
+               e.stopPropagation(); //This will prevent the event from bubbling up and close the dropdown when you type/click on text boxes.
+       });
        $('.travel__artist-guides__carousel, .travel__artist-guides__carousel').slick({
          infinite: true,
          slidesToShow: 4,
