@@ -156,7 +156,9 @@
             _params.cat_city = _val;
           }
           var new_params = $.param(_params);
-          window.location.replace(_url+'?'+new_params);
+          var new_url = _url+'?'+new_params;
+          console.log(new_url);
+          // window.location.replace(_url+'?'+new_params);
         });
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
