@@ -13,7 +13,9 @@ var makepopup = function (el) {
 
 function getUrlVars() {
     var vars = {}, hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    var search_params = window.location.search;
+    search_params = search_params.slice(search_params.indexOf('?')+1);
+    var hashes = search_params.split('&');
     for(var i = 0; i < hashes.length; i++)
     {
         hash = hashes[i].split('=');

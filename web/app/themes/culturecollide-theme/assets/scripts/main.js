@@ -155,9 +155,7 @@
           } else {
             _params.cat_city = _val;
           }
-          console.log(_params);
           var new_params = $.param(_params);
-          console.log(new_params);
           var new_url = _url+'?'+new_params;
           console.log(new_url);
           // window.location.replace(_url+'?'+new_params);
