@@ -147,15 +147,19 @@
           var _origin = window.location.origin;
           var _url = _origin + window.location.pathname;
           var _params = getUrlVars();
+          console.dir(_params);
           var _val = $( '.city-filter-select option:checked' ).val();
           // remove cat artist on new city filter change
           delete _params.cat_artist;
+          console.dir(_params);
           if(_val === 'All Cities...') {
             delete _params.cat_city;
           } else {
             _params.cat_city = _val;
           }
+
           var new_params = $.param(_params);
+          console.log(new_params);
           var new_url = _url+'?'+new_params;
           console.log(new_url);
           // window.location.replace(_url+'?'+new_params);
