@@ -4,6 +4,22 @@
       $travel_page = get_page_by_path( 'travel' );
       $travel_title = $travel_page->post_title;
       $travel_sub_title = wp_strip_all_tags( $travel_page->post_content, true );
+      global $post;
+      $cat_city_name;
+      $artist_city;
+      if(get_post_type() == 'artist') {
+        $artist_city = get_field('artist_city', $post->ID)[0];
+        $subject = $artist_city->post_title;
+        $cat_city_name = $artist_city->post_name;
+        $cat_city_id = $artist_city->ID;
+        $cat_query_params['cat_artist'] = $post->post_name;
+        $cat_query_params['cat_city'] = $cat_city_id;
+      } else {
+        $cat_city_name = $post->post_name;
+        $cat_city_id = $post->ID;
+        $cat_query_params['cat_city'] = $cat_city_id;
+      }
+
     ?>
     <div class="travel__header__title">
       <?= $travel_title; ?>
@@ -45,14 +61,14 @@
                       );
                       $cities = get_posts( $args );
                       if( !empty( $cities ) ):
-                        foreach( $cities as $post ): setup_postdata( $post );
+                        foreach( $cities as $city ):
                     ?>
-                    <a href="<?php echo get_the_permalink($post->ID);?>" class="dropdown-item" rel="nofollow"><?php echo $post->post_title; ?></a>
+                    <a href="<?php echo get_the_permalink($city->ID);?>" class="dropdown-item<?php echo ($city->ID == $post->ID) ? ' active' : ''; ?>" rel="nofollow"><?php echo $city->post_title; ?></a>
                     <?php
                         endforeach;
-                        wp_reset_postdata();
                       endif;
                     ?>
+                    <a href="/city" class="dropdown-item button button--small button--outline button--width-fit" rel="nofollow">All Cities</a>
                   </div>
                   <?php
                     $args = array(
@@ -80,6 +96,14 @@
               <a href="#" rel="nofollow" class="btn btn-secondary dropdown-toggle" id="artistsMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Artists</a>
               <div class="dropdown-menu" aria-labelledby="artistsMenuLink">
                 <div class="row">
+                  <div class="col-12 dropdown_notice font-weight-bold ml-4">
+                    <?php
+                      echo (get_post_type() != 'artist') ? 'Artists : ' : '', $post->post_title;
+                      if(get_post_type() == 'artist') {
+                        echo ' : ', $subject;
+                      }
+                    ?>
+                  </div>
                   <div class="col-12 dropdown-search">
                     <div class="form-group">
                       <input class="cc-autocomplete form-control" placeholder="search for an artist name" data-post-type="artist" />
@@ -93,11 +117,12 @@
                         "order" => "ASC",
                         "numberposts" => "25"
                       );
-                      if(get_post_type() == 'city') {
+                      if(get_post_type() == 'city' || get_post_type() == 'artist') {
+                        $city_id = (get_post_type() == 'city') ? $post->ID : $artist_city->ID;
                         $meta = array(
                           array(
                             "key" => "artist_city",
-                            "value" => $post->ID,
+                            "value" => $city_id,
                             "compare" => "LIKE"
                           )
                         );
@@ -106,14 +131,15 @@
 
                       $artists = get_posts( $args );
                       if( !empty( $artists ) ):
-                        foreach( $artists as $post ): setup_postdata( $post );
+                        foreach( $artists as $artist ):
                     ?>
-                    <a href="<?php echo get_the_permalink();?>" class="dropdown-item" rel="nofollow"><?php echo get_the_title(); ?></a>
+                    <a href="<?php echo get_the_permalink($artist->ID);?>" class="dropdown-item<?php echo ($artist->ID == $post->ID) ? ' active' : '' ?>" rel="nofollow"><?php echo $artist->post_title; ?></a>
                     <?php
                         endforeach;
                         wp_reset_postdata();
                       endif;
                     ?>
+                    <a href="/artist" class="dropdown-item button button--small button--outline button--width-fit" rel="nofollow">All Artists</a>
                   </div>
                   <?php
                     $args = array(
@@ -164,23 +190,11 @@
                       </select>
                     </div>
                   <?php elseif (in_array(get_post_type(), ['artist','city'])): ?>
-                    <div class="dropdown_notice">
+                    <div class="dropdown_notice font-weight-bold ml-4">
                       <?php
-                        global $post;
-                        $cat_city_name;
                         echo $post->post_title;
                         if(get_post_type() == 'artist') {
-                          $artist_city = get_field('artist_city', $post->ID)[0];
-                          $subject = $artist_city->post_title;
-                          $cat_city_name = $artist_city->post_name;
-                          $cat_city_id = $artist_city->ID;
-                          $cat_query_params['cat_artist'] = $post->post_name;
-                          $cat_query_params['cat_city'] = $cat_city_id;
                           echo ' : ', $subject;
-                        } else {
-                          $cat_city_name = $post->post_name;
-                          $cat_city_id = $post->ID;
-                          $cat_query_params['cat_city'] = $cat_city_id;
                         }
                       ?>
                     </div>

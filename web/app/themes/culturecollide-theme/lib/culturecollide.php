@@ -304,3 +304,12 @@ function add_query_vars_filter( $vars ){
   return $vars;
 }
 add_filter( 'query_vars', 'add_query_vars_filter' );
+
+//removing the 'read more' link from event posts
+function cc_modify_event_read_more_link() {
+  global $post;
+  if($post->post_type == 'event') {
+    return '...';
+  }
+}
+add_filter( 'excerpt_more', 'cc_modify_event_read_more_link' );

@@ -19,6 +19,9 @@
   &.button--narrow {
     width: 93px;
   }
+  &.button--width-fit {
+    width: auto;
+  }
   &.button--small {
     font-size: .875rem;
     padding: 3px 0 8px;

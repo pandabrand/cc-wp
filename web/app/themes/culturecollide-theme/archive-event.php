@@ -3,9 +3,6 @@
     <div class="travel__header__title">
       Events
     </div>
-    <div class="travel__header__subtitle">
-      Do we add a subtitle? If so what is it.
-    </div>
   </div>
 </div>
 <?php if (!have_posts()) : ?>
