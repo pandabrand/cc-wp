@@ -1,5 +1,5 @@
 <div class="editorial__detail__header <?php add_billboard_class(); ?>">
-    <div class="billboard__image" style="background-image:url('<?php echo the_post_thumbnail_url('large-feature'); ?>')"></div>
+    <div class="billboard__image" style="background-image:<?php echo cc_background_image_filter(); ?>, url('<?php echo the_post_thumbnail_url('editorial-feature'); ?>')"></div>
   <div class="billboard__filter"></div>
   <div class="billboard__body pl-2">
     <div class="billboard__copy">

@@ -1,7 +1,7 @@
 <div class="col-xs-12 col-sm-6 event__block">
   <div class="event-block-wrapper__square">
     <div class="event-block__square">
-      <div class="event-image__square" style="background-image:url('<?php echo the_post_thumbnail_url('large-feature'); ?>')">
+      <div class="event-image__square" style="background-image:<?php echo cc_background_image_filter(); ?>, url('<?php echo the_post_thumbnail_url('large-feature'); ?>')">
         <div class="event-block">
           <div class="event-block__title">
             <?php the_title(); ?>

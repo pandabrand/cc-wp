@@ -5,17 +5,22 @@
     </div>
   </div>
   <div class="row cc-row justify-content-center editorial__detail__article">
-    <div class="col-11">
+    <div class="col-sm-12 col-md-10">
       <main>
         <article <?php post_class(); ?>>
-          <div class="editorial__detail__feature_media">
-            <?php if(get_field('background_image')): ?>
-              <img src="<?php echo the_post_thumbnail_url('large-feature'); ?>" class="img-fluid" />
-            <?php endif; ?>
-          </div>
-          <div class="row">
-            <div class="editorial__detail__article__copy col-8 offset-2">
-              <?php the_content(); ?>
+          <div class="row justify-content-center">
+            <div class="editorial__detail__article__copy col-10">
+              <div class="event__detail_subtitle">
+                <div class="event__detail_subtitle__line">
+                  When: <?php echo get_field('event_date'); ?>
+                </div>
+                <div class="event_detail_subtitle__line">
+                  Where: <?php $address = get_field('event_address'); echo $address['address']; ?>
+                </div>
+              </div>
+              <div class="editorial__detail__article__copy">
+                <?php the_content(); ?>
+              </div>
             </div>
           </div>
         </article>
