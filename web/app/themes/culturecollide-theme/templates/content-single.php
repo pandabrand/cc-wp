@@ -16,6 +16,14 @@
                 <?php endif; ?>
               </div>
               <?php the_content(); ?>
+              <?php
+                $photo_credit = get_field( 'photo_credit' );
+                if($photo_credit):
+              ?>
+                <div class="editorial__detail__article-photo-credit">
+                  photo by: <?= $photo_credit ?>
+                </div>
+              <?php endif; ?>
             </div>
           </div>
         </article>

@@ -42,12 +42,14 @@ function setup() {
   add_image_size( 'large-feature', 660, 720 );
   add_image_size( 'city-guide_thumbnail', 390, 213 );
   add_image_size( 'ad-space-image', 233, 428);
+  add_image_size( 'author-icon', 94, 94 );
 
   function cc_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'large-feature' => __( 'Large Feature' ),
         'city-guide_thumbnail' => __( 'City Guide Thumbnail' ),
         'ad-space-image' => __( 'Ad Space Image' ),
+        'author-icon' => __( 'Author Icon' ),
     ) );
   }
   add_filter( 'image_size_names_choose',  __NAMESPACE__ . '\\cc_custom_sizes', 10, 1 );

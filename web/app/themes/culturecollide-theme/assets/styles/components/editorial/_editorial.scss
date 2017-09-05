@@ -22,6 +22,22 @@
   .billboard__category-block {
     left: 4rem;
   }
+  .editorial__text-byline {
+    height: 47px;
+    .editorial__text-author_icon {
+      width: 47px;
+    }
+    .editorial__text-author_name {
+      margin-left: 1.8rem;
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      &:before {
+        content: 'BY ';
+      }
+    }
+  }
 }
 
 .editorial__detail__article {
@@ -103,8 +119,13 @@
       margin-right: 3rem;
       text-transform: uppercase;
       font-size: .75rem;
-      font-weight: 600;
+      font-weight: 500;
     }
+  }
+  .editorial__detail__article-photo-credit {
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 500;
   }
 }
 

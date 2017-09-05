@@ -10,9 +10,23 @@
       <div class="billboard__title h1 ml-3">
         <?php echo get_the_title(); ?>
       </div>
-      <div class="billboard__text">
-        <?php echo get_field('secondary_description'); ?>
-      </div>
+      <?php
+        $author_name = get_field('author');
+        $author_icon = get_field('author_icon');
+        if($author_name):
+      ?>
+        <div class="editorial__text-byline d-flex flex-row ml-3">
+          <?php if($author_icon): ?>
+            <div class="editorial__text-author_icon">
+              <img class="img-fluid rounded-circle editorial__text-author_icon--image" src="<?= $author_icon['sizes'][ 'author-icon' ]; ?>"/>
+            </div>
+          <?php endif; ?>
+          <div class="editorial__text-author_name my-auto">
+            <?= $author_name ?>
+          </div>
+        </div>
+      <?php endif; ?>
+
     </div>
   </div>
   <div class="billboard__category-block">
