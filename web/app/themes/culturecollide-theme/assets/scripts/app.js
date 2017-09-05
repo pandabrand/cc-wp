@@ -15,11 +15,15 @@ function getUrlVars() {
     var vars = {}, hash;
     var search_params = window.location.search;
     search_params = search_params.slice(search_params.indexOf('?')+1);
-    var hashes = search_params.split('&');
-    for(var i = 0; i < hashes.length; i++)
+    console.log(search_params.length);
+    if(search.length > 0)
     {
-        hash = hashes[i].split('=');
-        vars[hash[0]] = hash[1];
+      var hashes = search_params.split('&');
+      for(var i = 0; i < hashes.length; i++)
+      {
+          hash = hashes[i].split('=');
+          vars[hash[0]] = hash[1];
+      }
     }
     return vars;
 }
