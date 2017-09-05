@@ -18,7 +18,7 @@
                   Where: <?php $address = get_field('event_address'); echo $address['address']; ?>
                 </div>
               </div>
-              <div class="editorial__detail__article__copy">
+              <div class="editorial__detail__article__copy event__detail__article__copy">
                 <?php the_content(); ?>
               </div>
             </div>

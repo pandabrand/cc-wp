@@ -1,6 +1,7 @@
 <div class="row cc-row">
   <div class="travel travel__detail__header billboard">
-    <div class="billboard__image" style="background-image:<?php echo cc_background_image_filter(); ?>, url('<?php echo the_post_thumbnail_url('editorial-feature'); ?>')"></div>
+    <?php $image_position = get_field('main_image_postition') ? ' billboard__image-bottom' : ''; ?>
+    <div class="billboard__image<?php echo $image_position; ?>" style="background-image:<?php echo cc_background_image_filter(); ?>, url('<?php echo the_post_thumbnail_url('editorial-feature'); ?>')"></div>
     <div class="billboard__category-line travel__detail__category-line"></div>
     <div class="billboard__filter"></div>
     <div class="billboard__body travel__detail__body pl-4">
