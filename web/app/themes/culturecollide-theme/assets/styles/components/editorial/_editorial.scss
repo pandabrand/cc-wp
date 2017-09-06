@@ -26,15 +26,16 @@
     height: 47px;
     .editorial__text-author_icon {
       width: 47px;
+      margin-right: 1.3rem;
     }
     .editorial__text-author_name {
-      margin-left: 1.8rem;
       font-weight: 500;
       font-size: 1rem;
       letter-spacing: 4px;
       text-transform: uppercase;
       &:before {
         content: 'BY ';
+        margin-left: .5rem;
       }
     }
   }
@@ -72,6 +73,10 @@
     .editorial__detail__article__copy {
       margin-top: 2rem;
       margin-bottom: 6.75rem;
+      p {
+        line-height: 2.375rem;
+        letter-spacing: 1.12px;
+      }
     }
     .editorial__detail__article__lede {
       font-size: 1.5rem;
