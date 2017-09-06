@@ -313,3 +313,11 @@ function cc_modify_event_read_more_link() {
   }
 }
 add_filter( 'excerpt_more', 'cc_modify_event_read_more_link' );
+
+function cc_modify_event_excerpt_length() {
+  global $post;
+  if($post->post_type == 'event') {
+    return 20;
+  }
+}
+add_filter( 'excerpt_length', 'cc_modify_event_excerpt_length' );

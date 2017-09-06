@@ -11,7 +11,11 @@
               <?php echo get_field('event_date'); ?>
             </div>
             <div class="event-block__details-location">
-              <?php $address = get_field('event_address'); echo $address['address']; ?>
+              <?php
+                $address = get_field('event_address');
+                $addr_array = explode(", ", $address['address']);
+                echo $addr_array[1], ", ", $addr_array[2];
+              ?>
             </div>
           </div>
           <div class="event-block__excerpt hidden-xs-down">
