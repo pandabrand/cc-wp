@@ -14,10 +14,14 @@
         $cat_city_id = $artist_city->ID;
         $cat_query_params['cat_artist'] = $post->post_name;
         $cat_query_params['cat_city'] = $cat_city_id;
-      } else {
+      } elseif ( get_post_type() == 'city' ) {
         $cat_city_name = $post->post_name;
         $cat_city_id = $post->ID;
         $cat_query_params['cat_city'] = $cat_city_id;
+      } elseif ( is_tax( 'location_types' ) && get_query_var('cat_city') ) {
+        $cat_city_id = get_query_var('cat_city');
+        $tax_city = get_post( $cat_city_id );
+        $cat_city_name = $tax_city->post_title;
       }
 
     ?>
@@ -98,7 +102,7 @@
                 <div class="row">
                   <div class="col-12 dropdown_notice font-weight-bold ml-4">
                     <?php
-                      echo (get_post_type() != 'artist') ? 'Artists : ' : '', $post->post_title;
+                      echo (get_post_type() != 'artist') ? 'Artists : ' : '', $cat_city_name;
                       if(get_post_type() == 'artist') {
                         echo ' : ', $subject;
                       }
@@ -117,8 +121,14 @@
                         "order" => "ASC",
                         "numberposts" => "25"
                       );
-                      if(get_post_type() == 'city' || get_post_type() == 'artist') {
+                      if( get_post_type() == 'city'
+                          || get_post_type() == 'artist'
+                          || ( is_tax( 'location_types' ) && get_query_var('cat_city') )
+                        ) {
                         $city_id = (get_post_type() == 'city') ? $post->ID : $artist_city->ID;
+                        if(!$city_id) {
+                          $city_id = get_query_var('cat_city');
+                        }
                         $meta = array(
                           array(
                             "key" => "artist_city",
