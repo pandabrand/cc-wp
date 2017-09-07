@@ -16,7 +16,6 @@
         while( have_rows( 'side_features' ) ):
           the_row();
           $post = get_sub_field( 'feature' );
-          // var_dump( $post );
           setup_postdata( $post );
           include( locate_template('layouts/feature-block__2-1-long.php'));
           wp_reset_postdata();

@@ -3,11 +3,20 @@
     <?php get_template_part('layouts/ad', 'block'); ?>
   </div>
   <?php
+    $exclude_posts = array();
+    $main_post_object = get_field('main_feature');
+    $exclude_posts[] = $main_post_object->ID;
+    $second_features = get_field('secondary_main_feature');
+    while( have_rows( 'secondary_main_feature' ) ){
+      the_row();
+      $ex_post = get_sub_field( 'feature_object' );
+      $exclude_posts[] = $ex_post->ID;
+    }
     $args = array(
       'posts_per_page' => 3,
-      'post_type' => ['post', 'city', 'artist'],
-      'orderby' => ['rand', 'title'],
-      'order' => 'ASC'
+      'post_type' => ['post'],
+      'order_by' => ['date'],
+      'order' => 'DESC'
     );
     $related_query = new WP_Query($args);
     if($related_query->have_posts()):

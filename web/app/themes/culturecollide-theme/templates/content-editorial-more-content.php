@@ -1,13 +1,24 @@
 <?php
+$exclude_posts = array();
+$main_post_object = get_field('main_feature');
+$exclude_posts[] = $main_post_object->ID;
+$second_features = get_field('side_features');
+while( have_rows( 'side_features' ) ){
+  the_row();
+  $ex_post = get_sub_field( 'feature' );
+  $exclude_posts[] = $ex_post->ID;
+}
+
 if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
 elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
 else { $paged = 1; }
 $args = array(
 'posts_per_page' => 12,
 'post_type' => 'post',
-'orderby' => ['rand', 'title'],
-'order' => 'ASC',
-'paged' => $paged
+'order_by' => ['date'],
+'order' => 'DESC',
+'paged' => $paged,
+'post__not_in' => $exclude_posts,
 );
 $more_query = new WP_Query($args);
 if($more_query->have_posts()): $counter = 1; ?>

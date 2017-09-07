@@ -1,6 +1,9 @@
 set :repo_url, 'git@github.com:pandabrand/cc-wp.git'
 
 set :local_url, 'culturecollide.dev'
+set :application, 'stage.culturecollide.com'
+set :url, 'stage.culturecollide.com'
+
 # Branch options
 # Prompts for the branch name (defaults to current branch)
 #ask :branch, -> { `git rev-parse --abbrev-ref HEAD`.chomp }
