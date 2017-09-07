@@ -73,7 +73,8 @@
     "wpUXsolutions/enhanced-media-library-pro": "*",
     "wpackagist-plugin/quick-featured-images": "~13.2",
     "wpackagist-plugin/query-monitor": "2.13.4",
-    "wpackagist-plugin/velvet-blues-update-urls": "3.2.7"
+    "wpackagist-plugin/velvet-blues-update-urls": "3.2.7",
+    "wpackagist-plugin/redirection": "2.7.3"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
