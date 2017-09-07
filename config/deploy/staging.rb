@@ -1,5 +1,8 @@
 set :stage, :staging
 
+set :application, 'stage.culturecollide.com'
+set :url, 'stage.culturecollide.com'
+
 # Simple Role Syntax
 # ==================
 #role :app, %w{deploy@example.com}
