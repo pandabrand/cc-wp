@@ -8,6 +8,8 @@ while( have_rows( 'side_features' ) ){
   $ex_post = get_sub_field( 'feature' );
   $exclude_posts[] = $ex_post->ID;
 }
+$reservedObj = get_category_by_slug('reserved');
+$reservedId = $reservedObj->term_id;
 
 if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
 elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
@@ -19,6 +21,7 @@ $args = array(
 'order' => 'DESC',
 'paged' => $paged,
 'post__not_in' => $exclude_posts,
+'category__not_in' => [$reservedId],
 );
 $more_query = new WP_Query($args);
 if($more_query->have_posts()): $counter = 1; ?>

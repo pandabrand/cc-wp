@@ -226,13 +226,17 @@ function cc_category_archives( $query ) {
       );
       $query->set('meta_query', $meta_query);
     }
-  } elseif( is_post_type_archive( ['city', 'artist'] ) ) {
+  } elseif( !is_admin() && $query->is_main_query() && is_post_type_archive( ['city', 'artist'] ) ) {
     $query->set( 'posts_per_page', 12 );
-  }
-
-  if ( is_post_type_archive() ) {
     $query->set( 'orderby', 'title' );
     $query->set( 'order', 'asc' );
+  } elseif( !is_admin() && $query->is_main_query() && $query->is_home() ) {
+    $idObj = get_category_by_slug('reserved');
+    $id = $idObj->term_id;
+    $query->set('category__not_in', [$id]);
+  }
+
+  if ( !is_admin() && $query->is_main_query() && is_post_type_archive() ) {
   }
 }
 

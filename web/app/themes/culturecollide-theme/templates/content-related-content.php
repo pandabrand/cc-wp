@@ -7,6 +7,8 @@
     $main_post_object = get_field('main_feature');
     $exclude_posts[] = $main_post_object->ID;
     $second_features = get_field('secondary_main_feature');
+    $reservedObj = get_category_by_slug('reserved');
+    $reservedId = $reservedObj->term_id;
     while( have_rows( 'secondary_main_feature' ) ){
       the_row();
       $ex_post = get_sub_field( 'feature_object' );
@@ -15,6 +17,8 @@
     $args = array(
       'posts_per_page' => 3,
       'post_type' => ['post'],
+      'post__not_in' => $exclude_posts,
+      'category__not_in' => [$reservedId],
       'order_by' => ['date'],
       'order' => 'DESC'
     );
