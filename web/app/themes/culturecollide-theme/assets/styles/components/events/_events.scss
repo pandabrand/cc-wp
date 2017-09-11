@@ -1,5 +1,8 @@
 .event-block-wrapper__square {
   margin-top: 100%;
+  @media(max-width: 480px) {
+    height: 490px;
+  }
   .event-block__square {
     position: absolute;
     top: 1rem;
@@ -20,12 +23,15 @@
     color: $white;
     padding: 5rem;
     height: 100%;
+    @media(max-width: 480px) {
+      padding: 2.5rem;
+    }
   }
   .event-block__title {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
     padding-bottom: 1rem;
-    letter-spacing: 6px;
-    line-height: 2.6875rem;
+    letter-spacing: 3px;
+    line-height: 1.875rem;
     font-weight: bold;
   }
   .event-block__details {

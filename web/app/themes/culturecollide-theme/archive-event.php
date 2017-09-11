@@ -14,7 +14,7 @@
 
 <div class="row cc-row">
   <?php while (have_posts()) : the_post(); ?>
-    <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+    <?php get_template_part('templates/content-event'); ?>
   <?php endwhile; ?>
 </div>
 <?php the_posts_navigation(); ?>
