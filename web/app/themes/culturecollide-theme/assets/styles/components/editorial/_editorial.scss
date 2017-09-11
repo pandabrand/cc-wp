@@ -11,6 +11,12 @@
   height: 750px;
   margin-top: 30px;
   color: $white;
+  @media(max-width: 768px) {
+    background-color: $white;
+  }
+  @media(max-width: 480px) {
+    height: 335px;
+  }
   .editorial__detail__header_img {
     width: 100%;
     object-fit: cover;
@@ -192,7 +198,7 @@
     margin: 0;
     @extend .image--filter_four_layer-blend;
     @media(max-width: 480px) {
-      height: 50%;
+      height: 100%;
     }
   }
   .billboard__filter {
@@ -211,7 +217,8 @@
       left: 3.5rem;
     }
     @media(max-width: 480px) {
-      top: 5px;
+      top: 15px;
+      min-height: 99%;
     }
     &.travel__detail__category-line {
       min-height: 81.6%;
@@ -222,7 +229,7 @@
     margin-top: -35rem;
     @media(max-width: 786px) {
       margin: 2rem;
-      margin-top: -35rem;
+      margin-top: -17rem;
     }
     &.travel__detail__body {
       left: 6.85rem;
@@ -239,7 +246,7 @@
         margin-left: 1rem;
       }
       @media(max-width: 480px) {
-
+        margin-left: 0;
       }
       .billboard__title {
         color: $white;
@@ -302,7 +309,7 @@
       left: 1.75rem;
     }
     @media(max-width: 480px) {
-      top: 5px;
+      top: 15px;
     }
     .billboard__category-block__category-image {
     }
