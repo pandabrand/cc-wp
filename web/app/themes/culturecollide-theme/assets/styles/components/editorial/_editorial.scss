@@ -283,7 +283,7 @@
       @media(max-width: 480px) {
         left: 0;
         width: 100%;
-        height: 393px;
+        min-height: 393px;
         padding: 1rem;
       }
     }
