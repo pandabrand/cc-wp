@@ -42,7 +42,9 @@ $travel--background--color: $black;
       height: 100%;
     }
     .billboard__image {
-      height: 335px;
+      @media(max-width: 480px) {
+        height: 335px;
+      }
     }
   }
   .travel__detail__text {
