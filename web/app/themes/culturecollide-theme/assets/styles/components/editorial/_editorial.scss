@@ -59,6 +59,9 @@
         line-height: 2rem;
         letter-spacing: 2px;
       }
+      img {
+        @extend .img-fluid;
+      }
     }
   }
   main {
