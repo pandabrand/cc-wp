@@ -121,6 +121,23 @@ $card__border__color:  $white;
       min-height: 205px;
       height: auto;
     }
+    &.card__2-1-travel {
+      height: auto;
+      .card__image {
+        height: 205px;
+      }
+      .card__body {
+        margin-top: 0%;
+        min-height: 205px;
+        height: auto;
+        position: relative;
+        bottom: auto;
+        right: auto;
+      }
+      .card__category-block {
+        top: 3rem;
+      }
+    }
   }
   &.card__3-1 {
     .card__image {
