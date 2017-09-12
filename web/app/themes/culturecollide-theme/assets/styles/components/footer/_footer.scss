@@ -65,6 +65,10 @@ $footer_color: $black;
       width: 50%;
       margin: 0 auto;
       max-height: 150px;
+      @media(max-width: 480px) {
+        width: 100%;
+        max-height: none;
+      }
       @extend .flex-column;
       @extend .justify-content-around;
       @extend .flex-wrap;
