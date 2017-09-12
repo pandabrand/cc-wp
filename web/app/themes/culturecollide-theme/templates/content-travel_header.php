@@ -10,12 +10,12 @@
       if(get_post_type() == 'artist') {
         $artist_city = get_field('artist_city', $post->ID)[0];
         $subject = $artist_city->post_title;
-        $cat_city_name = $artist_city->post_name;
+        $cat_city_name = $artist_city->post_title;
         $cat_city_id = $artist_city->ID;
         $cat_query_params['cat_artist'] = $post->post_name;
         $cat_query_params['cat_city'] = $cat_city_id;
       } elseif ( get_post_type() == 'city' ) {
-        $cat_city_name = $post->post_name;
+        $cat_city_name = $post->post_title;
         $cat_city_id = $post->ID;
         $cat_query_params['cat_city'] = $cat_city_id;
       } elseif ( is_tax( 'location_types' ) && get_query_var('cat_city') ) {
