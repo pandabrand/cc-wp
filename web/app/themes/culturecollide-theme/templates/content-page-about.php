@@ -10,7 +10,7 @@
         <div class="editorial__detail__feature_media">
         </div>
         <div class="row justify-content-center">
-          <div class="editorial__detail__article__copy col-9">
+          <div class="about__detail__article__copy col-9">
             <?php the_content(); ?>
           </div>
         </div>
