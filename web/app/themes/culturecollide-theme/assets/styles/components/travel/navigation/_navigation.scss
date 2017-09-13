@@ -133,6 +133,11 @@
               columns: 3;
               column-fill: auto;
               overflow: hidden;
+              @media(max-width: 480px) {
+                height: 50vh;
+                columns: 2;
+                overflow: scroll;
+              }
               .dropdown-item {
                 font-size: .875rem;
                 letter-spacing: 1.75px;
