@@ -44,6 +44,24 @@
                     			<?php $address = get_field('address'); ?>
                     			<?php echo $address['address']; ?>
                     		</div>
+                        <?php
+                          $loc_id = get_the_ID();
+                          global $wpdb;
+                          $artist_posts = $wpdb->get_results( "SELECT * FROM wp_postmeta WHERE meta_key LIKE 'artists_locations_%_location' AND meta_value LIKE '%{$loc_id}%'", OBJECT );
+                          if( !empty( $artist_posts ) ) :
+                        ?>
+                          <div class="card_reccomendations">
+                            <div class="medium small_text pt-2">Recommended by</div>
+                            <div class="d-flex flex-row flex-wrap">
+                        <?php foreach($artist_posts as $artist): ?>
+                            <div class="card_reccomendations__title small_text pr-2">
+                              <a href="<?= get_the_permalink($artist->post_id) ?>"><?= get_the_title($artist->post_id); ?></a>
+                            </div>
+                        <?php endforeach; ?>
+                            </div>
+                          </div>
+                        <?php endif; ?>
+                        <?php wp_reset_query(); ?>
                         <div class="card__links d-flex justify-content-between">
                           <div class="card__link">
                             <a href="<?php the_permalink(); ?>" rel="external" target="_blank"><i class="fa fa-desktop"></i> website</a>

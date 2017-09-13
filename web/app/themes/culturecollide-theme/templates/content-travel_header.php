@@ -4,6 +4,8 @@
       $travel_page = get_page_by_path( 'travel' );
       $travel_title = $travel_page->post_title;
       $travel_sub_title = wp_strip_all_tags( $travel_page->post_content, true );
+      $reservedObj = get_category_by_slug('reserved');
+      $reservedId = $reservedObj->term_id;
       global $post;
       $cat_city_name;
       $artist_city;
@@ -232,6 +234,7 @@
                       $args = array(
                         "post_type" => ["city","post"],
                         "numberposts" => "2",
+                        "category__not_in" => [$reservedId],
                         "order" => "rand"
                       );
                       $cat_extra = get_posts( $args );
