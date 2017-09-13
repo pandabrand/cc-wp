@@ -55,13 +55,15 @@
     </div>
     <?php if( get_field( 'sponsor_title' ) ): ?>
       <div class="billboard_sponsor-block d-flex ml-auto pr-4 text-center">
-        <div>
+        <div class="d-flex flex-row">
           <div class="billboard_sponsor-callout">
-            Sponsored by:
+            Presented by:
           </div>
           <?php if(get_field( 'sponsor_logo' ) ): ?>
             <?php $sponsor_logo = get_field( 'sponsor_logo' ); ?>
-            <img src="<?php echo $sponsor_logo['url']; ?>" class="img-fluid billboard_sponsor-image" alt="<?php echo $sponsor_logo['alt']; ?>" />
+            <div class="billboard_sponsor-image_wrapper">
+              <img src="<?php echo $sponsor_logo['url']; ?>" class="img-fluid billboard_sponsor-image" alt="<?php echo $sponsor_logo['alt']; ?>" />
+            </div>
           <?php else: ?>
             <div class="billboard_sponsor-title">
               <?php the_field( 'sponsor_title' ); ?>

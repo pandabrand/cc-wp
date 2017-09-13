@@ -363,13 +363,26 @@
   }
   .billboard_sponsor-block {
     color: $white;
-    width: 150px;
+    position: absolute;
+    top: 19rem;
+    left: 7.5rem;
+    @media(max-width: 480px) {
+      top: 9rem;
+      left: 4.5rem;
+    }
     .billboard_sponsor-callout {
       text-transform: uppercase;
       font-size: .75rem;
+      margin-right: 1rem;
     }
     .billboard_sponsor-title {
       @extend .h3;
+    }
+    .billboard_sponsor-image_wrapper {
+      height: 50px;
+      .billboard_sponsor-image {
+        max-height: 100%;
+      }
     }
   }
 }
