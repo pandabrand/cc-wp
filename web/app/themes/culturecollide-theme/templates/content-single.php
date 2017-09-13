@@ -12,7 +12,7 @@
             <div class="editorial__detail__article__copy col-9">
               <?php if(get_field('background_image')): ?>
                 <div class="editorial__detail__feature_media mb-4">
-                    <img src="<?php echo the_post_thumbnail_url('editorial-feature'); ?>" class="img-fluid" />
+                    <img src="<?php echo the_post_thumbnail_url('full'); ?>" class="img-fluid" />
                 </div>
               <?php endif; ?>
               <?php the_content(); ?>
