@@ -35,10 +35,10 @@
     </div>
   </div>
   <div class="col-12 travel travel__navigation">
-    <div class="row travel__navigation-row justify-content-between">
+    <div class="row travel__navigation-row">
       <div class="d-flex flex-row justify-content-around travel__navigation__wrapper">
         <nav class="hidden-sm-up navbar">
-          <a class="navbar-toggler btn btn-secondary travel__navigation__button  travel__navigation__button--browse" data-toggle="collapse" data-target="#travel-navigate" aria-controls="travel-navigate" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-toggler btn btn-secondary travel__navigation__button travel__navigation__button--browse" data-toggle="collapse" data-target="#travel-navigate" aria-controls="travel-navigate" aria-expanded="false" aria-label="Toggle navigation" onclick="javascript: void(0);">
             BROWSE
           </a>
         </nav>

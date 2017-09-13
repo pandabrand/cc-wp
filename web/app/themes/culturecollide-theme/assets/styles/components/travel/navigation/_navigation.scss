@@ -5,8 +5,10 @@
       padding-left: 0;
       padding-right: 0;
       flex-direction: row;
+      justify-content: space-around;
       @media(min-width: 769px) {
         flex-direction: row-reverse;
+        justify-content: space-between;
         padding-left: 15px;
         padding-right: 15px;
       }
