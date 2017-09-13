@@ -86,7 +86,8 @@ $feature__border__color:  $white;
         }
         .feature__text {
           font-size: .75rem;
-          line-height: 1.25;
+          line-height: 1.25rem;
+          letter-spacing: 1.5px
         }
       }
       @media(max-width: 768px) {
@@ -138,7 +139,9 @@ $feature__border__color:  $white;
       }
       .feature__text {
         display: block;
-        font-size: 12px;
+        font-size: .75rem;
+        line-height: 1.25rem;
+        letter-spacing: 1.5px
       }
     }
     .feature__category-block {
@@ -245,6 +248,8 @@ $feature__border__color:  $white;
       }
       .feature__text {
         font-size: .75rem;
+        line-height: 1.25rem;
+        letter-spacing: 1.5px
       }
     }
     .feature__category-block {
