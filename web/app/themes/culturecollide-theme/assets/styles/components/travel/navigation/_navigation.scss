@@ -1,15 +1,25 @@
 .travel {
   &.travel__navigation {
     width: 100%;
-    .travel__navigation__wrapper {
-      @media(max-width: 480px) {
-        flex-wrap: wrap;
+    .travel__navigation-row {
+      padding-left: 0;
+      padding-right: 0;
+      flex-direction: row;
+      @media(min-width: 769px) {
+        flex-direction: row-reverse;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .travel__navigation__wrapper {
+        @media(max-width: 480px) {
+          flex-wrap: wrap;
+        }
       }
     }
     .travel__navigation__dropdowns {
       @media(max-width: 480px) {
         min-height: 3rem;
-        padding: 0 1rem;
+        padding: 0;
       }
     }
     &.sticky-header {
@@ -40,11 +50,10 @@
           margin: .5rem 1rem 0;
         }
         &.travel__navigation__button--near-me {
+          margin: .5rem 0;
           &:before {
             font-family: FontAwesome;
             font-size: 2rem;
-            margin-right: .75rem;
-            margin-left: 1.2rem;
             content: "\f05b";
             vertical-align: middle;
             transform: rotate(-45deg);
@@ -55,7 +64,6 @@
             font-family: FontAwesome;
             font-size: 2rem;
             margin-right: .5rem;
-            margin-left: 1.2rem;
             content: "\f1de";
             vertical-align: middle;
           }
