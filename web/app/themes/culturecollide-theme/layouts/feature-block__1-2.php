@@ -23,9 +23,6 @@
         <div class="feature__title">
           <?php echo (get_field('secondary_title')) ? get_field('secondary_title') : get_the_title(); ?>
         </div>
-        <div class="feature__text">
-          <?php echo substr(get_field('secondary_description') ,0, 50), '...'; ?>
-        </div>
       </div>
     </div>
   </div>
