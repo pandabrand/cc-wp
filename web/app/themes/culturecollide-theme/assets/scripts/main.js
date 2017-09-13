@@ -194,16 +194,17 @@
           slidesToScroll: 5,
           responsive: [
             {
-              breakpoint: 1025,
+              breakpoint: 480,
               settings: {
-                arrows: true,
+                arrows: false,
                 dots: false,
-                slidesToShow: 4,
-                centerMode: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                // centerMode: true,
               }
             },
             {
-              breakpoint: 769,
+              breakpoint: 768,
               settings: {
                 arrows: false,
                 dots: true,
@@ -212,16 +213,14 @@
               }
             },
             {
-              breakpoint: 481,
+              breakpoint: 1024,
               settings: {
-                arrows: false,
-                dots: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                slidesToShow: 4,
                 centerMode: true,
-                // centerPadding: '36px',
               }
-            }
+            },
           ]
         });
 
