@@ -1,12 +1,16 @@
 <header class="header banner">
   <nav class="navbar navbar-toggleable-md navbar-custom">
-    <div class="navbar-toggler navbar-toggler-right link_search-form_opener link_search-mobile_link"><a href="#" class="nav-link">search</a></div>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavigationListHeader" aria-controls="navbarNavigationListHeader" aria-expanded="false" aria-label="Toggle Navigation">
-      <i class="fa fa-bars"></i>
-    </button>
-    <a href="/">
-      <img src="<?php echo get_template_directory_uri() . '/dist/images/logo@1x.png'; ?>" srcset="<?php echo get_template_directory_uri() . '/dist/images/logo@1x.png'; ?> 211w, <?php echo get_template_directory_uri() . '/dist/images/logo@2x.png'; ?> 422w, <?php echo get_template_directory_uri() . '/dist/images/logo@3x.png'; ?> 633w" class="navbar-brand logo" height="47" />
-    </a>
+    <div class="navbar__mobile__wrapper">
+      <div class="navbar-toggler navbar-toggler-right link_search-form_opener link_search-mobile_link"><a href="#" class="nav-link">search</a></div>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavigationListHeader" aria-controls="navbarNavigationListHeader" aria-expanded="false" aria-label="Toggle Navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+    <div class="navbar__logo__wrapper">
+      <a href="/">
+        <img src="<?php echo get_template_directory_uri() . '/dist/images/logo@1x.png'; ?>" srcset="<?php echo get_template_directory_uri() . '/dist/images/logo@1x.png'; ?> 211w, <?php echo get_template_directory_uri() . '/dist/images/logo@2x.png'; ?> 422w, <?php echo get_template_directory_uri() . '/dist/images/logo@3x.png'; ?> 633w" class="navbar-brand logo" height="47" />
+      </a>
+    </div>
     <div class="collapse navbar-collapse justify-content-end navbar__navigation__header" id="navbarNavigationListHeader">
       <div class="social-icons social-icons__header">
         <div class="social-icons__header-row">

@@ -55,9 +55,9 @@ $search-form__color_hover: $gray;
     .nav-link {
       @include text-hide;
       color: $white;
-      margin-top: .60rem;
+      margin-top: 1rem;
       &:after {
-        font-size: 2rem;
+        font-size: 1.2rem;
         font-family: FontAwesome;
         color: $white;
         content: "\f002";
