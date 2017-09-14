@@ -68,9 +68,9 @@
     </div>
   </nav>
 </header>
-<div class="container-fluid search">
-  <div class="row cc-row">
-    <div class="col-12 rounded-bottom">
+<div class="container-fluid search search-form__container">
+  <div class="row cc-row search-form-row">
+    <div class="search-form-wrapper col-12 rounded-bottom">
       <?php get_search_form(); ?>
     </div>
   </div>

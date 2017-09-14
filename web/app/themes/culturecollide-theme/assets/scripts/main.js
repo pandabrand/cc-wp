@@ -143,6 +143,11 @@
         }
       },
       finalize: function() {
+        $('.search-form__button-close').click(function(e){
+          e.preventDefault();
+          $('.search-form').slideToggle('slow');
+        });
+
         $( '.city-filter-select' ).change(function(event) {
           var _origin = window.location.origin;
           var _url = _origin + window.location.pathname;
