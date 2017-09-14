@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4daecd36dff1e7a9069642a9486ef1b2",
+    "content-hash": "f31588272eb1a0faa7dfa06e5c7bc295",
     "packages": [
         {
             "name": "composer/installers",
@@ -550,6 +550,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/bulk-delete/"
+        },
+        {
+            "name": "wpackagist-plugin/enable-media-replace",
+            "version": "3.1.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/enable-media-replace/",
+                "reference": "tags/3.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/enable-media-replace/"
         },
         {
             "name": "wpackagist-plugin/import-external-attachments",
