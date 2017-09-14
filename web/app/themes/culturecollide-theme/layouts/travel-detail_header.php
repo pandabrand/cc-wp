@@ -56,7 +56,7 @@
     <?php if( get_field( 'sponsor_title' ) ): ?>
       <div class="billboard_sponsor-block d-flex ml-auto pr-4 text-center">
         <div class="d-flex flex-row">
-          <div class="billboard_sponsor-callout">
+          <div class="billboard_sponsor-callout my-auto">
             Presented by:
           </div>
           <?php if(get_field( 'sponsor_logo' ) ): ?>
