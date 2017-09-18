@@ -4,9 +4,9 @@
   letter-spacing: 4.5px;
   margin-top: 2rem;
   @media(max-width: 768px) {
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.25rem;
     letter-spacing: 2.5px;
+    line-height: 1.6875rem;
   }
   p {
     font-size: 2.25rem;
@@ -15,7 +15,6 @@
     line-height: 3rem !important;
     @media(max-width: 768px) {
       font-size: 1rem;
-      font-weight: 500;
       letter-spacing: 2.5px;
       line-height: 1rem;
     }
