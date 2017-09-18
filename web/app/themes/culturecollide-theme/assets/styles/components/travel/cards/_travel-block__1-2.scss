@@ -69,13 +69,16 @@ $travel__border__color:  $white;
         font-size: 1.5rem;
         line-height: 1.75rem;
         letter-spacing: 3px;
-        font-weight: bold;
+        font-weight: 500;
         overflow: hidden;
         @media(max-width: 768px) {
           font-size: 1rem;
         }
       }
       .travel__text {
+        letter-spacing: 1.5px;
+        line-height: 1.25rem;
+        font-size: .75rem;
         display: block;
       }
     }

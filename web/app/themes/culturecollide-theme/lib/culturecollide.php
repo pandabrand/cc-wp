@@ -128,8 +128,9 @@ function get_card_excerpt($post = null, $length = '60') {
   $line=$excerpt;
   if (preg_match('/^.{1,'.$length.'}\b/s', $excerpt, $match)) {
       $line=$match[0];
+      $line .= '...';
   }
-  return strip_tags($line.'...');
+  return strip_tags($line);
 }
 
 function get_social_links($post = null) {

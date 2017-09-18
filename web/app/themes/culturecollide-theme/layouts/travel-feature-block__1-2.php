@@ -21,7 +21,7 @@
             <?php echo get_card_title(); ?>
           </div>
           <div class="travel__text">
-            <?php echo get_card_excerpt(null, '100'); ?>
+            <?php echo get_card_excerpt(null, '170'); ?>
           </div>
         </div>
       </div>
