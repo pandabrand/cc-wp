@@ -126,11 +126,11 @@ function get_card_excerpt($post = null, $length = '60') {
 
   $excerpt = get_the_excerpt();
   $line=$excerpt;
-  if (preg_match('/^.{1,'.$length.'}\b/s', $excerpt, $match)) {
-      $line=$match[0];
-      $line .= '...';
+  if ( preg_match( '/^.{1,'.$length.'}\b/s', $excerpt, $match ) ) {
+      $line=trim( $match[0] );
+      $line .= ( strlen( $excerpt ) > $length ) ? '...' : '';
   }
-  return strip_tags($line);
+  return strip_tags( $line );
 }
 
 function get_social_links($post = null) {
