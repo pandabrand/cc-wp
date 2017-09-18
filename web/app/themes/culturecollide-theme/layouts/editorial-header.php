@@ -7,7 +7,7 @@
   <div class="billboard__filter"></div>
   <div class="billboard__body pl-4">
     <div class="billboard__copy">
-      <div class="billboard__title h1 ml-3">
+      <div class="billboard__title ml-3">
         <?php echo get_the_title(); ?>
       </div>
       <?php
