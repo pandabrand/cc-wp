@@ -698,10 +698,19 @@
    },
    'single': {
      init: function() {
+      /* get width, height of window for caching */
+      var width = $(window).width(), height = $(window).height();
     	/* Call the function */
       mediaSize();
       /* Attach the function to the resize event listener */
-    	$(window).resize(mediaSize);
+    	$(window).resize(function() {
+        /* this is because resize is fired when scrolling, don't call mediaSize unless the width, height has actually changed */
+        if($(window).width() !== width && $(window).height() !== height) {
+          width = $(window).width();
+          height = $(window).height();
+          mediaSize();
+        }
+      });
      }
    }
 

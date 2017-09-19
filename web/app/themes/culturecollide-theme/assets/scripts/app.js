@@ -30,7 +30,6 @@ function getUrlVars() {
 
 function mediaSize() {
  /* Set the matchMedia */
- console.log(window.innerWidth);
  if (window.matchMedia('(max-width: 480px)').matches) {
    /* Changes when we reach the min-width  */
    jQuery('.cc-media-wrapper, .editorial__detail__feature_media').each(function() {
