@@ -698,28 +698,10 @@
    },
    'single': {
      init: function() {
-       function mediaSize() {
-    		/* Set the matchMedia */
-    		if (window.matchMedia('(max-width: 480px)').matches) {
-      		/* Changes when we reach the min-width  */
-          $('.cc-media-wrapper, .editorial__detail__feature_media').each(function() {
-            var left_offset = $(this).offset();
-            $(this).css('margin-left', left_offset.left * -1);
-          });
-    		} else {
-      		/* Reset for CSS changes – Still need a better way to do this! */
-          $('.cc-media-wrapper, .editorial__detail__feature_media').each(function() {
-            var left_offset = $(this).offset();
-            $(this).css('margin-left', 0);
-          });
-    		}
-    	}
-
     	/* Call the function */
       mediaSize();
       /* Attach the function to the resize event listener */
-    	window.addEventListener('resize', mediaSize, false);
-
+    	$(window).resize(mediaSize);
      }
    }
 
