@@ -43,7 +43,7 @@ $card__border__color:  $white;
         margin-bottom: 1rem;
       }
       .card__title {
-        font-weight: 500;
+        @extend .medium;
         font-size: 1rem;
         letter-spacing: 2px;
         line-height: 1.4375rem;
@@ -90,13 +90,13 @@ $card__border__color:  $white;
       display: inline-block;
       color: $white;
       .card__category-block__category-type {
-        font-weight: 500;
+        @extend .medium;
         font-size: .625rem;
         letter-spacing: 3px;
         text-transform: uppercase;
       }
       .card__category-block__category-info {
-        font-weight: 500;
+        @extend .medium;
         font-size: .75rem;
         letter-spacing: 6px;
         text-transform: uppercase;

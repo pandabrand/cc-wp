@@ -37,8 +37,7 @@
     }
   }
   .navbar__navigation__list__header {
-    font-family: $colfax;
-    font-weight: 500;
+    @extend .medium;
     color: $white;
     text-transform: uppercase;
     letter-spacing: 4px;

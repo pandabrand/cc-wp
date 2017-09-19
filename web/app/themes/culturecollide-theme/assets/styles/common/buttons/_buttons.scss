@@ -3,7 +3,7 @@
   display: block;
   width: 193px;
   height: 50px;
-  font-weight: 500;
+  @extend .medium;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;

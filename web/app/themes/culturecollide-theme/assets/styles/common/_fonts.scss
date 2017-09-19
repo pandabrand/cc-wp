@@ -1,58 +1,60 @@
 //Colfax
 @font-face {
-  font-family: 'Colfax';
+  font-family: 'Colfax-Regular';
   font-weight: normal;
-  src: url('../../fonts/ColfaxCombo/ColfaxWeb_EOT/ColfaxWebRegular.eot');
-  src: url('../../fonts/ColfaxCombo/ColfaxWeb_EOT/ColfaxWebRegular.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/ColfaxCombo/ColfaxWeb_WOFF/ColfaxWebRegular.woff') format('woff'),
-  url('../../ColfaxCombo/Colfax/Colfax-Regular.otf') format('opentype');
+  src: url('../../dist/fonts/ColfaxWebRegular.eot');
+  src: url('../../dist/fonts/ColfaxWebRegular.eot?#iefix') format('embedded-opentype'),
+  url('../../dist/fonts/ColfaxWebRegular.woff') format('woff'),
+  url('../../dist/fonts/Colfax-Regular.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'Colfax';
+  font-family: 'Colfax-RegularItalic';
   font-weight: normal;
   font-style: italic;
-  src: url('../../fonts/ColfaxCombo/ColfaxWeb_EOT/ColfaxWebRegularItalic.eot');
-  src: url('../../fonts/ColfaxCombo/ColfaxWeb_EOT/ColfaxWebRegularItalic.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/ColfaxCombo/ColfaxWeb_WOFF/ColfaxWebRegularItalic.woff') format('woff'),
-  url('../../ColfaxCombo/Colfax/Colfax-RegularItalic.otf') format('opentype');
+  src: url('../../dist/fonts/ColfaxWebRegularItalic.eot');
+  src: url('../../dist/fonts/ColfaxWebRegularItalic.eot?#iefix') format('embedded-opentype'),
+  url('../../dist/fonts/ColfaxWebRegularItalic.woff') format('woff'),
+  url('../../dist/fonts/Colfax-RegularItalic.otf') format('opentype');
 }
 
 
 @font-face {
-  font-family: 'Colfax';
-  font-weight:  500;
-  src: url('../../fonts/ColfaxCombo/ColfaxWeb_EOT/ColfaxWebMedium.eot');
-  src: url('../../fonts/ColfaxCombo/ColfaxWeb_EOT/ColfaxWebMedium.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/ColfaxCombo/ColfaxWeb_WOFF/ColfaxWebMedium.woff') format('woff'),
-  url('../../ColfaxCombo/Colfax/Colfax-Medium.otf') format('opentype');
+  font-family: 'Colfax-Medium';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../../dist/fonts/ColfaxWebMedium.eot');
+  src: url('../../dist/fonts/ColfaxWebMedium.eot?#iefix') format('embedded-opentype'),
+  url('../../dist/fonts/ColfaxWebMedium.woff') format('woff'),
+  url('../../dist/fonts/Colfax-Medium.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'Colfax';
-  font-weight:  500;
+  font-family: 'Colfax-MediumItalic';
+  font-weight: 500;
   font-style: italic;
-  src: url('../../fonts/ColfaxCombo/ColfaxWeb_EOT/ColfaxWebMediumItalic.eot');
-  src: url('../../fonts/ColfaxCombo/ColfaxWeb_EOT/ColfaxWebMediumItalic.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/ColfaxCombo/ColfaxWeb_WOFF/ColfaxWebMediumItalic.woff') format('woff'),
-  url('../../ColfaxCombo/Colfax/Colfax-MediumItalic.otf') format('opentype');
+  src: url('../../dist/fonts/ColfaxWebMediumItalic.eot');
+  src: url('../../dist/fonts/ColfaxWebMediumItalic.eot?#iefix') format('embedded-opentype'),
+  url('../../dist/fonts/ColfaxWebMediumItalic.woff') format('woff'),
+  url('../../dist/fonts/Colfax-MediumItalic.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'Colfax';
+  font-family: 'Colfax-Bold';
   font-weight: bold;
-  src: url('../../fonts/ColfaxCombo/ColfaxWeb_EOT/ColfaxWebBold.eot');
-  src: url('../../fonts/ColfaxCombo/ColfaxWeb_EOT/ColfaxWebBold.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/ColfaxCombo/ColfaxWeb_WOFF/ColfaxWebBold.woff') format('woff'),
-  url('../../ColfaxCombo/Colfax/Colfax-Bold.otf') format('opentype');
+  font-style: normal;
+  src: url('../../dist/fonts/ColfaxWebBold.eot');
+  src: url('../../dist/fonts/ColfaxWebBold.eot?#iefix') format('embedded-opentype'),
+  url('../../dist/fonts/ColfaxWebBold.woff') format('woff'),
+  url('../../dist/fonts/Colfax-Bold.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'Colfax';
+  font-family: 'Colfax-BoldItalic';
   font-weight: bold;
   font-style: italic;
-  src: url('../../fonts/ColfaxCombo/ColfaxWeb_EOT/ColfaxWebBoldItalic.eot');
-  src: url('../../fonts/ColfaxCombo/ColfaxWeb_EOT/ColfaxWebBoldItalic.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/ColfaxCombo/ColfaxWeb_WOFF/ColfaxWebBoldItalic.woff') format('woff'),
-  url('../../ColfaxCombo/Colfax/Colfax-BoldItalic.otf') format('opentype');
+  src: url('../../dist/fonts/ColfaxWebBoldItalic.eot');
+  src: url('../../dist/fonts/ColfaxWebBoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../../dist/fonts/ColfaxWebBoldItalic.woff') format('woff'),
+  url('../../dist/fonts/Colfax-BoldItalic.otf') format('opentype');
 }

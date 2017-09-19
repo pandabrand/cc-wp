@@ -1,6 +1,6 @@
 .about_call_out {
   font-size: 2.25rem;
-  font-weight: 500;
+  @extend .medium;
   letter-spacing: 4.5px;
   margin-top: 2rem;
   @media(max-width: 768px) {
@@ -10,7 +10,7 @@
   }
   p {
     font-size: 2.25rem;
-    font-weight: 500;
+    @extend .medium;
     letter-spacing: 4.5px;
     line-height: 3rem !important;
     @media(max-width: 768px) {
@@ -24,7 +24,7 @@
 h3.about-h3 {
   font-size: 1.5rem;
   letter-spacing: 3px;
-  font-weight: 500;
+  @extend .medium;
   margin-bottom: 1.1875rem;
 }
 
@@ -84,7 +84,6 @@ h3.about-h3 {
   .about-copy {
     @extend .d-flex;
     @extend .flex-column;
-    // @extend .justify-content-between;
     justify-content: space-evenly;
   }
 }
@@ -99,12 +98,11 @@ h3.about-h3 {
         justify-content: space-around;
       }
       padding: 0 2rem;
-      // justify-content: space-between;
       .prev, .next {
         text-transform: uppercase;
       }
       .current {
-        font-weight: bold;
+        @extend .bold;
       }
     }
   }

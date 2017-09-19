@@ -15,9 +15,8 @@
     }
   }
   .social-icons__cta__header {
-    font-family: $colfax;
     font-size: 12px;
-    font-weight: 500;
+    @extend .medium;
     text-transform: uppercase;
     opacity: .6;
     padding-right: 4px;

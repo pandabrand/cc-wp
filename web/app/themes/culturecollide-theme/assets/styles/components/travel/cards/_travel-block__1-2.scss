@@ -69,7 +69,7 @@ $travel__border__color:  $white;
         font-size: 1.5rem;
         line-height: 1.75rem;
         letter-spacing: 3px;
-        font-weight: 500;
+        @extend .medium;
         overflow: hidden;
         @media(max-width: 768px) {
           font-size: 1rem;
@@ -93,13 +93,13 @@ $travel__border__color:  $white;
       .travel__category-block__category-details {
         display: inline-block;
         .travel__category-block__category-type {
-          font-weight: bold;
+          @extend .bold;
           font-size: 10px;
           letter-spacing: 3px;
           text-transform: uppercase;
         }
         .travel__category-block__category-info {
-          font-weight: bold;
+          @extend .bold;
           font-size: 12px;
           letter-spacing: 8px;
           text-transform: uppercase;

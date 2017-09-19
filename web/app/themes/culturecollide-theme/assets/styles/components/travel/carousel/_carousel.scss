@@ -4,7 +4,7 @@
     margin-bottom: 0;
   }
   .travel__artist-guides-title {
-    font-weight: 500;
+    @extend .medium;
     text-transform: uppercase;
     letter-spacing: 2px;
   }

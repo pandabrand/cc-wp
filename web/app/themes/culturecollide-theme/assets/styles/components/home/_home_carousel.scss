@@ -15,7 +15,7 @@ $home__city-guides__background: $white;
   .home__city-guides-block__title {
     font-size: 1.125rem;
     letter-spacing: 3px;
-    font-weight: 500;
+    @extend .medium;
     text-align: center;
     text-transform: uppercase;
     padding-top: 2.5rem;
@@ -64,7 +64,7 @@ $home__city-guides__background: $white;
             top: .5rem;
             left: 0;
             color: $home__city-guides__background;
-            font-weight: bold;
+            @extend .bold;
             font-size: .75rem;
             text-transform: uppercase;
             padding: 5px 0 5px 1rem;

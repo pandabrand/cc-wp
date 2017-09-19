@@ -109,8 +109,11 @@ var cssTasks = function(filename) {
     .pipe(autoprefixer, {
       browsers: [
         'last 2 versions',
+        'safari 5',
         'android 4',
-        'opera 12'
+        'opera 12',
+        'ie 6',
+        'ie 7'
       ]
     })
     .pipe(cssNano, {

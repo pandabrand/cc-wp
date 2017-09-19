@@ -23,7 +23,7 @@ $footer_color: $black;
       font-size: 16px;
     }
     .navigation__list__footer {
-      font-weight: 500;
+      @extend .medium;
       flex-direction: row;
       justify-content: center;
       @media(max-width: 768px) {
@@ -57,7 +57,7 @@ $footer_color: $black;
   .menu-footer-about-container {
     .footer-cta {
       font-size: 1.25rem;
-      font-weight: 500;
+      @extend .medium;
       letter-spacing: 2.25px;
       text-transform: uppercase;
     }

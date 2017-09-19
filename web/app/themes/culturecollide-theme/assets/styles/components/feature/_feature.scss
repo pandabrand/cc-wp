@@ -36,13 +36,13 @@ $feature__border__color:  $white;
       display: inline-block;
       color: $white;
       .feature__category-block__category-type {
-        font-weight: 500;
+        @extend .medium;
         font-size: .625rem;
         letter-spacing: 3px;
         text-transform: uppercase;
       }
       .feature__category-block__category-info {
-        font-weight: bold;
+        @extend .bold;
         font-size: .75rem;
         letter-spacing: 8px;
         text-transform: uppercase;
@@ -80,7 +80,7 @@ $feature__border__color:  $white;
       .feature__copy {
         .feature__title {
           font-size: 1rem;
-          font-weight: 600;
+          @extend .medium;
           line-height: 1.1875;
           margin-bottom: .6rem;
         }
@@ -133,7 +133,7 @@ $feature__border__color:  $white;
       margin: 0;
       .feature__title {
         font-size: 1rem;
-        font-weight: 600;
+        @extend .medium;
         line-height: 1.1875;
         margin-bottom: .6rem;
       }
@@ -186,7 +186,7 @@ $feature__border__color:  $white;
       margin: 0;
       .feature__title {
         font-size: 2rem;
-        font-weight: 600;
+        @extend .medium;
         line-height: 1.1875;
         margin-bottom: .6rem;
         @media (max-width: 768px) {
@@ -242,7 +242,7 @@ $feature__border__color:  $white;
       }
       .feature__title {
         font-size: 1rem;
-        font-weight: 600;
+        @extend .medium;
         line-height: 1.1875rem;
         margin-bottom: .6rem;
       }
@@ -296,7 +296,7 @@ $feature__border__color:  $white;
       margin: 0;
       .feature__title {
         font-size: 1rem;
-        font-weight: 600;
+        @extend .medium;
         line-height: 1.1875;
         margin-bottom: .6rem;
         @media (max-width: 768px) {

@@ -19,7 +19,7 @@ $travel--background--color: $black;
     color: $travel--color;
     .travel__header__title {
       font-size: 2.25rem;
-      font-weight: 500;
+      @extend .medium;
       text-transform: uppercase;
       letter-spacing: 4.5px;
     }

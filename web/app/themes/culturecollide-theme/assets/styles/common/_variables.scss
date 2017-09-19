@@ -40,7 +40,9 @@ $color__link--active:   $gray;
 $color__border:         $black;
 
 
-$colfax: 'Colfax', 'Helvetica', sans-serif;
+$colfax: 'Colfax-Regular', Helvetica, Arial, sans-serif;
+$colfax-bold: 'Colfax-Bold', 'Helvetica', Arial, sans-serif;
+$colfax-medium: 'Colfax-Medium', 'Helvetica', Arial, sans-serif;
 $body-font: $colfax;
 $header-font: $colfax;
 $fa-font-path: '../../dist/fonts';

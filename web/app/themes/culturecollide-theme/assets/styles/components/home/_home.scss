@@ -58,7 +58,7 @@ body, html {
         .feature-block__title {
           font-size: 2rem;
           line-height: 2rem;
-          font-weight: bold;
+          @extend .bold;
           overflow: hidden;
         }
         .feature-block__text {
@@ -79,13 +79,13 @@ body, html {
           transform: translate(0, 15%);
           color: $white;
           .feature-block__category-block__category-type {
-            font-weight: bold;
+            @extend .bold;
             font-size: 10px;
             letter-spacing: 3px;
             text-transform: uppercase;
           }
           .feature-block__category-block__category-info {
-            font-weight: bold;
+            @extend .bold;
             font-size: 12px;
             letter-spacing: 8px;
             text-transform: uppercase;
@@ -117,7 +117,7 @@ body, html {
         .feature-block__title {
           font-size: 1rem;
           line-height: 1rem;
-          font-weight: bold;
+          @extend .bold;
           margin-bottom: 1rem;
         }
         .feature-block__text {
@@ -139,13 +139,13 @@ body, html {
           display: inline-block;
           transform: translate(0, 15%);
           .feature-block__category-block__category-type {
-            font-weight: bold;
+            @extend .bold;
             font-size: 10px;
             letter-spacing: 3px;
             text-transform: uppercase;
           }
           .feature-block__category-block__category-info {
-            font-weight: bold;
+            @extend .bold;
             font-size: 12px;
             letter-spacing: 8px;
             text-transform: uppercase;
@@ -180,7 +180,7 @@ body, html {
           .feature-block__title {
             font-size: 1rem;
             line-height: 1rem;
-            font-weight: bold;
+            @extend .bold;
             margin-bottom: 1rem;
           }
           .feature-block__text {
@@ -203,13 +203,13 @@ body, html {
           display: inline-block;
           transform: translate(0, 15%);
           .feature-block__category-block__category-type {
-            font-weight: bold;
+            @extend .bold;
             font-size: 10px;
             letter-spacing: 3px;
             text-transform: uppercase;
           }
           .feature-block__category-block__category-info {
-            font-weight: bold;
+            @extend .bold;
             font-size: 12px;
             letter-spacing: 8px;
             text-transform: uppercase;
@@ -244,7 +244,7 @@ body, html {
           .feature-block__title {
             font-size: 1rem;
             line-height: 1rem;
-            font-weight: bold;
+            @extend .bold;
             margin-bottom: 1rem;
           }
           .feature-block__text {
@@ -268,13 +268,13 @@ body, html {
           transform: translate(0, 15%);
           color: $white;
           .feature-block__category-block__category-type {
-            font-weight: bold;
+            @extend .bold;
             font-size: 10px;
             letter-spacing: 3px;
             text-transform: uppercase;
           }
           .feature-block__category-block__category-info {
-            font-weight: bold;
+            @extend .bold;
             font-size: 12px;
             letter-spacing: 8px;
             text-transform: uppercase;
