@@ -273,7 +273,7 @@ function cc_gallery_shortcode( $output = '', $atts, $instance ) {
     $caption = wp_strip_all_tags( $galleryPost->post_excerpt );
     $return .= '<div class="cc-gallery-item">';
     $return .= '<a href="'.wp_get_attachment_image_src($galleryPost->ID, 'full')[0].'" data-fancybox="'.$gallery_id.'" data-caption="'.$caption.'">';
-    $return .= '<img src="'.wp_get_attachment_image_src($galleryPost->ID, 'large')[0].'" class="img-fluid" data-media="(min-width: 400px)" alt="'.$caption.'" />';
+    $return .= '<img src="'.wp_get_attachment_image_src($galleryPost->ID, 'thumbnail')[0].'" class="img-fluid" data-media="(min-width: 400px)" alt="'.$caption.'" />';
     $return .= '</a></div>';
   }
   $return .= '</div>';
