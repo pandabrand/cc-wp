@@ -32,15 +32,13 @@ function mediaSize() {
  /* Set the matchMedia */
  if (window.matchMedia('(max-width: 480px)').matches) {
    /* Changes when we reach the min-width  */
-   jQuery('.cc-media-wrapper, .editorial__detail__feature_media').each(function() {
+   jQuery('.cc-img-media-wrapper, .editorial__detail__feature_media').each(function() {
      var left_offset = jQuery(this).offset();
-     console.log('smaller than 480, offset: ' + left_offset.left);
      jQuery(this).css('margin-left', left_offset.left * -1);
    });
  } else {
-   console.log('bigger than 480');
    /* Reset for CSS changes – Still need a better way to do this! */
-   jQuery('.cc-media-wrapper, .editorial__detail__feature_media').each(function() {
+   jQuery('.cc-img-media-wrapper, .editorial__detail__feature_media').each(function() {
      jQuery(this).css('margin-left', 0);
    });
  }

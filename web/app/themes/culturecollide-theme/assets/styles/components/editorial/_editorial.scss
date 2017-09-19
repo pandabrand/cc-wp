@@ -94,11 +94,20 @@
       img {
         @extend .img-fluid;
       }
-      .cc-media-wrapper {
+      .cc-img-media-wrapper {
         @media(max-width: 480px) {
           width: 100vw;
           img {
             width: 100vw !important;
+            height: auto;
+          }
+        }
+      }
+      .cc-iframe-wrapper {
+        @media(max-width: 480px) {
+          width: 100%;
+          iframe {
+            width: 100% !important;
             height: auto;
           }
         }

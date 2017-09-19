@@ -330,10 +330,9 @@ add_filter( 'excerpt_length', 'cc_modify_event_excerpt_length' );
 function cc_wrap_img_media( $content ) {
   // A regular expression of what to look for.
   $pattern = '/(<img([^>]*)>)/i';
-  // <iframe[^>]+>.*?</iframe>
   // possible pattern for wrapping iframes for youtubes etc.
   // What to replace it with. $1 refers to the content in the first 'capture group', in parentheses above
-  $replacement = '<div class="cc-media-wrapper">$1</div>';
+  $replacement = '<div class="cc-img-media-wrapper">$1</div>';
 
   // run preg_replace() on the $content
   $content = preg_replace( $pattern, $replacement, $content );
@@ -343,3 +342,13 @@ function cc_wrap_img_media( $content ) {
 }
 
 add_filter( 'the_content', 'cc_wrap_img_media' );
+
+function cc_wrap_iframe( $content ) {
+  //
+  $pattern = '/(<iframe[^>]+>.*?<\/iframe>)/i';
+  $replacement = '<div class="cc-iframe-wrapper">$1</div>';
+  $content = preg_replace( $pattern, $replacement, $content );
+  return $content;
+}
+
+add_filter( 'the_content', 'cc_wrap_iframe' );
