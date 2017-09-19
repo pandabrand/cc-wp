@@ -7,7 +7,7 @@
     font-size: 1rem;
     letter-spacing: 2.25px;
     line-height: 1.5rem;
-    @extend .bold;
+    font-family: $colfax-bold;
   }
   p {
     font-size: 2.25rem;
@@ -18,7 +18,7 @@
       font-size: 1rem;
       letter-spacing: 2.25px;
       line-height: 1.5rem;
-      @extend .bold;
+      font-family: $colfax-bold;
     }
   }
 }
