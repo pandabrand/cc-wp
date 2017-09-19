@@ -114,9 +114,28 @@
         $('[id^=gallery-]').slick({
           dots: true,
           infinite: true,
-          slidesToShow: 1,
-          centerMode: true,
-          centerPadding: '50px'
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          responsive: [
+            {
+              breakpoint: 480,
+              settings: {
+                arrows: false,
+                dots: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                arrows: false,
+                dots: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              }
+            }
+          ]
         });
 
         $(window).on('load', function() {
