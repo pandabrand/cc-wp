@@ -1,5 +1,5 @@
 <div class="row cc-row justify-content-center editorial__detail__share-footer">
-  <div class="col-10 editorial__detail__share-footer_background">
+  <div class="col-sm-12 col-md-10 editorial__detail__share-footer_background">
     <div class="d-flex justify-content-center">
       <div class="editorial__detail__share-footer__title">
         share
