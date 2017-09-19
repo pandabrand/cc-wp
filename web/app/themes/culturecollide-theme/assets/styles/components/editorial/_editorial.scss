@@ -72,6 +72,9 @@
       }
     }
     .editorial__detail__feature_media {
+      @media(max-width: 480px) {
+        width: 100vw;
+      }
       img {
         width: 100%;
       }
