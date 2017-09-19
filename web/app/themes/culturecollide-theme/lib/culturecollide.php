@@ -326,3 +326,20 @@ function cc_modify_event_excerpt_length() {
   }
 }
 add_filter( 'excerpt_length', 'cc_modify_event_excerpt_length' );
+
+function cc_wrap_img_media( $content ) {
+  // A regular expression of what to look for.
+  $pattern = '/(<img([^>]*)>)/i';
+  // <iframe[^>]+>.*?</iframe>
+  // possible pattern for wrapping iframes for youtubes etc.
+  // What to replace it with. $1 refers to the content in the first 'capture group', in parentheses above
+  $replacement = '<div class="cc-media-wrapper">$1</div>';
+
+  // run preg_replace() on the $content
+  $content = preg_replace( $pattern, $replacement, $content );
+
+  // return the processed content
+  return $content;
+}
+
+add_filter( 'the_content', 'cc_wrap_img_media' );

@@ -91,6 +91,15 @@
       img {
         @extend .img-fluid;
       }
+      .cc-media-wrapper {
+        @media(max-width: 480px) {
+          width: 100vw;
+          img {
+            width: 100vw !important;
+            height: auto;
+          }
+        }
+      }
     }
     .editorial__detail__article__lede {
       font-size: 1.5rem;
