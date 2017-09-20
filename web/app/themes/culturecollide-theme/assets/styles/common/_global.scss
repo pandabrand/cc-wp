@@ -76,6 +76,14 @@ a {
   font-weight: 700;
 }
 
+b, strong {
+	@extend .bold;
+}
+
+em {
+	font-family: 'Colfax-RegularItalic';
+}
+
 .nav-links {
   display: flex;
   justify-content: space-between;
