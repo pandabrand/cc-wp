@@ -1,6 +1,18 @@
 .navbar-custom {
   background-color: $black;
   padding: 0 1rem;
+  @media(max-width: 375px) {
+    padding: 0 1rem 0 0;
+    .navbar__logo__wrapper {
+      margin-top: .5rem;
+      width: 150px;
+      height: 33px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
   /* change the brand and text color */
   .navbar-brand, .navbar-text {
       color: $white;
