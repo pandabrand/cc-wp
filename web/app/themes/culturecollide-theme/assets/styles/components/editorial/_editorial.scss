@@ -104,12 +104,10 @@
         }
       }
       .cc-iframe-wrapper {
-        @media(max-width: 480px) {
-          width: 100%;
-          iframe {
-            width: 100% !important;
-            height: auto;
-          }
+        width: 100%;
+        iframe {
+          width: 100% !important;
+          height: auto;
         }
       }
     }
