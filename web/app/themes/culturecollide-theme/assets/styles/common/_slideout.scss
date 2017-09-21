@@ -57,7 +57,7 @@
   position: relative;
   z-index: 1;
   will-change: transform;
-  background-color: #000; /* A background-color is required */
+  background-color: $color__background; /* A background-color is required */
   min-height: 100vh;
 }
 
