@@ -11,7 +11,7 @@
     $cat_query_params = array();
     if(get_post_type() == 'artist') {
       $artist_city = get_field('artist_city', $post->ID)[0];
-      $subject = $artist_city->post_title;
+      $subject = $post->post_title;
       $cat_city_name = $artist_city->post_title;
       $cat_city_id = $artist_city->ID;
       $cat_query_params['cat_artist'] = $post->post_name;
@@ -19,7 +19,6 @@
     } elseif ( get_post_type() == 'city' ) {
       $cat_city_name = $post->post_title;
       $cat_city_id = $post->ID;
-      write_log($cat_query_params);
       $cat_query_params['cat_city'] = $cat_city_id;
     } elseif ( is_tax( 'location_types' ) && get_query_var('cat_city') ) {
       $cat_city_id = get_query_var('cat_city');
@@ -31,7 +30,7 @@
   <div class="d-flex flex-row justify-content-end">
     <a href="javascript: void(0);" class="travel__slideout-menu-close"><i class="fa fa-times"></i></a>
   </div>
-  <div id="mobile_travel-accordion" class="travel__navigation__dropdowns">
+  <div id="mobile_travel-accordion" class="travel__navigation__accordion">
     <div class="card">
       <div class="card-header" role="tab" id="cityHeader">
         <a href="#cityCollapse" class="accordion-link" id="citiesMenuLink" data-toggle="collapse" data-parent="#mobile_travel-accordion" aria-controls="cityCollapse" aria-expanded="true">Cities</a>
@@ -131,7 +130,7 @@
     </div>
     <div class="card">
       <div class="card-header" role="tab" id="catHeader">
-        <a href="#catCollapse" class="accordion-link collapsed" id="categoriesMenuLink" data-toggle="collapse" aria-controls="CatCollapse" aria-expanded="false">Categories</a>
+        <a href="#catCollapse" class="accordion-link collapsed" id="categoriesMenuLink" data-toggle="collapse" data-parent="#mobile_travel-accordion" aria-controls="CatCollapse" aria-expanded="false">Categories</a>
       </div>
       <div id="catCollapse" class="collapse" role="tabpanel"  aria-labelledby="catHeader">
         <div class="card-block">

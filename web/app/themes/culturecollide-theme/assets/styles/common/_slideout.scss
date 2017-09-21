@@ -109,6 +109,12 @@
     z-index: -1;
   }
 }
+
+.travel__navigation__accordion {
+  @extend .travel__navigation__dropdowns;
+  margin-bottom: 5rem;
+}
+
 .slideout-menu {
   position: fixed;
   top: 0;
