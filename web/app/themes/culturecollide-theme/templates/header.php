@@ -2,7 +2,8 @@
   <nav class="navbar navbar-toggleable-md navbar-custom">
     <div class="navbar__mobile__wrapper">
       <div class="navbar-toggler navbar-toggler-right link_search-form_opener link_search-mobile_link"><a href="#" class="nav-link">search</a></div>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavigationListHeader" aria-controls="navbarNavigationListHeader" aria-expanded="false" aria-label="Toggle Navigation">
+      <!-- button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavigationListHeader" aria-controls="navbarNavigationListHeader" aria-expanded="false" aria-label="Toggle Navigation" -->
+      <button class="navbar-toggler navbar-toggler-right" type="button">
         <i class="fa fa-bars"></i>
       </button>
     </div>

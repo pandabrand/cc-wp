@@ -56,9 +56,9 @@
            fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
 
-         $('.navbar-toggler > i.fa').click(function() {
-           $( '.navbar-toggler > i.fa' ).toggleClass( 'fa-bars fa-times' );
-         });
+        //  $('.navbar-toggler > i.fa').click(function() {
+        //    $( '.navbar-toggler > i.fa' ).toggleClass( 'fa-bars fa-times' );
+        //  });
 
         $('.share-fb').click(function() {
           event.preventDefault();
@@ -136,6 +136,22 @@
               }
             }
           ]
+        });
+
+        var slideout = new Slideout({
+          'panel': document.getElementById('panel'),
+          'menu': document.getElementById('slideout-menu'),
+          'padding': document.documentElement.clientWidth,
+          'tolerance': 7,
+          'easing': 'cubic-bezier(.32,2,.55,.27)'
+        });
+
+        $('.navbar-toggler').click(function() { slideout.toggle(); });
+        $(window).bind("orientationchange", function(evt){
+          if(slideout.isOpen()) {
+            slideout.close();
+            $('html, body').animate({scrollTop:0}, 'slow');
+          }
         });
 
         $(window).on('load', function() {
