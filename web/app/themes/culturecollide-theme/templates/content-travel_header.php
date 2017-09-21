@@ -40,7 +40,8 @@
     <div class="row travel__navigation-row">
       <div class="d-flex flex-row justify-content-around travel__navigation__wrapper">
         <nav class="hidden-sm-up navbar">
-          <a class="navbar-toggler btn btn-secondary travel__navigation__button travel__navigation__button--browse" data-toggle="collapse" data-target="#travel-navigate" aria-controls="travel-navigate" aria-expanded="false" aria-label="Toggle navigation" onclick="javascript: void(0);">
+          <!-- a class="navbar-toggler btn btn-secondary travel__navigation__button travel__navigation__button--browse" data-toggle="collapse" data-target="#travel-navigate" aria-controls="travel-navigate" aria-expanded="false" aria-label="Toggle navigation" onclick="javascript: void(0);" -->
+          <a class="btn btn-secondary travel__navigation__button travel__navigation__button--browse">
             BROWSE
           </a>
         </nav>

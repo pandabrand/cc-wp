@@ -56,10 +56,6 @@
            fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
 
-        //  $('.navbar-toggler > i.fa').click(function() {
-        //    $( '.navbar-toggler > i.fa' ).toggleClass( 'fa-bars fa-times' );
-        //  });
-
         $('.share-fb').click(function() {
           event.preventDefault();
           FB.ui({
@@ -141,10 +137,54 @@
         var slideout = new Slideout({
           'panel': document.getElementById('panel'),
           'menu': document.getElementById('slideout-menu'),
-          'padding': document.documentElement.clientWidth,
+          'padding': window.innerWidth,
           'tolerance': 7,
           'easing': 'cubic-bezier(.32,2,.55,.27)'
         });
+
+        if($('#mobile-travel-navigate').length) {
+          var travel_slideout = new Slideout({
+            'panel': document.getElementById('panel'),
+            'menu': document.getElementById('mobile-travel-navigate'),
+            'padding': window.innerWidth,
+            'side': 'right',
+            'tolerance': 7,
+            'easing': 'cubic-bezier(.32,2,.55,.27)'
+          });
+
+          slideout.on('beforeopen', function() {
+            $('#mobile-travel-navigate').addClass('slideout-open--left');
+            travel_slideout.disableTouch();
+          } );
+          slideout.on('close', function() {
+            $('#mobile-travel-navigate').removeClass('slideout-open--left');
+            travel_slideout.enableTouch();
+          } );
+
+          travel_slideout.on('beforeopen', function() {
+            $('#slideout-menu').addClass('slideout-open--right');
+            slideout.disableTouch();
+          } );
+          travel_slideout.on('close', function() {
+            $('#slideout-menu').removeClass('slideout-open--right');
+            slideout.enableTouch();
+          } );
+
+          $('.travel__navigation__button--browse').click( function() {
+            travel_slideout.open();
+          } );
+
+          $('.travel__slideout-menu-close').click( function() {
+            travel_slideout.close();
+          } );
+
+          $(window).bind('orientationchange', function(evt) {
+            if( travel_slideout.isOpen() ) {
+              travel_slideout.close();
+              $('html, body').animate( {scrollTop:0}, 'slow' );
+            }
+          });
+        }
 
         $('.navbar-toggler').click(function() { slideout.toggle(); });
         $(window).bind("orientationchange", function(evt){

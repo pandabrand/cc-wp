@@ -9,7 +9,20 @@ use Roots\Sage\Wrapper;
 <html <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
-    <?php get_template_part('templates/mobile_header'); ?>
+    <?php
+      // getting mobile menus
+      // primary menu
+      get_template_part('templates/mobile_header');
+      // get menu if this is the travel page, post type of artist or city, or taxonomy of location_types
+      if(
+        is_page('travel') ||
+        get_post_type() == 'artist' ||
+        get_post_type() == 'city' ||
+        is_tax('location_types')
+        ) :
+        get_template_part('layouts/travel-header_mobile-menu');
+      endif;
+    ?>
     <div id="panel" class="cc-container">
       <!--[if IE]>
         <div class="alert alert-warning">
