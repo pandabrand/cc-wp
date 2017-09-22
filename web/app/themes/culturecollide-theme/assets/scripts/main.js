@@ -139,7 +139,8 @@
           'menu': document.getElementById('slideout-menu'),
           'padding': window.innerWidth,
           'tolerance': 7,
-          'easing': 'cubic-bezier(.32,2,.55,.27)'
+          'easing': 'cubic-bezier(.32,2,.55,.27)',
+          'touch': false
         });
 
         if($('#mobile-travel-navigate').length) {
@@ -149,25 +150,26 @@
             'padding': window.innerWidth,
             'side': 'right',
             'tolerance': 7,
-            'easing': 'cubic-bezier(.32,2,.55,.27)'
+            'easing': 'cubic-bezier(.32,2,.55,.27)',
+            'touch': false
           });
 
           slideout.on('beforeopen', function() {
             $('#mobile-travel-navigate').addClass('slideout-open--left');
-            travel_slideout.disableTouch();
+            // travel_slideout.disableTouch();
           } );
           slideout.on('close', function() {
             $('#mobile-travel-navigate').removeClass('slideout-open--left');
-            travel_slideout.enableTouch();
+            // travel_slideout.enableTouch();
           } );
 
           travel_slideout.on('beforeopen', function() {
             $('#slideout-menu').addClass('slideout-open--right');
-            slideout.disableTouch();
+            // slideout.disableTouch();
           } );
           travel_slideout.on('close', function() {
             $('#slideout-menu').removeClass('slideout-open--right');
-            slideout.enableTouch();
+            // slideout.enableTouch();
           } );
 
           $('.travel__navigation__button--browse').click( function() {
