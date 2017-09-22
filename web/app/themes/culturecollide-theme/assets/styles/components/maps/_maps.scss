@@ -9,6 +9,14 @@
   // left: -58px;
 }
 
+.leaflet-control-attribution{
+  &.leaflet-control {
+    @media(max-width: 480px) {
+      font-size: .5rem;
+    }
+  }
+}
+
 .cc-map-marker {
   // position: absolute;
   // top: -40px;

@@ -40,7 +40,6 @@
     <div class="row travel__navigation-row">
       <div class="d-flex flex-row justify-content-around travel__navigation__wrapper">
         <nav class="hidden-sm-up navbar">
-          <!-- a class="navbar-toggler btn btn-secondary travel__navigation__button travel__navigation__button--browse" data-toggle="collapse" data-target="#travel-navigate" aria-controls="travel-navigate" aria-expanded="false" aria-label="Toggle navigation" onclick="javascript: void(0);" -->
           <a class="btn btn-secondary travel__navigation__button travel__navigation__button--browse">
             BROWSE
           </a>
@@ -53,7 +52,7 @@
           <a href="#" rel="noreferrer" class="btn btn-secondary travel__navigation__button travel__navigation__button--near-me">Near Me</a>
         </div>
       </div>
-      <div class="" id="travel-navigate">
+      <div class="hidden-sm-down" id="travel-navigate">
         <div class="d-flex flex-row justify-content-start travel__navigation__dropdowns">
           <div class="dropdown full-width">
             <a href="#" class="btn btn-secondary dropdown-toggle" id="citiesMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cities</a>
