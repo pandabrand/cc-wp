@@ -5,10 +5,12 @@
 .stuck {
   position: fixed;
   top: 0;
+  left: 0;
   &.travel__navigation {
     z-index: 30;
-    margin-left: -1.875rem;
-    padding-left: 2.8rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 3rem;
     padding-right: 1rem;
   }
 }

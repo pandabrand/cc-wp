@@ -1,6 +1,21 @@
+.avoid-clicks {
+  pointer-events: none;
+}
+
 .navbar__slideout-menu {
-  width: 100%;
-  right: 0;
+  position: fixed;
+  left: -100vw;
+  top: 0;
+  max-height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+  transition-property: left;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  z-index: 55;
+  &.open {
+    left: 0vw;
+  }
   &.navbar-custom {
     padding: 1rem;
   }
@@ -34,10 +49,22 @@
 }
 
 .travel__slideout-menu {
-  width: 100%;
-  left: 0;
+  position: fixed;
+  right: -100vw;
+  top: 0;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  transition-property: right;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  z-index: 56;
   background-color: $color__background;
   color: $black;
+  &.open {
+    right: 0vw;
+    height: 100%;
+  }
   .travel__slideout-menu-close {
     padding: 1rem;
   }
@@ -94,6 +121,7 @@
     }
   }
 }
+
 .slideout-menu-right {
   &.slideout-open--left {
     visibility: hidden;
