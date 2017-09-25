@@ -3,3 +3,22 @@
     max-width: none;
   }
 }
+
+.footer-nav-menu-about {
+  .menu-item {
+    @media(max-width: 480px) {
+      text-align: center;
+    }
+    .nav-link {
+      color: $color__text-main;
+      text-align: center;
+      &:link, &:visited {
+        color: $color__text-main;
+      }
+      &:hover, &:active {
+        color: $color__link--active;
+        text-decoration: none;
+      }
+    }
+  }
+}
