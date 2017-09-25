@@ -43,6 +43,17 @@ a {
     color: $color__link--active;
     text-decoration: none;
   }
+	&.dark {
+		color: $color__text-main;
+    text-align: center;
+    &:link, &:visited {
+      color: $color__text-main;
+    }
+    &:hover, &:active {
+      color: $color__link--active;
+      text-decoration: none;
+    }
+	}
   &.invert {
     color: $white;
     &:link, &:visited {

@@ -50,6 +50,15 @@
         &.travel__navigation__button {
           border: none;
           margin: .5rem .5rem 0 0;
+          color: $color__text-main;
+          text-align: center;
+          &:link, &:visited {
+            color: $color__text-main;
+          }
+          &:hover, &:active {
+            color: $color__link--active;
+            text-decoration: none;
+          }
         }
         &.travel__navigation__button--near-me {
           margin: .5rem 0;
@@ -83,6 +92,15 @@
       }
       .dropdown {
         .dropdown-toggle {
+          color: $color__text-main;
+          text-align: center;
+          &:link, &:visited {
+            color: $color__text-main;
+          }
+          &:hover, &:active {
+            color: $color__link--active;
+            text-decoration: none;
+          }
           font-size: .875rem;
           letter-spacing: 1.75px;
           &:before {
@@ -104,6 +122,15 @@
         }
         &.show {
           .dropdown-toggle {
+            color: $color__text-main;
+            text-align: center;
+            &:link, &:visited {
+              color: $color__text-main;
+            }
+            &:hover, &:active {
+              color: $color__link--active;
+              text-decoration: none;
+            }
             &:after {
               content: "\f077";
             }
@@ -139,11 +166,30 @@
                 overflow: scroll;
               }
               .dropdown-item {
+                color: $color__text-main;
+                text-align: center;
+                &:link, &:visited {
+                  color: $color__text-main;
+                }
+                &:hover, &:active {
+                  color: $color__link--active;
+                  text-decoration: none;
+                }
                 font-size: .875rem;
                 letter-spacing: 1.75px;
                 padding-bottom: .75rem;
                 page-break-inside: avoid;
                 break-inside: avoid;
+                &.active {
+                  color: $white;
+                  &:link, &:visited {
+                    color: $white;
+                  }
+                  &:hover {
+                    color: $light-gray;
+                    text-decoration: none;
+                  }
+                }
               }
             }
           }
