@@ -84,6 +84,7 @@ $card__border__color:  $white;
     left: .625rem;
     height: 40px;
     display: flex;
+    word-break: break-all;
     .card__category-block__category-image {
     }
     .card__category-block__category-details {

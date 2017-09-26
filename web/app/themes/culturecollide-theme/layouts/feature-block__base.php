@@ -9,7 +9,7 @@
         <?php $cat = $category->slug; echo ($cat == 'uncategorized') ? 'music' : $cat; ?>
       </div>
       <div class="feature__category-block__category-info">
-
+        <?php echo get_category_type_subject(); ?>
       </div>
     </div>
   </div>
