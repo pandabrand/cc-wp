@@ -75,7 +75,8 @@
     "wpackagist-plugin/query-monitor": "2.13.4",
     "wpackagist-plugin/velvet-blues-update-urls": "3.2.7",
     "wpackagist-plugin/redirection": "2.7.3",
-    "wpackagist-plugin/enable-media-replace": "3.1.1"
+    "wpackagist-plugin/enable-media-replace": "3.1.1",
+    "wpackagist-plugin/official-mailerlite-sign-up-forms": "1.2.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

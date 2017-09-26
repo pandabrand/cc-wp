@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f31588272eb1a0faa7dfa06e5c7bc295",
+    "content-hash": "85e4aae9be1826928a83cf4f21cdf15b",
     "packages": [
         {
             "name": "composer/installers",
@@ -613,6 +613,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/ninja-forms/"
+        },
+        {
+            "name": "wpackagist-plugin/official-mailerlite-sign-up-forms",
+            "version": "1.2.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/official-mailerlite-sign-up-forms/",
+                "reference": "tags/1.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/official-mailerlite-sign-up-forms.1.2.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/official-mailerlite-sign-up-forms/"
         },
         {
             "name": "wpackagist-plugin/query-monitor",
