@@ -1,27 +1,34 @@
 <?php
 $exclude_posts = array();
-$main_post_object = get_field('main_feature');
-$exclude_posts[] = $main_post_object->ID;
-$second_features = get_field('side_features');
-while( have_rows( 'side_features' ) ){
-  the_row();
-  $ex_post = get_sub_field( 'feature' );
-  $exclude_posts[] = $ex_post->ID;
+$post_types = array('post');
+if( is_page('editorial') ) {
+  $main_post_object = get_field('main_feature');
+  $exclude_posts[] = $main_post_object->ID;
+  $second_features = get_field('side_features');
+  while( have_rows( 'side_features' ) ){
+    the_row();
+    $ex_post = get_sub_field( 'feature' );
+    $exclude_posts[] = $ex_post->ID;
+  }
+} elseif( is_single() ) {
+  $exclude_posts[] = get_the_ID();
+  // $post_types[] = 'city';
+  // $post_types[] = 'artist';
 }
 $reservedObj = get_category_by_slug('reserved');
-$reservedId = $reservedObj->term_id;
+$exclude_cats = array($reservedObj->term_id);
 
 if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
 elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
 else { $paged = 1; }
 $args = array(
 'posts_per_page' => 12,
-'post_type' => 'post',
+'post_type' => $post_types,
 'order_by' => ['date'],
 'order' => 'DESC',
 'paged' => $paged,
 'post__not_in' => $exclude_posts,
-'category__not_in' => [$reservedId],
+'category__not_in' => $exclude_cats,
 );
 $more_query = new WP_Query($args);
 if($more_query->have_posts()): $counter = 1; ?>
@@ -57,7 +64,7 @@ if($more_query->have_posts()): $counter = 1; ?>
 <?php wp_reset_query(); ?>
 <?php
   global $wp;
-  $current_url = home_url( $wp->query_vars['pagename'] );
+  $current_url = home_url( $wp->query_vars['name'] );
 ?>
 <div class="row cc-row d-flex justify-content-center">
     <?php if( $paged + 1 < 11 ): ?>

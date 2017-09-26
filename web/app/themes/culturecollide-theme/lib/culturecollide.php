@@ -235,6 +235,10 @@ function cc_category_archives( $query ) {
     $idObj = get_category_by_slug('reserved');
     $id = $idObj->term_id;
     $query->set('category__not_in', [$id]);
+  } elseif( !is_admin() && is_search() ) {
+    $idObj = get_category_by_slug('reserved');
+    $id = $idObj->term_id;
+    $query->set('category__not_in', [$id]);
   }
 
   if ( !is_admin() && $query->is_main_query() && is_post_type_archive() ) {

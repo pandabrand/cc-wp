@@ -19,8 +19,8 @@
           <?php echo get_card_title(); ?>
         </div>
         <div class="card__text">
-          <!-- ?php echo get_card_excerpt(); ? -->
-          <?= strip_tags(get_the_excerpt()); ?>
+          <?= get_card_excerpt(); ?>
+          <!-- ?= strip_tags(get_the_excerpt()); ? -->
         </div>
       </div>
     </div>

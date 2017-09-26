@@ -54,7 +54,8 @@
       </ul>
     </div>
     <?php if( get_field( 'sponsor_title' ) ): ?>
-      <div class="billboard_sponsor-block d-flex ml-auto pr-4 text-center">
+      <?php $sponsor_url = get_field( 'sponsor_url' ); ?>
+      <div class="billboard_sponsor-block d-flex ml-auto pr-4 text-center<? echo $sponsor_url ? ' billboard_sponsor-block-pointer' : ''; ?>" onclick="<?php echo $sponsor_url ? "javascript: sendToSponsor('{$sponsor_url}');" : "javascript: void(0);"; ?>">
         <div class="d-flex flex-row">
           <div class="billboard_sponsor-callout my-auto">
             Presented by:

@@ -390,6 +390,9 @@
     position: absolute;
     top: 19rem;
     left: 7.5rem;
+    &.billboard_sponsor-block-pointer {
+      cursor: pointer;
+    }
     @media(max-width: 480px) {
       top: 9rem;
       left: 4.5rem;

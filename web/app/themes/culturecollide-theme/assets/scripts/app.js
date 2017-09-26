@@ -43,3 +43,7 @@ function mediaSize() {
    });
  }
 }
+
+function sendToSponsor(url) {
+  window.open(url, '_blank');
+}
