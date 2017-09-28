@@ -340,7 +340,7 @@
                 "source": "https://github.com/pandabrand/cc-plugin/tree/master",
                 "issues": "https://github.com/pandabrand/cc-plugin/issues"
             },
-            "time": "2017-09-26T18:45:19+00:00"
+            "time": "2017-09-28T21:31:00+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -930,16 +930,16 @@
         },
         {
             "name": "yoast/wordpress-seo",
-            "version": "5.5",
+            "version": "5.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast/wordpress-seo.git",
-                "reference": "bf81897a6605d9419150064281405315ac259678"
+                "reference": "58e1a55ec2b0980278ff9365d5e988cad5afcc6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast/wordpress-seo/zipball/bf81897a6605d9419150064281405315ac259678",
-                "reference": "bf81897a6605d9419150064281405315ac259678",
+                "url": "https://api.github.com/repos/Yoast/wordpress-seo/zipball/58e1a55ec2b0980278ff9365d5e988cad5afcc6c",
+                "reference": "58e1a55ec2b0980278ff9365d5e988cad5afcc6c",
                 "shasum": ""
             },
             "require": {
@@ -981,7 +981,7 @@
                 "seo",
                 "wordpress"
             ],
-            "time": "2017-09-26T08:41:24+00:00"
+            "time": "2017-09-28T12:59:51+00:00"
         }
     ],
     "packages-dev": [
