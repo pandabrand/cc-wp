@@ -40,13 +40,13 @@ if( is_single() && !empty($post_tags) ) {
 
 $more_query = new WP_Query($args);
 if($more_query->have_posts()): $counter = 1; ?>
-<?php if( !is_page( 'editorial' ) ): ?>
-  <div class="row cc-row d-flex justify-content-center">
-    <div class="editorial__title">
+<div class="row cc-row d-flex justify-content-center">
+  <div class="editorial__title">
+    <?php if( !is_page( 'editorial' ) ): ?>
       related
-    </div>
+    <?php endif; ?>
   </div>
-<?php endif; ?>
+</div>
 <div class="row cc-row editorial__block">
   <?php while($more_query->have_posts()): $more_query->the_post(); ?>
     <?php if($counter > 6) { $counter = 1; } ?>
