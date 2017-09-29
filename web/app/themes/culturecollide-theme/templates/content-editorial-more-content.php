@@ -1,5 +1,6 @@
 <?php
 $exclude_posts = array();
+$post_tags = array();
 $post_types = array('post');
 if( is_page('editorial') ) {
   $main_post_object = get_field('main_feature');
@@ -12,8 +13,11 @@ if( is_page('editorial') ) {
   }
 } elseif( is_single() ) {
   $exclude_posts[] = get_the_ID();
-  // $post_types[] = 'city';
-  // $post_types[] = 'artist';
+  foreach (get_the_tags() as $tag) {
+    $post_tags[] = $tag->term_id;
+  }
+  $post_types[] = 'city';
+  $post_types[] = 'artist';
 }
 $reservedObj = get_category_by_slug('reserved');
 $exclude_cats = array($reservedObj->term_id);
@@ -30,13 +34,19 @@ $args = array(
 'post__not_in' => $exclude_posts,
 'category__not_in' => $exclude_cats,
 );
+if( is_single() && !empty($post_tags) ) {
+  $args['tag__in'] = $post_tags;
+}
+
 $more_query = new WP_Query($args);
 if($more_query->have_posts()): $counter = 1; ?>
-<div class="row cc-row d-flex justify-content-center">
-  <div class="editorial__title">
-    related
+<?php if( !is_page( 'editorial' ) ): ?>
+  <div class="row cc-row d-flex justify-content-center">
+    <div class="editorial__title">
+      related
+    </div>
   </div>
-</div>
+<?php endif; ?>
 <div class="row cc-row editorial__block">
   <?php while($more_query->have_posts()): $more_query->the_post(); ?>
     <?php if($counter > 6) { $counter = 1; } ?>

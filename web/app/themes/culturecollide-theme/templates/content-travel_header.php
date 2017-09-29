@@ -80,7 +80,7 @@
                       endforeach;
                     endif;
                   ?>
-                  <a href="/city" class="dropdown-item button button--small button--outline button--width-fit" rel="nofollow">All Cities</a>
+                  <a href="/city" class="button button--small button--outline button--width-fit" rel="nofollow">All Cities</a>
                 </div>
                 <?php
                   $args = array(
@@ -157,7 +157,7 @@
                       wp_reset_postdata();
                     endif;
                   ?>
-                  <a href="/artist" class="dropdown-item button button--small button--outline button--width-fit" rel="nofollow">All Artists</a>
+                  <a href="/artist" class="button button--small button--outline button--width-fit" rel="nofollow">All Artists</a>
                 </div>
                 <?php
                   $args = array(

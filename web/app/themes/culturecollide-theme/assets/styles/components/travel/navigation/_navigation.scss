@@ -167,7 +167,6 @@
               }
               .dropdown-item {
                 color: $color__text-main;
-                text-align: center;
                 &:link, &:visited {
                   color: $color__text-main;
                 }
@@ -180,6 +179,10 @@
                 padding-bottom: .75rem;
                 page-break-inside: avoid;
                 break-inside: avoid;
+                text-align: left;
+                @media(max-width: 768px) {
+                  text-align: center;
+                }
                 &.active {
                   color: $white;
                   &:link, &:visited {
