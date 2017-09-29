@@ -4,16 +4,19 @@
   </div>
   <?php
     $exclude_posts = array();
-    $main_post_object = get_field('main_feature');
-    $exclude_posts[] = $main_post_object->ID;
-    $second_features = get_field('secondary_main_feature');
-    $reservedObj = get_category_by_slug('reserved');
-    $reservedId = $reservedObj->term_id;
-    while( have_rows( 'secondary_main_feature' ) ){
-      the_row();
-      $ex_post = get_sub_field( 'feature_object' );
-      $exclude_posts[] = $ex_post->ID;
-    }
+    if( is_front_page() ):
+      $feature_id = get_queried_object_id();
+      $main_post_object = get_field('main_feature', $feature_id);
+      $exclude_posts[] = $main_post_object->ID;
+      $second_features = get_field('secondary_main_feature', $feature_id);
+      $reservedObj = get_category_by_slug('reserved');
+      $reservedId = $reservedObj->term_id;
+      while( have_rows( 'secondary_main_feature', $feature_id ) ){
+        the_row();
+        $ex_post = get_sub_field( 'feature_object', $feature_id );
+        $exclude_posts[] = $ex_post->ID;
+      }
+    endif;
     $args = array(
       'posts_per_page' => 3,
       'post_type' => ['post'],
