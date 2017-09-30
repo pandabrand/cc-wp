@@ -25,16 +25,19 @@
   }
   .navbar_navigation__item__header {
     text-align: center;
+    margin: 0 auto;
     .nav-link {
       font-family: $colfax-medium;
       text-transform: uppercase;
       letter-spacing: 4px;
+      width: min-content;
+      padding: .5rem 0 0;
+      margin-bottom: .5rem;
     }
   }
   .current-menu-item {
     a {
       border-bottom: 1px solid $white;
-      margin: 0 25%;
     }
   }
   .social-icons__list__header {
