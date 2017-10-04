@@ -337,6 +337,8 @@ function cc_modify_event_excerpt_length() {
 add_filter( 'excerpt_length', 'cc_modify_event_excerpt_length' );
 
 function cc_wrap_img_media( $content ) {
+  $caption_pattern = '/<figure [^>]+><img [^>]*><figcaption [^>]+>.*<\/figcaption><\/figure>/i';
+
   // A regular expression of what to look for.
   $pattern = '/(<img([^>]*)>)/i';
   // possible pattern for wrapping iframes for youtubes etc.
@@ -350,7 +352,7 @@ function cc_wrap_img_media( $content ) {
   return $content;
 }
 
-add_filter( 'the_content', 'cc_wrap_img_media' );
+add_filter( 'the_content', 'cc_wrap_img_media', 20, 1);
 
 function cc_wrap_iframe( $content ) {
   //
@@ -361,3 +363,42 @@ function cc_wrap_iframe( $content ) {
 }
 
 add_filter( 'the_content', 'cc_wrap_iframe' );
+
+add_filter( 'img_caption_shortcode', 'cleaner_caption', 10, 3 );
+
+function cleaner_caption( $output, $attr, $content ) {
+	/* Set up the default arguments. */
+	$defaults = array(
+		'id' => '',
+		'align' => 'alignnone',
+		'width' => '',
+		'caption' => ''
+	);
+
+	/* Merge the defaults with user input. */
+	$attr = shortcode_atts( $defaults, $attr );
+
+	/* If the width is less than 1 or there is no caption, return the content wrapped between the [caption]< tags. */
+	if ( 1 > $attr['width'] || empty( $attr['caption'] ) )
+		return $content;
+
+	/* Set up the attributes for the caption <div>. */
+	$attributes = ( !empty( $attr['id'] ) ? ' id="' . esc_attr( $attr['id'] ) . '"' : '' );
+	$attributes .= ' class="wp-caption ' . esc_attr( $attr['align'] ) . '"';
+	$attributes .= ' style="width: ' . esc_attr( $attr['width'] ) . 'px"';
+
+	/* Open the caption <div>. */
+	$output = '<figure' . $attributes .'>';
+
+	/* Allow shortcodes for the content the caption was created for. */
+	$output .= do_shortcode( $content );
+
+	/* Append the caption text. */
+	$output .= '<figurecaption class="wp-caption-text">' . $attr['caption'] . '</figurecaption>';
+
+	/* Close the caption </div>. */
+	$output .= '</figure>';
+
+	/* Return the formatted, clean caption. */
+	return $output;
+}
