@@ -362,7 +362,7 @@ function cc_wrap_iframe( $content ) {
   return $content;
 }
 
-add_filter( 'the_content', 'cc_wrap_iframe' 20, 1 );
+add_filter( 'the_content', 'cc_wrap_iframe', 20, 1 );
 
 add_filter( 'img_caption_shortcode', 'cleaner_caption', 10, 3 );
 
