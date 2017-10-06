@@ -112,6 +112,7 @@
           infinite: true,
           slidesToShow: 4,
           slidesToScroll: 4,
+          rows: 0,
           responsive: [
             {
               breakpoint: 480,
@@ -216,6 +217,7 @@
           mobileFirst: true,
           arrows: false,
           dots: true,
+          rows: 0,
           slide: '.feature-block_element',
           responsive: [
             {
@@ -228,6 +230,7 @@
           infinite: true,
           slidesToShow: 5,
           slidesToScroll: 5,
+          rows: 0,
           responsive: [
             {
               breakpoint: 480,
@@ -266,6 +269,7 @@
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
+          rows: 0,
           responsive: [
             {
               breakpoint: 480,
@@ -698,6 +702,7 @@
          infinite: true,
          slidesToShow: 4,
          slidesToScroll: 4,
+         rows: 0,
          responsive: [
            {
              breakpoint: 1025,
