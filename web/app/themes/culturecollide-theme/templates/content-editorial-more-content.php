@@ -1,5 +1,6 @@
 <?php
 $exclude_posts = array();
+$exclude_cats = array();
 $post_tags = array();
 $post_types = array('post');
 if( is_page('editorial') ) {
@@ -20,7 +21,7 @@ if( is_page('editorial') ) {
   $post_types[] = 'artist';
 }
 $reservedObj = get_category_by_slug('reserved');
-$exclude_cats = array($reservedObj->term_id);
+$exclude_cats[] = $reservedObj->term_id;
 
 if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
 elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
