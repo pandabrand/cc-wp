@@ -1,17 +1,18 @@
 <?php
-  $args = array(
-    'posts_per_page' => 1,
-    'post_type' => ['ad_space'],
-  );
-  $ad_query = new WP_Query($args);
-  if($ad_query->have_posts()):
+  //get all widgets
+  $all_widgets = wp_get_sidebars_widgets();
+  //get the related ads widget
+  $related_ad_widget = $all_widgets['related-ads'];
+  //make sure this sidebar has an adbutler widget in it
+  $filter_result = array_filter($related_ad_widget, function($v){
+    return ( strpos($v, 'adbutler') !== false );
+  });
+
+  if( is_active_sidebar( 'related-ads' ) && !empty( $filter_result ) ):
 ?>
   <div class="ad">
-    <a href="<?php echo get_field(''); ?>" target="_blank" rel="external">
-      <img src="<?php echo the_post_thumbnail_url('ad-space-image'); ?>" class="img-fluid" height="100%"/>
-    </a>
+    <?php dynamic_sidebar('related-ads'); ?>
   </div>
-</div>
 <?php
   else :
     $args = array(
