@@ -42,7 +42,7 @@
     if( empty( $filter_result ) ) {
       $filter_result_key = array_rand($cities, 1);
       $rand_city = $cities[$filter_result_key];
-      $filter_result[] = $city;
+      $filter_result[] = $rand_city;
     }
 
     //now make the $related_guide_details

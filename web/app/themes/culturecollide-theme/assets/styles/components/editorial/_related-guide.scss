@@ -43,6 +43,8 @@ $delay: 100ms;
       z-index: 5;
       background-color: $off-black;
       filter: grayscale(100%);
+      background-position: center;
+      background-size: cover;
 
       .panel-copy {
         font-family: $colfax-bold;
