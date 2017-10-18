@@ -15,10 +15,13 @@
   </div>
 <?php
   else :
+    $reservedObj = get_category_by_slug('reserved');
+    $exclude_cats = array($reservedObj->term_id);
     $args = array(
       'posts_per_page' => 1,
       'post_type' => ['post', 'artist', 'city'],
-      'orderby' => 'rand'
+      'orderby' => 'rand',
+      'category__not_in' => $exclude_cats,
     );
     $filler_query = new WP_Query($args);
     if($filler_query->have_posts()) :
