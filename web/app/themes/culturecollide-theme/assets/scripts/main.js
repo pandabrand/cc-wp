@@ -202,11 +202,11 @@
 
         $('.first-panel').waypoint({
           handler: function(direction) {
-            if( direction === 'down' ) {
-              $('.second-panel').toggleClass('slide-in');
-            } else {
-              $('.second-panel').toggleClass('slide-in');
-            }
+            // if( direction === 'down' ) {
+            //   $('.second-panel').toggleClass('slide-in');
+            // } else {
+              $('.second-panel').addClass('slide-in');
+            // }
           },
           offset: 'right-in-view',
         });
