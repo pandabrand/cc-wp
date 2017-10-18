@@ -12,29 +12,51 @@
         $tags = wp_list_pluck( $post_tags, 'name' );
     }
 
+    $post_tags = get_the_terms( $post->ID, 'post_tag' );
+    if ( ! empty( $post_tags ) && ! is_wp_error( $post_tags ) ) {
+        $tag_ids = wp_list_pluck( $post_tags, 'term_id' );
+    }
     //endure tags are lower case
-    array_walk($tags, function( $tag ){
-      $tag = strtolower($tag);
-    });
+    if( !empty( $tags ) ) {
+      array_walk($tags, function( $tag ){
+        $tag = strtolower($tag);
+      });
+    }
 
-    // Get a list of all current city post names
-    $city_args = array(
-      'post_type' => 'city',
-      'posts_per_page' => -1
-    );
-
-    $cities = get_posts( $city_args );
-
-    // see if there is a term match with a city name
-    $filter_result = array_filter($cities, function( $city ) use ( $tags ){
-      $city_title = strtolower( $city->post_title );
-      return in_array( $city_title, $tags );
-    } );
+    // try to match tags to tags
+    // first get all city tags or city IDS for tags
+    if( !empty( $tag_ids ) ) {
+      $filter_result = get_posts(
+        array(
+          'posts_per_page' => -1,
+          'post_type' => 'city',
+          'tag__in' => $tag_ids,
+        )
+      );
+    }
 
     // if filter_result is empty search content
     if( empty ( $filter_result ) ) {
+      // Get a list of all current city post names
+      $city_args = array(
+        'post_type' => 'city',
+        'posts_per_page' => -1
+      );
+
+      $cities = get_posts( $city_args );
+
       $filter_result = array_filter( $cities, function( $city ){
-        return ( stripos( get_the_content(), $city->post_title ) !== false );
+        //get the terms of this city
+        $city_terms = get_the_terms( $city->ID, 'post_tag' );
+        $city_tags = array();
+        //get the tag names of this city`
+        if ( ! empty( $city_terms ) && ! is_wp_error( $city_terms ) ) {
+            $city_tags = wp_list_pluck( $city_terms, 'name' );
+        }
+        //create a regex that will match any tag name with content in the post
+        $regexp = '/(' . implode( '|',array_values( $city_tags ) ) . ')/i';
+        $match_return = ( !empty( $city_tags ) ) ? preg_match( $regexp, get_the_content() ) : 0;
+        return  ( $match_return === 1 );
       } );
     }
 

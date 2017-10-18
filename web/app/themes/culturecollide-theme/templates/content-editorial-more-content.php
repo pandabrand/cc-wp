@@ -14,8 +14,11 @@ if( is_page('editorial') ) {
   }
 } elseif( is_single() ) {
   $exclude_posts[] = get_the_ID();
-  foreach (get_the_tags() as $tag) {
-    $post_tags[] = $tag->term_id;
+  $tags = get_the_tags(get_the_ID());
+  if( !empty( $tags ) ) {
+    foreach (get_the_tags() as $tag) {
+      $post_tags[] = $tag->term_id;
+    }
   }
   $post_types[] = 'city';
   $post_types[] = 'artist';
