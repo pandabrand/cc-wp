@@ -199,6 +199,17 @@
           var new_url = _url+'?'+new_params;
           window.location.replace(new_url);
         });
+
+        $('.first-panel').waypoint({
+          handler: function(direction) {
+            if( direction === 'down' ) {
+              $('.second-panel').toggleClass('slide-in');
+            } else {
+              $('.second-panel').toggleClass('slide-in');
+            }
+          },
+          offset: 'right-in-view',
+        });
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
     },

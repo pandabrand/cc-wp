@@ -31,5 +31,6 @@
     </div>
   </div>
   <?php get_template_part('templates/content', 'editorial-share-bar'); ?>
+  <?php get_template_part('templates/related', 'guide-block'); ?>
   <?php get_template_part('templates/content', 'editorial-more-content'); ?>
 <?php endwhile; ?>

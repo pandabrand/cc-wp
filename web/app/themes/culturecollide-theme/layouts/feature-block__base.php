@@ -22,7 +22,7 @@
       <?php echo (get_field('secondary_title')) ? get_field('secondary_title') : get_the_title(); ?>
     </div>
     <div class="feature__text">
-      <?php echo substr(get_field('secondary_description') ,0, 50), get_the_excerpt($post->ID); ?>
+      <?php echo substr(get_field('secondary_description') ,0, 50), get_card_excerpt($post->ID); ?>
     </div>
   </div>
 </div>

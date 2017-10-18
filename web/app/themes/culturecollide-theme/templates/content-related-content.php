@@ -4,13 +4,14 @@
   </div>
   <?php
     $exclude_posts = array();
+    $exclude_cats = array();
+    $reservedObj = get_category_by_slug('reserved');
+    $exclude_cats[] = $reservedObj->term_id;
     if( is_front_page() ):
       $feature_id = get_queried_object_id();
       $main_post_object = get_field('main_feature', $feature_id);
       $exclude_posts[] = $main_post_object->ID;
       $second_features = get_field('secondary_main_feature', $feature_id);
-      $reservedObj = get_category_by_slug('reserved');
-      $reservedId = $reservedObj->term_id;
       while( have_rows( 'secondary_main_feature', $feature_id ) ){
         the_row();
         $ex_post = get_sub_field( 'feature_object', $feature_id );
@@ -21,7 +22,7 @@
       'posts_per_page' => 3,
       'post_type' => ['post'],
       'post__not_in' => $exclude_posts,
-      'category__not_in' => [$reservedId],
+      'category__not_in' => $exclude_cats,
       'order_by' => ['date'],
       'order' => 'DESC'
     );
