@@ -1,7 +1,7 @@
 <?php
   // Set the cache key
   $related_guide_cache_key = 'related_guide_cache_key';
-  delete_transient( 'related_guide_cache_key' );
+  // delete_transient( $related_guide_cache_key );
   // if transient doesn't have our related detail array start the query
   if( ! $related_guide_details = get_transient( $related_guide_cache_key ) ) {
     $filter_result = array();
@@ -40,7 +40,7 @@
       // Get a list of all current city post names
       $city_args = array(
         'post_type' => 'city',
-        'posts_per_page' => -1
+        'posts_per_page' => -1,
       );
 
       $cities = get_posts( $city_args );

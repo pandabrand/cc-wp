@@ -23,6 +23,6 @@
             .appendTo( ul );
         };
       },
-			minLength: 2,
+			minLength: 1,
 		});
 })( jQuery );
