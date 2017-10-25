@@ -36,7 +36,11 @@
               <?php
                 $loc_id = $location->ID;
                 global $wpdb;
-                $artist_posts = $wpdb->get_results( "SELECT * FROM wp_postmeta WHERE meta_key LIKE 'artists_locations_%_location' AND meta_value LIKE '%{$loc_id}%'", OBJECT );
+                $artist_posts = $wpdb->get_results(
+                  "SELECT wp_postmeta.* FROM wp_postmeta
+                  LEFT OUTER JOIN wp_posts ON wp_postmeta.post_id = wp_posts.ID WHERE wp_postmeta.meta_key LIKE 'artists_locations_%_location' AND wp_postmeta.meta_value LIKE '%{$loc_id}%'
+                  AND wp_posts.post_status = 'publish'"
+                  , OBJECT );
                 if( !empty( $artist_posts ) ) :
               ?>
                 <div class="card_reccomendations">
