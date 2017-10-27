@@ -1,6 +1,6 @@
 <?php
 /** Production */
-ini_set('display_errors', 0);
+ini_set('display_errors', 1);
 define('WP_DEBUG_DISPLAY', true);
 define('SCRIPT_DEBUG', false);
 define('WP_DEBUG', true);
