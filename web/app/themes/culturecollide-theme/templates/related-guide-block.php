@@ -1,6 +1,10 @@
 <?php
   // Set the cache key
   $related_guide_cache_key = 'related_guide_cache_key';
+  if($post->post_status !== 'publish' ) {
+    // don't cache while post is being written
+    delete_transient( $related_guide_cache_key );
+  }
   // delete_transient( $related_guide_cache_key );
   // if transient doesn't have our related detail array start the query
   if( ! $related_guide_details = get_transient( $related_guide_cache_key ) ) {
