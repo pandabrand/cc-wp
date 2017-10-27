@@ -8,7 +8,8 @@
 
     // Get a list of tags and extract their names
     $post_tags = get_the_terms( $post->ID, 'post_tag' );
-    write_log($psot_tags);
+    write_log('$post_tags');
+    write_log($post_tags);
     if ( ! empty( $post_tags ) && ! is_wp_error( $post_tags ) ) {
         $tags = wp_list_pluck( $post_tags, 'name' );
     }
@@ -16,6 +17,7 @@
     if ( ! empty( $post_tags ) && ! is_wp_error( $post_tags ) ) {
         $tag_ids = wp_list_pluck( $post_tags, 'term_id' );
     }
+    write_log('$tag_ids');
     write_log($tag_ids);
     //ensure tags are lower case
     if( !empty( $tags ) ) {
@@ -35,6 +37,7 @@
         )
       );
     }
+    write_log('$filter_result');
     write_log($filter_result);
     // if filter_result is empty search content
     if( empty ( $filter_result ) ) {
