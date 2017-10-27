@@ -8,15 +8,16 @@
 
     // Get a list of tags and extract their names
     $post_tags = get_the_terms( $post->ID, 'post_tag' );
+    write_log($psot_tags);
     if ( ! empty( $post_tags ) && ! is_wp_error( $post_tags ) ) {
         $tags = wp_list_pluck( $post_tags, 'name' );
     }
 
-    $post_tags = get_the_terms( $post->ID, 'post_tag' );
     if ( ! empty( $post_tags ) && ! is_wp_error( $post_tags ) ) {
         $tag_ids = wp_list_pluck( $post_tags, 'term_id' );
     }
-    //endure tags are lower case
+    write_log($tag_ids);
+    //ensure tags are lower case
     if( !empty( $tags ) ) {
       array_walk($tags, function( $tag ){
         $tag = strtolower($tag);
@@ -34,7 +35,7 @@
         )
       );
     }
-
+    write_log($filter_result);
     // if filter_result is empty search content
     if( empty ( $filter_result ) ) {
       // Get a list of all current city post names
