@@ -1,10 +1,11 @@
 <?php
 /** Production */
-// ini_set('display_errors', 1);
-define('WP_DEBUG_DISPLAY', true);
+ini_set('display_errors', 0);
+define('WP_DEBUG_DISPLAY', false);
 define('SCRIPT_DEBUG', false);
 define('WP_DEBUG', true);
 define('WP_DEBUG_LOG', true);
+ini_set( 'error_log', WP_CONTENT_DIR . '/error.log' );
 
 /** Disable all file modifications including updates and update notifications */
 define('DISALLOW_FILE_MODS', true);
