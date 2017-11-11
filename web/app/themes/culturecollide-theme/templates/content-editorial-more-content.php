@@ -77,7 +77,7 @@ if($more_query->have_posts()): $counter = 1; ?>
 <?php wp_reset_query(); ?>
 <?php
   global $wp;
-  $current_url = home_url( $wp->query_vars['name'] );
+  $current_url = home_url( $wp->query_vars['pagename'] );
 ?>
 <div class="row cc-row d-flex justify-content-center">
     <?php if( $paged + 1 < 11 ): ?>
