@@ -170,7 +170,10 @@
           infinite = new Waypoint.Infinite({
             element: $('.editorial__block')[0],
             more: '.infinite-more-link',
-            items: '.col-xs-12.col-sm-4'
+            items: '.col-xs-12.col-sm-4',
+            offset: 'right-in-view',
+            onBeforePageLoad: function(){$('.loader-anim').addClass('show');},
+            onAfterPageLoad: function(){$('.loader-anim').removeClass('show');},
           });
         }
       },

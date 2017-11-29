@@ -38,3 +38,10 @@
     top: 15.5rem;
   }
 }
+
+.loader-anim {
+  display: none;
+  &.show {
+    display: inline-block;
+  }
+}

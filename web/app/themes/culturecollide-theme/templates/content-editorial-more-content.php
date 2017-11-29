@@ -81,6 +81,6 @@ if($more_query->have_posts()): $counter = 1; ?>
 ?>
 <div class="row cc-row d-flex justify-content-center">
     <?php if( $paged + 1 < 11 ): ?>
-      <a class="infinite-more-link button button--outline" href="<?php echo trailingslashit($current_url), $paged + 1; ?>">More</a>
+      <a class="infinite-more-link button button--outline" onclick="javascript:(event.preventDefault())" href="<?php echo trailingslashit($current_url), $paged + 1; ?>">More <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw loader-anim"></i></a>
     <?php endif; ?>
 </div>
