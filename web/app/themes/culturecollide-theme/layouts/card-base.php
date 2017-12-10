@@ -20,7 +20,6 @@
         </div>
         <div class="card__text">
           <?= get_card_excerpt(); ?>
-          <!-- ?= strip_tags(get_the_excerpt()); ? -->
         </div>
       </div>
     </div>

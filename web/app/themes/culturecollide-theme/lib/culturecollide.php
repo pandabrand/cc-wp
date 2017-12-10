@@ -141,6 +141,12 @@ function get_card_excerpt($post = null, $length = '60') {
   }
 
   $excerpt = get_the_excerpt();
+  //for some reason &hellip; keeps showing up on empty excerpts, get the post content 
+  if ($excerpt === '&hellip;') {
+    $excerpt = wp_strip_all_tags( $post->post_content );
+    write_log($excerpt);
+  }
+
   $line=$excerpt;
   if ( preg_match( '/^.{1,'.$length.'}\b/s', $excerpt, $match ) ) {
       $line=trim( $match[0] );

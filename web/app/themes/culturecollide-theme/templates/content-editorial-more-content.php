@@ -86,7 +86,6 @@ if($more_query->have_posts()): $counter = 1; ?>
   endif;
   wp_reset_query();
   $current_url = home_url( $post->post_name );
-  write_log($paged);
 ?>
 <div class="row cc-row d-flex justify-content-center">
     <?php if( $paged < 11 && $has_more_posts): ?>
