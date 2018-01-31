@@ -20,7 +20,7 @@ $current_post = $post;
                 array(
                   'key' => 'location_city',
                   'compare' => 'LIKE',
-                  'value' => $current_post->ID
+                  'value' => '"'.$current_post->ID.'"'
                 ),
               )
             ));

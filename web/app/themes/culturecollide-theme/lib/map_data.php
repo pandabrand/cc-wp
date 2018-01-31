@@ -33,7 +33,7 @@ function load_map_data() {
           array(
             'key' => 'location_city',
             'compare' => 'LIKE',
-            'value' => $post->ID
+            'value' => '"'.$post->ID.'"'
           ),
         )
       ));
