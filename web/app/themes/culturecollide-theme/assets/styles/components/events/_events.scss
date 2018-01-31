@@ -21,7 +21,7 @@
   }
   .event-block {
     color: $white;
-    padding: 5rem;
+    padding: 3.5rem;
     height: 100%;
     @media(max-width: 480px) {
       padding: 2.5rem;
@@ -46,7 +46,7 @@
   .event-block__excerpt {
     p {
       padding-bottom: 1.5rem;
-      line-height: 1.625rem;
+      line-height: 1.125rem;
       letter-spacing: 2px;
     }
   }

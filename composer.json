@@ -67,16 +67,16 @@
     "wpackagist-plugin/regenerate-thumbnails": "*",
     "pandabrand/cc-plugin":"dev-master",
     "yoast/wordpress-seo":"*",
-    "wpackagist-plugin/ninja-forms": "~3.1.6",
+    "wpackagist-plugin/ninja-forms": "~3.2",
     "wpackagist-plugin/all-in-one-wp-migration": "~6.53",
     "wpackagist-plugin/adbutler": "~1.13",
     "wpUXsolutions/enhanced-media-library-pro": "*",
     "wpackagist-plugin/quick-featured-images": "~13.2",
-    "wpackagist-plugin/query-monitor": "2.13.4",
-    "wpackagist-plugin/velvet-blues-update-urls": "3.2.7",
-    "wpackagist-plugin/redirection": "2.7.3",
-    "wpackagist-plugin/enable-media-replace": "3.1.1",
-    "wpackagist-plugin/official-mailerlite-sign-up-forms": "1.2.2"
+    "wpackagist-plugin/query-monitor": "~2.13",
+    "wpackagist-plugin/velvet-blues-update-urls": "~3.2",
+    "wpackagist-plugin/redirection": "~3.1",
+    "wpackagist-plugin/enable-media-replace": "~3.1",
+    "wpackagist-plugin/official-mailerlite-sign-up-forms": "~1.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
