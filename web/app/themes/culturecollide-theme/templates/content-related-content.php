@@ -23,6 +23,7 @@
       'post_type' => ['post'],
       'post__not_in' => $exclude_posts,
       'category__not_in' => $exclude_cats,
+      'ignore_sticky_posts' => true,
       'order_by' => ['date'],
       'order' => 'DESC'
     );
