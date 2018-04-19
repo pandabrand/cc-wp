@@ -280,10 +280,11 @@
         var related_content__settings = {
           arrows: false,
           dots: true,
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           rows: 0,
+          mobileFirst: true,
           responsive: [
             {
               breakpoint: 480,
@@ -306,20 +307,31 @@
             },
             {
               breakpoint: 1024,
-              settings: "noslick"
+              settings: {
+                infinite: true,
+                arrows: false,
+                dots: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+              }
+            },
+            {
+              breakpoint: 1440,
+              settings: "unslick"
             }
           ]
         };
 
-        if ($(window).width() < 1024) {
+        // if ($(window).width() < 1024) {
           $('.related-content__carousel').slick(related_content__settings);
-        }
+        // }
 
         $(window).resize(function() {
-          if($(window).width() >= 1024) {
-            $('.related-content__carousel').unslick();
-          } else if ($(window).width() < 1024) {
-            $('.related-content__carousel').slick(related_content__settings);
+          // if($(window).width() >= 1024) {
+            // $('.related-content__carousel').unslick();
+          //  } else
+          if ($(window).width() < 1024) {
+            // $('.related-content__carousel').slick(related_content__settings);
           }
         });
 
