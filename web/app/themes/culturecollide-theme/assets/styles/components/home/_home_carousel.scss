@@ -88,13 +88,13 @@ $home__city-guides__background: $white;
   .related-content__carousel__item {
     @media(min-width: 1024px) {
       width: 33%;
+      margin: 0 2.5em 0 0;
     }
-    margin: 0 2.5rem 0 0;
+
+    margin: 0 1.25em;
+
     &:last-child {
       margin-right: 0;
     }
   }
-}
-
-.related-content__item {
 }

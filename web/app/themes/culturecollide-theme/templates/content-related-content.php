@@ -12,11 +12,11 @@
       $main_post_object = get_field('main_feature', $feature_id);
       $exclude_posts[] = $main_post_object->ID;
       $second_features = get_field('secondary_main_feature', $feature_id);
-      while( have_rows( 'secondary_main_feature', $feature_id ) ){
+      while( have_rows( 'secondary_main_feature', $feature_id ) ) :
         the_row();
         $ex_post = get_sub_field( 'feature_object', $feature_id );
         $exclude_posts[] = $ex_post->ID;
-      }
+      endwhile;
     endif;
     $args = array(
       'posts_per_page' => 3,
