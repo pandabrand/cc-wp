@@ -7,6 +7,7 @@ web/app/uploads/
 #web/app/uploads/2017
 !web/app/uploads/.gitkeep
 web/app/ai1wm-backups
+web/app/ewww
 
 # WordPress
 web/wp
@@ -26,3 +27,5 @@ web/app/debug.log
 
 **/.DS_Store
 **/*.zip
+
+wp-cli.yml

@@ -1,1 +1,3 @@
 path: web/wp
+@dev:
+  ssh: vagrant@culturecollide.dev/srv/www/culturecollide.com/current

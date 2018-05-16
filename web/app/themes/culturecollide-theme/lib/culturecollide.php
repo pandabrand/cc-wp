@@ -141,7 +141,7 @@ function get_card_excerpt($post = null, $length = '60') {
   }
 
   $excerpt = get_the_excerpt();
-  //for some reason &hellip; keeps showing up on empty excerpts, get the post content 
+  //for some reason &hellip; keeps showing up on empty excerpts, get the post content
   if ($excerpt === '&hellip;') {
     $excerpt = wp_strip_all_tags( $post->post_content );
     write_log($excerpt);
@@ -419,3 +419,12 @@ function cleaner_caption( $output, $attr, $content ) {
 	/* Return the formatted, clean caption. */
 	return $output;
 }
+
+//* Remove Query String from Static Resources
+function remove_css_js_ver( $src ) {
+  if( strpos( $src, '?ver=' ) )
+  $src = remove_query_arg( 'ver', $src );
+  return $src;
+  }
+  add_filter( 'style_loader_src', 'remove_css_js_ver', 10, 2 );
+  add_filter( 'script_loader_src', 'remove_css_js_ver', 10, 2 );

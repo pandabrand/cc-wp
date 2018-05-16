@@ -81,8 +81,8 @@ $home__city-guides__background: $white;
 
 .related-content__carousel {
   // @media(min-width: 1024px) {
-  //   display: flex;
-  //   flex-direction: row;
+    display: flex;
+    flex-direction: row;
   // }
   // display: inherit;
   .related-content__carousel__item {

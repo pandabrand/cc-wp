@@ -76,7 +76,8 @@
     "wpackagist-plugin/velvet-blues-update-urls": "~3.2",
     "wpackagist-plugin/redirection": "~3.1",
     "wpackagist-plugin/enable-media-replace": "~3.1",
-    "wpackagist-plugin/official-mailerlite-sign-up-forms": "~1.2"
+    "wpackagist-plugin/official-mailerlite-sign-up-forms": "~1.2",
+    "wpackagist-plugin/ewww-image-optimizer": "dev-trunk"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

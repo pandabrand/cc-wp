@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf3e18de7a01f19fdf558ff5da18a188",
+    "content-hash": "b5ed92aa9f686b833e911692171182a0",
     "packages": [
         {
             "name": "composer/installers",
@@ -130,20 +130,20 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.9.2",
+            "version": "4.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "34627d0b992bbe9ed909c73b27307297fb21f2a4"
+                "reference": "c0d69bde6fc373270766a00db333c64f35496d67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/34627d0b992bbe9ed909c73b27307297fb21f2a4",
-                "reference": "34627d0b992bbe9ed909c73b27307297fb21f2a4",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/c0d69bde6fc373270766a00db333c64f35496d67",
+                "reference": "c0d69bde6fc373270766a00db333c64f35496d67",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "4.9.2",
+                "johnpbloch/wordpress-core": "4.9.5",
                 "johnpbloch/wordpress-core-installer": "^1.0",
                 "php": ">=5.3.2"
             },
@@ -165,32 +165,32 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-01-16T23:12:18+00:00"
+            "time": "2018-04-03T22:47:48+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "4.9.2",
+            "version": "4.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "59292fac30315323ce99e1a1d362015581e5d8e6"
+                "reference": "442ae6c761e3b20cc6a000bee8fefcde5dbab3fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/59292fac30315323ce99e1a1d362015581e5d8e6",
-                "reference": "59292fac30315323ce99e1a1d362015581e5d8e6",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/442ae6c761e3b20cc6a000bee8fefcde5dbab3fa",
+                "reference": "442ae6c761e3b20cc6a000bee8fefcde5dbab3fa",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "provide": {
-                "wordpress/core-implementation": "4.9.2"
+                "wordpress/core-implementation": "4.9.5"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -205,7 +205,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-01-16T23:12:12+00:00"
+            "time": "2018-04-03T22:47:40+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -516,15 +516,15 @@
         },
         {
             "name": "wpackagist-plugin/all-in-one-wp-migration",
-            "version": "6.62",
+            "version": "6.67",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/all-in-one-wp-migration/",
-                "reference": "tags/6.62"
+                "reference": "tags/6.67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.6.62.zip",
+                "url": "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.6.67.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -556,15 +556,15 @@
         },
         {
             "name": "wpackagist-plugin/enable-media-replace",
-            "version": "3.1.1",
+            "version": "3.2.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/enable-media-replace/",
-                "reference": "tags/3.1.1"
+                "reference": "tags/3.2.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.1.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.2.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -573,6 +573,27 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/enable-media-replace/"
+        },
+        {
+            "name": "wpackagist-plugin/ewww-image-optimizer",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ewww-image-optimizer/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ewww-image-optimizer.zip?timestamp=1523569898",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ewww-image-optimizer/",
+            "time": "2018-04-12T22:51:38+00:00"
         },
         {
             "name": "wpackagist-plugin/import-external-attachments",
@@ -596,15 +617,15 @@
         },
         {
             "name": "wpackagist-plugin/ninja-forms",
-            "version": "3.2.11",
+            "version": "3.2.21",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/ninja-forms/",
-                "reference": "tags/3.2.11"
+                "reference": "tags/3.2.21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/ninja-forms.3.2.11.zip",
+                "url": "https://downloads.wordpress.org/plugin/ninja-forms.3.2.21.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -616,15 +637,15 @@
         },
         {
             "name": "wpackagist-plugin/official-mailerlite-sign-up-forms",
-            "version": "1.2.3",
+            "version": "1.2.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/official-mailerlite-sign-up-forms/",
-                "reference": "tags/1.2.3"
+                "reference": "tags/1.2.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/official-mailerlite-sign-up-forms.1.2.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/official-mailerlite-sign-up-forms.1.2.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -676,15 +697,15 @@
         },
         {
             "name": "wpackagist-plugin/redirection",
-            "version": "3.1.1",
+            "version": "3.2.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/redirection/",
-                "reference": "tags/3.1.1"
+                "reference": "tags/3.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redirection.3.1.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/redirection.3.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -930,16 +951,16 @@
         },
         {
             "name": "yoast/wordpress-seo",
-            "version": "6.2",
+            "version": "7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast/wordpress-seo.git",
-                "reference": "b00b418194dc49c502291e8af4d619bfdafb6fa1"
+                "reference": "bf2f4d11219f31839686a90cfba85838e96755e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast/wordpress-seo/zipball/b00b418194dc49c502291e8af4d619bfdafb6fa1",
-                "reference": "b00b418194dc49c502291e8af4d619bfdafb6fa1",
+                "url": "https://api.github.com/repos/Yoast/wordpress-seo/zipball/bf2f4d11219f31839686a90cfba85838e96755e8",
+                "reference": "bf2f4d11219f31839686a90cfba85838e96755e8",
                 "shasum": ""
             },
             "require": {
@@ -951,7 +972,7 @@
                 "yoast/whip": "^1.1.0"
             },
             "require-dev": {
-                "codeclimate/php-test-reporter": "dev-master",
+                "roave/security-advisories": "dev-master",
                 "yoast/php-development-environment": "^1.0",
                 "yoast/yoastcs": "~0.4.3"
             },
@@ -981,7 +1002,7 @@
                 "seo",
                 "wordpress"
             ],
-            "time": "2018-01-23T09:31:39+00:00"
+            "time": "2018-04-17T10:45:53+00:00"
         }
     ],
     "packages-dev": [
@@ -1067,7 +1088,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "pandabrand/cc-plugin": 20
+        "pandabrand/cc-plugin": 20,
+        "wpackagist-plugin/ewww-image-optimizer": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
