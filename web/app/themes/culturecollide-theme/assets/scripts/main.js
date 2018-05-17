@@ -283,18 +283,8 @@
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          rows: 0,
           mobileFirst: true,
           responsive: [
-            {
-              breakpoint: 480,
-              settings:  {
-                  arrows: false,
-                  dots: true,
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                }
-            },
             {
               breakpoint: 768,
               settings: {
@@ -310,14 +300,10 @@
               settings: {
                 infinite: true,
                 arrows: false,
-                dots: true,
+                dots: false,
                 slidesToShow: 3,
                 slidesToScroll: 3,
               }
-            },
-            {
-              breakpoint: 1440,
-              settings: "unslick"
             }
           ]
         };
