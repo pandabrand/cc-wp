@@ -240,6 +240,7 @@
             }
           ]
         });
+
         $('.home__city-guides-block__carousel-block__list').slick({
           infinite: true,
           slidesToShow: 5,
@@ -744,6 +745,37 @@
           height = $(window).height();
           mediaSize();
         }
+      });
+
+      $('.related-content__carousel').slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        mobileFirst: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              infinite: true,
+              arrows: false,
+              dots: true,
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              infinite: true,
+              arrows: false,
+              dots: false,
+              slidesToShow: 3,
+              slidesToScroll: 3
+            }
+          }
+        ]
       });
      }
    }
