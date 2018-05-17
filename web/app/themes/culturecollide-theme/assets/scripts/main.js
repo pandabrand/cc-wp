@@ -277,7 +277,7 @@
           ]
         });
 
-        var related_content__settings = {
+        $('.related-content__carousel').slick({
           arrows: false,
           dots: true,
           slidesToShow: 1,
@@ -292,7 +292,7 @@
                 arrows: false,
                 dots: true,
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 2
               }
             },
             {
@@ -302,25 +302,11 @@
                 arrows: false,
                 dots: false,
                 slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToScroll: 3
               }
             }
           ]
-        };
-
-        // if ($(window).width() < 1024) {
-          $('.related-content__carousel').slick(related_content__settings);
-        // }
-
-        $(window).resize(function() {
-          // if($(window).width() >= 1024) {
-            // $('.related-content__carousel').unslick();
-          //  } else
-          if ($(window).width() < 1024) {
-            // $('.related-content__carousel').slick(related_content__settings);
-          }
         });
-
       }
     },
     // About us page, note the change from about-us to about_us.

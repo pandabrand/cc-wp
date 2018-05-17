@@ -80,12 +80,15 @@ $home__city-guides__background: $white;
 }
 
 .related-content__carousel {
+  .slick-slide {
+    margin: 0 1.25em;
+  }
   // @media(min-width: 1024px) {
     // display: flex;
     // flex-direction: row;
   // }
   // display: inherit;
-  .related-content__carousel__item {
+  // .related-content__carousel__item {
     // @media(min-width: 1024px) {
       // width: 33%;
       // margin: 0 2.5em 0 0;
@@ -93,8 +96,8 @@ $home__city-guides__background: $white;
 
     // margin: 0 1.25em;
 
-    &:last-child {
+    // &:last-child {
       // margin-right: 0;
-    }
-  }
+    // }
+  // }
 }
