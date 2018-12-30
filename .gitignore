@@ -29,3 +29,5 @@ web/app/debug.log
 **/*.zip
 
 wp-cli.yml
+
+package-lock.json
