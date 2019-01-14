@@ -25,7 +25,7 @@
       $travel_post = false;
     	setup_postdata( $post );
       ?>
-  <div class="col-sm-12 col-md-6">
+  <div class="col-md-12 col-lg-6">
     <?php include( locate_template( 'layouts/feature-block__1-1.php' ) ); ?>
   </div>
   <?php
@@ -60,7 +60,7 @@
         $travel_post = true;
         setup_postdata( $post );
   ?>
-  <div class="col-sm-12 col-md-6">
+  <div class="col-md-12 col-lg-6">
     <?php include( locate_template( 'layouts/feature-block__1-1.php' ) ); ?>
   </div>
 <?php

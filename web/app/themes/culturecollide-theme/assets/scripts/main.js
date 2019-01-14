@@ -224,90 +224,97 @@
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
-        $('.feature-block__mobile').slick({
-          infinite: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          mobileFirst: true,
-          arrows: false,
-          dots: true,
-          rows: 0,
-          slide: '.feature-block_element',
-          responsive: [
-            {
-              breakpoint: 769,
-              settings: 'unslick'
-            }
-          ]
+        var elem = document.querySelector('.cc-fl-carousel');
+        var flkty = new Flickity( elem, {
+          draggable: true,
+          wrapAround: true,
+          watchCSS: true,
+          contain: true
         });
+        // $('.feature-block__mobile').slick({
+        //   infinite: true,
+        //   slidesToShow: 1,
+        //   slidesToScroll: 1,
+        //   mobileFirst: true,
+        //   arrows: false,
+        //   dots: true,
+        //   rows: 0,
+        //   slide: '.feature-block_element',
+        //   responsive: [
+        //     {
+        //       breakpoint: 769,
+        //       settings: 'unslick'
+        //     }
+        //   ]
+        // });
 
-        $('.home__city-guides-block__carousel-block__list').slick({
-          infinite: true,
-          slidesToShow: 5,
-          slidesToScroll: 5,
-          rows: 0,
-          responsive: [
-            {
-              breakpoint: 480,
-              settings: {
-                arrows: false,
-                dots: false,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                // centerMode: true,
-              }
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                arrows: false,
-                dots: true,
-                slidesToShow: 3,
-                // centerMode: true,
-              }
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                arrows: true,
-                dots: false,
-                slidesToShow: 4,
-                centerMode: true,
-              }
-            },
-          ]
-        });
+        // $('.home__city-guides-block__carousel-block__list').slick({
+        //   infinite: true,
+        //   slidesToShow: 5,
+        //   slidesToScroll: 5,
+        //   rows: 0,
+        //   responsive: [
+        //     {
+        //       breakpoint: 480,
+        //       settings: {
+        //         arrows: false,
+        //         dots: false,
+        //         slidesToShow: 1,
+        //         slidesToScroll: 1,
+        //         // centerMode: true,
+        //       }
+        //     },
+        //     {
+        //       breakpoint: 768,
+        //       settings: {
+        //         arrows: false,
+        //         dots: true,
+        //         slidesToShow: 3,
+        //         // centerMode: true,
+        //       }
+        //     },
+        //     {
+        //       breakpoint: 1024,
+        //       settings: {
+        //         arrows: true,
+        //         dots: false,
+        //         slidesToShow: 4,
+        //         centerMode: true,
+        //       }
+        //     },
+        //   ]
+        // });
 
-        $('.related-content__carousel').slick({
-          arrows: false,
-          dots: true,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          mobileFirst: true,
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                infinite: true,
-                arrows: false,
-                dots: true,
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 1024,
-              settings: {
-                infinite: true,
-                arrows: false,
-                dots: false,
-                slidesToShow: 3,
-                slidesToScroll: 3
-              }
-            }
-          ]
-        });
+        // $('.related-content__carousel').slick({
+        //   arrows: false,
+        //   dots: true,
+        //   slidesToShow: 1,
+        //   slidesToScroll: 1,
+        //   infinite: true,
+        //   mobileFirst: true,
+        //   responsive: [
+        //     {
+        //       breakpoint: 768,
+        //       settings: {
+        //         infinite: true,
+        //         arrows: false,
+        //         dots: true,
+        //         slidesToShow: 2,
+        //         slidesToScroll: 2
+        //       }
+        //     },
+        //     {
+        //       breakpoint: 1024,
+        //       settings: {
+        //         infinite: true,
+        //         arrows: false,
+        //         dots: false,
+        //         slidesToShow: 3,
+        //         slidesToScroll: 3
+        //       }
+        //     }
+        //   ]
+        // });
       }
     },
     // About us page, note the change from about-us to about_us.

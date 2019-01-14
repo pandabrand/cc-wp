@@ -1,5 +1,5 @@
 <div class="row cc-row related-content">
-  <div class="col-sm-12 col-md-4 push-md-8 col-lg-3 push-lg-9">
+  <div class="col-sm-12 col-md-4 push-md-7 col-lg-3 push-lg-9">
     <?php get_template_part('layouts/ad', 'block'); ?>
   </div>
   <?php
@@ -44,7 +44,7 @@
     $related_posts = get_posts( $args );
     $post = array_shift( $related_posts );
   ?>
-  <div class="col-sm-12 col-md-8 pull-md-4 col-lg-9 pull-lg-3">
+  <div class="col-sm-12 col-md-6 pull-md-4 col-lg-9 pull-lg-3">
       <?php $travel_post = false; ?>
       <?php setup_postdata( $post ); ?>
       <?php include( locate_template( 'layouts/feature-block__3-1.php' ) ); ?>
@@ -53,7 +53,7 @@
 </div>
 <div class="row cc-row related-content">
   <?php foreach($related_posts as $post): setup_postdata( $post ); ?>
-    <div class="col-sm-3">
+    <div class="col-sm-12 col-md-6 col-lg-3">
       <?php get_template_part('layouts/card', 'card__1-1'); ?>
     </div>
   <?php endforeach; wp_reset_postdata(); ?>
