@@ -8,19 +8,18 @@
       if($culture_start_date < $today && $today < $culture_end_date) {
         $post = $culture_post_object;
       } else {
+        global $post;
         $args = array(
-          'numberposts' => 5,
-          'offset' => 0,
-          'category' => 0,
-          'orderby' => 'post_date',
-          'order' => 'RAND',
+          'posts_per_page' => 5,
+          'offset' => 5,
+          'orderby' => 'date',
           'post_type' => 'post',
           'post_status' => 'publish',
-          'suppress_filters' => true
         );
 
-        $recent_posts = wp_get_recent_posts( $args, OBJECT );
-        $post = $recent_posts[0];
+        $recent_posts = get_posts( $args );
+        $key = array_rand( $recent_posts, 1 );
+        $post = $recent_posts[$key];
       }
       $travel_post = false;
     	setup_postdata( $post );
@@ -36,15 +35,12 @@
         if($travel_start_date < $today && $today < $travel_end_date) {
           $post = $travel_post_object;
         } else {
+          global $post;
           $args = array(
-            'numberposts' => 5,
-            'offset' => 0,
-            'category' => 0,
-            'orderby' => 'post_date',
-            'order' => 'RAND',
-            'post_type' => 'city, artist, post',
-            'post_status' => 'publish',
-            'suppress_filters' => true,
+            'posts_per_page' => 5,
+            'orderby' => 'date',
+            'offset' => 5,
+            'post_type' => ['city', 'artist', 'post'],
             'tax_query' => array(
               array (
                 'taxonomy' => 'category',
@@ -54,8 +50,9 @@
             )
           );
 
-          $recent_posts = wp_get_recent_posts( $args, OBJECT );
-          $post = $recent_posts[0];
+          $travel_posts = get_posts( $args );
+          $key = array_rand( $travel_posts, 1 );
+          $post = $travel_posts[$key];
         }
         $travel_post = true;
         setup_postdata( $post );
