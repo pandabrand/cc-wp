@@ -7,7 +7,8 @@
               <?php echo $travel_post ? 'travel' : get_category_type_title();?>
             </div>
             <div class="feature__image">
-              <img class="img-fluid" src="<?php echo the_post_thumbnail_url('large-feature'); ?>" />
+              <?php the_post_thumbnail( 'large-feature', ['class' => 'img-fluid img-cover', 'height' => '660', 'width' => '720'] ); ?>
+              <!-- img class="img-fluid" src="< ?php echo the_post_thumbnail_url('large-feature'); ?>" / -->
             </div>
             <div class="feature__body">
               <div class="feature__copy">
