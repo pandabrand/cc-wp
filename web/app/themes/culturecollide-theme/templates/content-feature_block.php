@@ -15,6 +15,9 @@
           'orderby' => 'date',
           'post_type' => 'post',
           'post_status' => 'publish',
+          'date_query' =>array(
+            array( 'after' => '1 month ago' )
+          ),
         );
 
         $recent_posts = get_posts( $args );
