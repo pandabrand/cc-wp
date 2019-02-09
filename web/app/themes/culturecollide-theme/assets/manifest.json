@@ -36,7 +36,8 @@
       "vendor": [
         "assets/scripts/jquery.waypoints.js",
         "assets/scripts/sticky.js",
-        "assets/scripts/infinite.js"
+        "assets/scripts/infinite.js",
+        "assets/scripts/flickity.js"
       ]
     },
     "cc-autocomplete.js": {
@@ -51,6 +52,6 @@
     }
   },
   "config": {
-    "devUrl": "http://culturecollide.dev"
+    "devUrl": "http://culturecollide.test"
   }
 }

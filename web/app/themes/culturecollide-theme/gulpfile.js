@@ -20,8 +20,11 @@ var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
 var spritesmith = require('gulp.spritesmith');
+var notify = require('gulp-notify');
 var debug = require('gulp-debug');
 var buffer = require('vinyl-buffer');
+var del = require( 'del' );
+var combiner = require('stream-combiner2').obj;
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -86,48 +89,38 @@ var onError = function(err) {
 //   .pipe(cssTasks('main.css')
 //   .pipe(gulp.dest(path.dist + 'styles'))
 // ```
-var cssTasks = function(filename) {
-  return lazypipe()
-    .pipe(function() {
-      return gulpif(!enabled.failStyleTask, plumber());
-    })
-    .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.init());
-    })
-    .pipe(function() {
-      return gulpif('*.less', less());
-    })
-    .pipe(function() {
-      return gulpif('*.scss', sass({
+ var cssTasks = function(filename) {
+  return combiner(
+      gulpif(enabled.maps, sourcemaps.init()),
+      gulpif('*.less', less({
+        plugins: [require('less-plugin-glob')]
+      })),
+      gulpif('*.scss', sass({
         outputStyle: 'nested', // libsass doesn't support expanded yet
         precision: 10,
         includePaths: ['.'],
-        errLogToConsole: !enabled.failStyleTask
-      }));
-    })
-    .pipe(concat, filename)
-    .pipe(autoprefixer, {
-      browsers: [
-        'last 2 versions',
-        'safari 5',
-        'android 4',
-        'opera 12',
-        'ie 6',
-        'ie 7'
-      ]
-    })
-    .pipe(cssNano, {
-      safe: true
-    })
-    .pipe(function() {
-      return gulpif(enabled.rev, rev());
-    })
-    .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.write('.', {
-        sourceRoot: 'assets/styles/'
-      }));
-    })();
-};
+        errLogToConsole: true
+      })),
+      concat(filename),
+      autoprefixer({
+        browsers: [
+          'last 2 versions',
+          'safari 5',
+          'android 4',
+          'opera 12',
+          'ie 6',
+          'ie 7'
+        ]
+      }),
+      gulpif(enabled.compression === true, cssNano({
+        safe: true
+      })),
+      gulpif(enabled.rev, rev()),
+      gulpif(enabled.maps, sourcemaps.write('.', {
+          sourceRoot: 'assets/styles/'
+      }))
+    ).on('error', notify.onError());
+  };
 
 // ### JS processing pipeline
 // Example
@@ -136,40 +129,40 @@ var cssTasks = function(filename) {
 //   .pipe(jsTasks('main.js')
 //   .pipe(gulp.dest(path.dist + 'scripts'))
 // ```
-var jsTasks = function(filename) {
-  return lazypipe()
-    .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.init());
-    })
-    // .pipe(debug({title: 'unicorn:'}))
-    .pipe(concat, filename)
-    .pipe(uglify, {
+function jsTasks(filename) {
+  return combiner(
+    gulpif(enabled.maps, sourcemaps.init()),
+    concat(filename),
+    gulpif(enabled.compression === true, uglify({
+      output: {
+        'ascii_only': true
+      },
       compress: {
         'drop_debugger': enabled.stripJSDebug
       }
-    })
-    .pipe(function() {
-      return gulpif(enabled.rev, rev());
-    })
-    .pipe(function() {
-      return gulpif(enabled.maps, sourcemaps.write('.', {
+    })),
+    gulpif(enabled.rev, rev()),
+    gulpif(enabled.maps, sourcemaps.write('.', {
         sourceRoot: 'assets/scripts/'
-      }));
-    })();
-};
+      }))
+    ).on('error', notify.onError());
+}
 
 // ### Write to rev manifest
 // If there are any revved files then write them to the rev manifest.
 // See https://github.com/sindresorhus/gulp-rev
 var writeToManifest = function(directory) {
-  return lazypipe()
-    .pipe(gulp.dest, path.dist + directory)
-    .pipe(browserSync.stream, {match: '**/*.{js,css}'})
-    .pipe(rev.manifest, revManifest, {
+  return combiner(
+    gulp.dest(path.dist + directory),
+    browserSync.stream({
+      match: '**/*.{js,css}'
+    }),
+    rev.manifest(revManifest, {
       base: path.dist,
       merge: true
-    })
-    .pipe(gulp.dest, path.dist)();
+    }),
+    gulp.dest(path.dist)
+  ).on('error', notify.onError());
 };
 
 // ## Gulp tasks
@@ -179,20 +172,15 @@ var writeToManifest = function(directory) {
 // `gulp styles` - Compiles, combines, and optimizes Bower CSS and project CSS.
 // By default this task will only log a warning if a precompiler error is
 // raised. If the `--production` flag is set: this task will fail outright.
-gulp.task('styles', ['wiredep'], function() {
+
+gulp.task('styles:compilation', function (cb) {
   var merged = merge();
   manifest.forEachDependency('css', function(dep) {
-    var cssTasksInstance = cssTasks(dep.name);
-    if (!enabled.failStyleTask) {
-      cssTasksInstance.on('error', function(err) {
-        console.error(err.message);
-        this.emit('end');
-      });
-    }
     merged.add(gulp.src(dep.globs, {base: 'styles'})
-      .pipe(plumber({errorHandler: onError}))
-      .pipe(cssTasksInstance));
+      .pipe(cssTasks(dep.name)));
   });
+
+  cb();
   return merged
     .pipe(writeToManifest('styles'));
 });
@@ -200,16 +188,16 @@ gulp.task('styles', ['wiredep'], function() {
 // ### Scripts
 // `gulp scripts` - Runs JSHint then compiles, combines, and optimizes Bower JS
 // and project JS.
-gulp.task('scripts', ['jshint'], function() {
+
+gulp.task('scripts:compilation', function(cb) {
   var merged = merge();
   manifest.forEachDependency('js', function(dep) {
     merged.add(
       gulp.src(dep.globs, {base: 'scripts'})
-        // .pipe(debug({title: 'unicorn:'}))
-        .pipe(plumber({errorHandler: onError}))
         .pipe(jsTasks(dep.name))
     );
   });
+  cb();
   return merged
     .pipe(writeToManifest('scripts'));
 });
@@ -239,16 +227,19 @@ gulp.task('images', function() {
 
 // ### JSHint
 // `gulp jshint` - Lints configuration JSON and project JS.
-gulp.task('jshint', function() {
+gulp.task('scripts:jshint', function(cb) {
   return gulp.src([
     'bower.json', 'gulpfile.js'
   ].concat(project.js))
     .pipe(jshint())
+    .on('error', notify.onError())
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(gulpif(enabled.failJSHint, jshint.reporter('fail')));
 });
 
-gulp.task('sprite', function () {
+gulp.task('scripts', gulp.series('scripts:jshint', 'scripts:compilation'));
+
+gulp.task('sprite', function() {
   var spriteData = gulp.src(path.dist+'images/icon-sprites/*.png')    .pipe(spritesmith({
     retinaSrcFilter: path.dist+'images/icon-sprites/*@2x.png',
     imgPath: '../images/icon-sprites.png',
@@ -265,7 +256,9 @@ gulp.task('sprite', function () {
 
 // ### Clean
 // `gulp clean` - Deletes the build folder entirely.
-gulp.task('clean', require('del').bind(null, [path.dist]));
+function clean() {
+  return del([path.dist]);
+}
 
 // ### Watch
 // `gulp watch` - Use BrowserSync to proxy your dev server and synchronize code
@@ -273,30 +266,28 @@ gulp.task('clean', require('del').bind(null, [path.dist]));
 // `manifest.config.devUrl`. When a modification is made to an asset, run the
 // build step for that asset and inject the changes into the page.
 // See: http://www.browsersync.io
-gulp.task('watch', function() {
-  browserSync.init({
-    files: ['{lib,templates}/**/*.php', '*.php'],
-    proxy: config.devUrl,
-    snippetOptions: {
-      whitelist: ['/wp-admin/admin-ajax.php'],
-      blacklist: ['/wp-admin/**']
-    }
-  });
-  gulp.watch([path.source + 'styles/**/*'], ['styles']);
-  gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
-  gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
-  gulp.watch([path.source + 'images/**/*'], ['images']);
-  gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
-});
+// function watch () {
+//   browserSync.init({
+//     files: ['{lib,templates}/**/*.php', '*.php'],
+//     proxy: config.devUrl,
+//     snippetOptions: {
+//       whitelist: ['/wp-admin/admin-ajax.php'],
+//       blacklist: ['/wp-admin/**']
+//     }
+//   });
+//   gulp.watch([path.source + 'styles/**/*'], ['styles']);
+//   gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
+//   gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
+//   gulp.watch([path.source + 'images/**/*'], ['images']);
+//   gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
+// }
 
 // ### Build
 // `gulp build` - Run all the build tasks but don't clean up beforehand.
 // Generally you should be running `gulp` instead of `gulp build`.
-gulp.task('build', function(callback) {
-  runSequence('sprite',['fonts', 'images'],'styles',
-              'scripts',
-              callback);
-});
+// function build (callback) {
+//   return runSequence('sprite',['fonts', 'images'],'styles', 'scripts', callback);
+// }
 
 // ### Wiredep
 // `gulp wiredep` - Automatically inject Less and Sass Bower dependencies. See
@@ -313,6 +304,44 @@ gulp.task('wiredep', function() {
 
 // ### Gulp
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
-gulp.task('default', ['clean'], function() {
-  gulp.start('build');
+
+gulp.task('styles', gulp.series('wiredep', 'styles:compilation'));
+gulp.task('build', gulp.series(clean, gulp.parallel('sprite', 'fonts', 'images', 'styles', 'scripts')));
+gulp.task('default', gulp.series('build'));
+
+gulp.task('watch:browser', function() {
+  browserSync.init({
+    files: ['{lib,templates}/**/*.php', '*.php'],
+    proxy: config.devUrl,
+    snippetOptions: {
+      whitelist: ['/wp-admin/admin-ajax.php'],
+      blacklist: ['/wp-admin/**']
+    }
+  });
 });
+
+gulp.task('watch:styles', function () {
+  gulp.watch([path.source + 'styles/**/*'], gulp.series('styles'));
+});
+
+gulp.task('watch:scripts', function () {
+  gulp.watch([path.source + 'scripts/**/*'], gulp.series('scripts'));
+});
+
+gulp.task('watch:fonts', function () {
+  gulp.watch([path.source + 'fonts/**/*'], gulp.series('fonts'));
+});
+
+gulp.task('watch:images', function () {
+  gulp.watch([path.source + 'images/**/*'], gulp.series('images'));
+});
+
+gulp.task('watch:build', function () {
+  gulp.watch(['bower.json', manifestFilePath], gulp.series('build'));
+});
+
+gulp.task('watch',
+  gulp.series(
+      'default', 'watch:browser', gulp.parallel('watch:styles', 'watch:scripts', 'watch:fonts', 'watch:images', 'watch:build')
+  )
+);

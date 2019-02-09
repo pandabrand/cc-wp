@@ -1,65 +1,71 @@
-<div class="row cc-row feature-block_color feature-block home hidden-sm-down">
+<div class="row cc-row feature-block_color feature-block home">
   <?php
     if( is_front_page() ):
-      $main_post_object = get_field('main_feature');
-      // debug_var($main_post_object);
-      // override $post
-    	$post = $main_post_object;
+      $today = new DateTime('now');
+      $culture_post_object = get_field('culture_post');
+      $culture_start_date = new DateTime(get_field('culture_feature_post_start'));
+      $culture_end_date = new DateTime(get_field('culture_feature_post_end'));
+      if($culture_start_date < $today && $today < $culture_end_date) {
+        $post = $culture_post_object;
+      } else {
+        global $post;
+        $args = array(
+          'posts_per_page' => 5,
+          'offset' => 5,
+          'orderby' => 'date',
+          'post_type' => 'post',
+          'post_status' => 'publish',
+          'date_query' => array(
+            array( 'after' => '3 month ago' ),
+          ),
+        );
+
+        $recent_posts = get_posts( $args );
+        $key = array_rand( $recent_posts, 1 );
+        $post = $recent_posts[$key];
+      }
+      $travel_post = false;
     	setup_postdata( $post );
+      ?>
+  <div class="col-md-12 col-lg-6">
+    <?php include( locate_template( 'layouts/feature-block__1-1.php' ) ); ?>
+  </div>
+  <?php
+        wp_reset_postdata();
+        $travel_post_object = get_field('travel_post');
+        $travel_start_date = new DateTime(get_field('travel_feature_post_start'));
+        $travel_end_date = new DateTime(get_field('travel_feature_post_end'));
+        if($travel_start_date < $today && $today < $travel_end_date) {
+          $post = $travel_post_object;
+        } else {
+          global $post;
+          $args = array(
+            'posts_per_page' => 5,
+            'orderby' => 'date',
+            'offset' => 5,
+            'post_type' => ['city', 'artist', 'post'],
+            'tax_query' => array(
+              array (
+                'taxonomy' => 'category',
+                'field'    => 'slug',
+                'terms'    => array( 'travel' ),
+              )
+            )
+          );
+
+          $travel_posts = get_posts( $args );
+          $key = array_rand( $travel_posts, 1 );
+          $post = $travel_posts[$key];
+        }
+        $travel_post = true;
+        setup_postdata( $post );
   ?>
-  <div class="col-md-6">
-    <?php include( locate_template( 'layouts/feature-block__1-2.php' ) ); ?>
+  <div class="col-md-12 col-lg-6">
+    <?php include( locate_template( 'layouts/feature-block__1-1.php' ) ); ?>
   </div>
 <?php
     endif;
     wp_reset_postdata();
-    $second_features = get_field('secondary_main_feature');
-    // debug_var($second_features);
 ?>
-  <div class="col-md-6 col-sm-12">
-  <?php
-    $first_feature = $second_features[0];
-    // debug_var($first_feature['feature_object']);
-    $post = $first_feature['feature_object'];
-    setup_postdata($post);
-  ?>
-  <?php include( locate_template('layouts/feature-block__2-1-long.php')); ?>
-  <?php wp_reset_postdata(); ?>
-    <?php
-      $sec_feature = $second_features[1];
-      $post = $sec_feature['feature_object'];
-      setup_postdata($post);
-    ?>
-    <?php include( locate_template('layouts/feature-block__2-1-long.php')); ?>
-    <?php wp_reset_postdata(); ?>
-  </div>
-</div>
-<?php wp_reset_query(); ?>
-
-<div class="row cc-row feature-block_color feature-block feature-block__mobile home hidden-md-up">
-  <?php
-    if( is_front_page() ):
-      $main_post_object = get_field('main_feature');
-      // debug_var($main_post_object);
-      // override $post
-    	$post = $main_post_object;
-    	setup_postdata( $post );
-      include( locate_template( 'layouts/feature-block__mobile.php' ) );
-    endif;
-    wp_reset_postdata();
-    $second_features = get_field('secondary_main_feature');
-    $first_feature = $second_features[0];
-    // debug_var($first_feature['feature_object']);
-    $post = $first_feature['feature_object'];
-    setup_postdata($post);
-    include( locate_template('layouts/feature-block__mobile.php'));
-    wp_reset_postdata();
-    $sec_feature = $second_features[1];
-    $post = $sec_feature['feature_object'];
-    setup_postdata($post);
-    include( locate_template('layouts/feature-block__mobile.php'));
-    wp_reset_postdata();
-  ?>
-  </div>
 </div>
 <?php wp_reset_query(); ?>

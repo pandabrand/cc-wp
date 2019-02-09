@@ -1,11 +1,10 @@
 <?php
-/** Development */
-define('SAVEQUERIES', true);
-define('WP_DEBUG', true);
-define('SCRIPT_DEBUG', true);
-define('WP_DEBUG', true);
-define('WP_DEBUG_LOG', true);
+/** Staging */
+ini_set('display_errors', 0);
+define('WP_DEBUG_DISPLAY', false);
+define('SCRIPT_DEBUG', false);
+/** Disable all file modifications including updates and update notifications */
+define('DISALLOW_FILE_MODS', true);
 define('GOOGLE_MAP_API','AIzaSyA5pdShpGLoC1YRRNiGiyM_bDAuGwLHcCg');
 define('MAPBOX_API', 'pk.eyJ1IjoicGFuZGFicmFuZCIsImEiOiJjaWg2cGcyOHAwM2RsdWtrdHQ4bWU1dW53In0.Ey23wcFG2-wFAR-I-0HwlQ');
 define('GOOGLE_ANALYTICS_ID', 'UA-52000426-1');
-define('JETPACK_DEV_DEBUG', true);

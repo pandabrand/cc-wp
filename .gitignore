@@ -30,4 +30,4 @@ web/app/debug.log
 
 wp-cli.yml
 
-**/package-lock.json
+package-lock.json

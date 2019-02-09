@@ -291,7 +291,9 @@ body, html {
 .related-content {
   &.row {
     padding: 0 1.5625rem;
+    margin-top: 40px;
   }
 }
 @import 'home_carousel';
 @import 'home_carousel__slick-theme';
+@import 'home_carousel-flickity';

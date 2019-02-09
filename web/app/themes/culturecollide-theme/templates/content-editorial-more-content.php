@@ -62,18 +62,27 @@ if($more_query->have_posts()): $counter = 1; ?>
   </div>
 </div>
 <div class="row cc-row editorial__block">
-  <div class="col-sm-12 col-md-4 push-md-8 col-lg-3 push-lg-9">
+  <div class="col-sm-12 col-md-6 push-md-6 col-lg-3 push-lg-9">
     <?php get_template_part('layouts/ad', 'block'); ?>
   </div>
   <?php while($more_query->have_posts()): $more_query->the_post(); ?>
     <?php if ($counter == 1) : ?>
-      <div class="col-sm-6 col-md-8 pull-md-4 col-lg-6 pull-lg-3">
-        <?php get_template_part('layouts/card', 'card__2-1'); ?>
+      <div class="col-sm-6 col-md-6 pull-md-6 col-lg-6 pull-lg-3">
+        <div class="d-none d-lg-block">
+          <?php get_template_part('layouts/card', 'card__2-1'); ?>
+        </div>
+        <div class="d-lg-none">
+          <?php get_template_part('layouts/card', 'card__1-1'); ?>
+        </div>
       </div>
     <?php elseif($counter == 2): ?>
-      <div class="col-sm-6 col-md-8 pull-md-4 col-lg-3 pull-lg-3">
-        <?php get_template_part('layouts/card', 'card__1-1'); ?>
-      </div>
+    <!-- ?php get_template_part('layouts/card', 'card__1-1'); ? -->
+        <div class="d-none d-lg-block col-sm-6 col-md-6 pull-md-6 col-lg-3 pull-lg-3">
+          <?php get_template_part('layouts/card', 'card__1-1'); ?>
+        </div>
+        <div class="d-lg-none infinite-item col-xs-12 col-sm-4">
+          <?php get_template_part('layouts/card', 'card__3-1'); ?>
+        </div>
     <?php else: ?>
       <div class="infinite-item col-xs-12 col-sm-4">
         <?php get_template_part('layouts/card', 'card__3-1'); ?>
@@ -81,7 +90,7 @@ if($more_query->have_posts()): $counter = 1; ?>
   <?php endif; ?>
   <?php $counter++; endwhile; ?>
 </div>
-<?php 
+<?php
     $paged++;
   endif;
   wp_reset_query();

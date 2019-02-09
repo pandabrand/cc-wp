@@ -1,0 +1,13 @@
+.cc-fl-carousel {
+  &:after {
+    content: 'flickity';
+    display: none;
+  }
+
+  @media screen and ( min-width: 768px ) {
+    /* disable Flickity for large devices */
+    &:after {
+      content: '';
+    }
+  }
+}
