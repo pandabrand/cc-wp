@@ -46,20 +46,20 @@
             'posts_per_page' => 5,
             'orderby' => 'date',
             'offset' => rand(1, 9),
-            'post_type' => ['city', 'artist', 'post'],
-            'tax_query' => array(
-              array (
-                'taxonomy' => 'category',
-                'field'    => 'slug',
-                'terms'    => array( 'travel' ),
-              )
-            ),
-            'date_query' => array(
-              array(
-                'year' => date('Y'),
-                'month' => date('M')
-               ),
-            ),
+            'post_type' => ['city'],
+            // 'tax_query' => array(
+            //   array (
+            //     'taxonomy' => 'category',
+            //     'field'    => 'slug',
+            //     'terms'    => array( 'travel' ),
+            //   )
+            // ),
+            // 'date_query' => array(
+            //   array(
+            //     'year' => date('Y'),
+            //     'month' => date('M')
+            //    ),
+            // ),
           );
 
           $travel_posts = get_posts( $args );
