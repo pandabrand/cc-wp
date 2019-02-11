@@ -42,7 +42,6 @@
           $post = $travel_post_object;
         } else {
           global $post;
-          var_dump($today);
           $args = array(
             'posts_per_page' => 5,
             'orderby' => 'date',
