@@ -17,9 +17,9 @@
           'post_status' => 'publish',
           'date_query' => array(
             array(
-              'year'  => $today['year'],
-              'month' => $today['mon'],
-            ),
+              'year' => date('Y'),
+              'month' => date('M')
+             ),
           ),
         );
 
@@ -56,9 +56,9 @@
             ),
             'date_query' => array(
               array(
-                'year'  => $today['year'],
-                'month' => $today['mon'],
-              ),
+                'year' => date('Y'),
+                'month' => date('M')
+               ),
             ),
           );
 
