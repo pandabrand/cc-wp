@@ -46,7 +46,7 @@
             'posts_per_page' => 5,
             'orderby' => 'date',
             'offset' => rand(1, 9),
-            'post_type' => ['city', 'artist', 'post'],
+            'post_type' => ['city', 'post'],
             'tax_query' => array(
               array (
                 'taxonomy' => 'category',
@@ -56,8 +56,9 @@
             ),
             'date_query' => array(
               array(
-                'year' => date('Y'),
-                'month' => date('M')
+                'before' => '9 month ago'
+                // 'year' => date('Y'),
+                // 'month' => date('M')
                ),
             ),
           );
