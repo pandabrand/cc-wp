@@ -11,12 +11,15 @@
         global $post;
         $args = array(
           'posts_per_page' => 5,
-          'offset' => 5,
+          'offset' => rand(1, 9),
           'orderby' => 'date',
           'post_type' => 'post',
           'post_status' => 'publish',
           'date_query' => array(
-            array( 'after' => '3 month ago' ),
+            array(
+              'year' => date('Y'),
+              'month' => date('M')
+             ),
           ),
         );
 
@@ -42,7 +45,7 @@
           $args = array(
             'posts_per_page' => 5,
             'orderby' => 'date',
-            'offset' => 5,
+            'offset' => rand(1, 9),
             'post_type' => ['city', 'artist', 'post'],
             'tax_query' => array(
               array (
@@ -50,7 +53,13 @@
                 'field'    => 'slug',
                 'terms'    => array( 'travel' ),
               )
-            )
+            ),
+            'date_query' => array(
+              array(
+                'year' => date('Y'),
+                'month' => date('M')
+               ),
+            ),
           );
 
           $travel_posts = get_posts( $args );

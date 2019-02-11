@@ -3,6 +3,9 @@ set :stage, :staging
 set :application, 'stage.culturecollide.com'
 set :url, 'stage.culturecollide.com'
 
+set :deploy_to, "/var/www/vhosts/culturecollide.com/#{fetch(:application)}"
+set :tmp_dir, "/var/www/vhosts/culturecollide.com/#{fetch(:application)}/tmp"
+
 # Simple Role Syntax
 # ==================
 #role :app, %w{deploy@example.com}
