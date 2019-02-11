@@ -17,9 +17,9 @@
           'post_status' => 'publish',
           'date_query' => array(
             array(
-              'year' => date('Y'),
-              'month' => date('M')
-             ),
+              'year'  => $today['year'],
+              'month' => $today['mon'],
+            ),
           ),
         );
 
@@ -42,6 +42,7 @@
           $post = $travel_post_object;
         } else {
           global $post;
+          var_dump($today);
           $args = array(
             'posts_per_page' => 5,
             'orderby' => 'date',
@@ -56,9 +57,9 @@
             ),
             'date_query' => array(
               array(
-                'year' => date('Y'),
-                'month' => date('M')
-               ),
+                'year'  => $today['year'],
+                'month' => $today['mon'],
+              ),
             ),
           );
 
