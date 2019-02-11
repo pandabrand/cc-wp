@@ -16,7 +16,7 @@
           'post_type' => 'post',
           'post_status' => 'publish',
           'date_query' => array(
-            array( 'after' => '3 month ago' ),
+            array( 'before' => '1 month ago' ),
           ),
         );
 
@@ -50,7 +50,10 @@
                 'field'    => 'slug',
                 'terms'    => array( 'travel' ),
               )
-            )
+            ),
+            'date_query' => array(
+              array( 'before' => '1 month ago' ),
+            ),
           );
 
           $travel_posts = get_posts( $args );
