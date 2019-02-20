@@ -2,6 +2,8 @@
   <?php
     if( is_front_page() ):
       $today = new DateTime('now');
+      $reservedObj = get_category_by_slug('reserved');
+      $exclude_cats = array($reservedObj->term_id);
       $culture_post_object = get_field('culture_post');
       $culture_start_date = new DateTime(get_field('culture_feature_post_start'));
       $culture_end_date = new DateTime(get_field('culture_feature_post_end'));
@@ -15,6 +17,7 @@
           'orderby' => 'date',
           'post_type' => 'post',
           'post_status' => 'publish',
+          'category__not_in' => $exclude_cats,
           'date_query' => array(
             array(
               'year' => date('Y'),
@@ -47,6 +50,7 @@
             'orderby' => 'date',
             'offset' => rand(1, 9),
             'post_type' => ['city', 'post'],
+            'category__not_in' => $exclude_cats,
             'tax_query' => array(
               array (
                 'taxonomy' => 'category',
