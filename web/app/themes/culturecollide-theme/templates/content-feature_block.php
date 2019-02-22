@@ -20,8 +20,9 @@
           'category__not_in' => $exclude_cats,
           'date_query' => array(
             array(
-              'year' => date('Y'),
-              'month' => date('M')
+              'before' => '1 month ago'
+              // 'year' => date('Y'),
+              // 'month' => date('M')
              ),
           ),
         );
