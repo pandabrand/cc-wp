@@ -5,7 +5,7 @@
     setup_postdata( $post );
   ?>
     <div class="col-md-6 col-sm-12">
-    <?php include( locate_template('layouts/feature-block__1-2.php')); ?>
+    <?php include( locate_template('layouts/feature-block__1-1.php')); ?>
     </div>
   <?php
     wp_reset_postdata();

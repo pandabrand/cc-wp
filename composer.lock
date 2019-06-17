@@ -402,7 +402,7 @@
                 "source": "https://github.com/pandabrand/cc-plugin/tree/master",
                 "issues": "https://github.com/pandabrand/cc-plugin/issues"
             },
-            "time": "2019-03-08T03:03:17+00:00"
+            "time": "2019-03-09T22:32:54+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -1099,15 +1099,15 @@
         },
         {
             "name": "wpackagist-plugin/velvet-blues-update-urls",
-            "version": "3.2.8",
+            "version": "3.2.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/velvet-blues-update-urls/",
-                "reference": "tags/3.2.8"
+                "reference": "tags/3.2.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/velvet-blues-update-urls.3.2.8.zip",
+                "url": "https://downloads.wordpress.org/plugin/velvet-blues-update-urls.3.2.9.zip",
                 "reference": null,
                 "shasum": null
             },

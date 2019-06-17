@@ -19,7 +19,11 @@ textarea {
 
 .row {
   &.cc-row {
-    padding: 0 15px;
+    padding: 15px;
+
+    @include media-breakpoint-up(md) {
+      padding: 0 15px;
+    }
   }
 }
 
