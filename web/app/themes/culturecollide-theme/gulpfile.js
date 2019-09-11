@@ -102,16 +102,7 @@ var onError = function(err) {
         errLogToConsole: true
       })),
       concat(filename),
-      autoprefixer({
-        browsers: [
-          'last 2 versions',
-          'safari 5',
-          'android 4',
-          'opera 12',
-          'ie 6',
-          'ie 7'
-        ]
-      }),
+      autoprefixer(),
       gulpif(enabled.compression === true, cssNano({
         safe: true
       })),
