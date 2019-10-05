@@ -5,7 +5,7 @@
   $related_ad_widget = $all_widgets['related-ads'];
   //make sure this sidebar has an adbutler widget in it
   $filter_result = array_filter($related_ad_widget, function($v){
-    return ( strpos($v, 'adbutler') !== false );
+    return ( strpos($v, 'adbutler') !== false || strpos($v, 'text') !== false );
   });
 
   if( is_active_sidebar( 'related-ads' ) && !empty( $filter_result ) ):

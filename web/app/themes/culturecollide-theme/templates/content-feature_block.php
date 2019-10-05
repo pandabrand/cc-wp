@@ -7,8 +7,10 @@
       $culture_post_object = get_field('culture_post');
       $culture_start_date = new DateTime(get_field('culture_feature_post_start'));
       $culture_end_date = new DateTime(get_field('culture_feature_post_end'));
+      $exclude_posts = array();
       if($culture_start_date < $today && $today < $culture_end_date) {
         $post = $culture_post_object;
+        $exclude_posts[] = $post->ID;
       } else {
         global $post;
         $args = array(
@@ -23,13 +25,14 @@
               'before' => '1 month ago'
               // 'year' => date('Y'),
               // 'month' => date('M')
-             ),
+            ),
           ),
         );
 
         $recent_posts = get_posts( $args );
         $key = array_rand( $recent_posts, 1 );
         $post = $recent_posts[$key];
+        $exclude_posts[] = $post->ID;
       }
       $travel_post = false;
     	setup_postdata( $post );
@@ -46,26 +49,41 @@
           $post = $travel_post_object;
         } else {
           global $post;
+          $exclude_cats[] = 'travel';
           $args = array(
             'posts_per_page' => 5,
-            'orderby' => 'date',
             'offset' => rand(1, 9),
-            'post_type' => ['city', 'post'],
+            'orderby' => 'date',
+            'post_type' => 'post',
+            'post_status' => 'publish',
             'category__not_in' => $exclude_cats,
-            'tax_query' => array(
-              array (
-                'taxonomy' => 'category',
-                'field'    => 'slug',
-                'terms'    => array( 'travel' ),
-              )
-            ),
+            'post__not_in' => $exclude_posts,
             'date_query' => array(
               array(
-                'before' => '9 month ago'
+                'before' => '1 month ago'
                 // 'year' => date('Y'),
                 // 'month' => date('M')
-               ),
-            ),
+              ),
+            )
+            // 'posts_per_page' => 5,
+            // 'orderby' => 'date',
+            // 'offset' => rand(1, 9),
+            // 'post_type' => ['city', 'post'],
+            // 'category__not_in' => $exclude_cats,
+            // 'tax_query' => array(
+            //   array (
+            //     'taxonomy' => 'category',
+            //     'field'    => 'slug',
+            //     'terms'    => array( 'travel' ),
+            //   )
+            // ),
+            // 'date_query' => array(
+            //   array(
+            //     'before' => '9 month ago'
+            //     // 'year' => date('Y'),
+            //     // 'month' => date('M')
+            //    ),
+            // ),
           );
 
           $travel_posts = get_posts( $args );
