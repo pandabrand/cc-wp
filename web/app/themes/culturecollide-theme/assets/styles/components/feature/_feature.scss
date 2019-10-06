@@ -455,14 +455,14 @@ $feature__border__color:  $white;
             }
 
             .feature__title {
-              font-size: 1rem;
+              font-size: 0.9rem;
 
               @include media-breakpoint-up(md) {
-                font-size: 1.2rem;
+                font-size: 1rem;
               }
 
               @include media-breakpoint-up(lg) {
-                font-size: 2rem;
+                font-size: 1.5rem;
               }
 
               @extend .medium;
