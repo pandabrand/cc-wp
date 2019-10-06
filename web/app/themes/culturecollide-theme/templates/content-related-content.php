@@ -38,7 +38,8 @@
       'ignore_sticky_posts' => true,
       'tax_query' => $tax_query,
       'order_by' => ['date'],
-      'order' => 'DESC'
+      'order' => 'DESC',
+      'offset' => $offset
     );
     // $related_query = new WP_Query($args);
     $related_posts = get_posts( $args );
