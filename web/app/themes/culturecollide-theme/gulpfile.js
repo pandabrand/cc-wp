@@ -209,7 +209,7 @@ gulp.task('images', function() {
   return gulp.src(globs.images)
     .pipe(imagemin([
       imagemin.jpegtran({progressive: true}),
-      imagemin.gifsicle({interlaced: true}),
+      // imagemin.gifsicle({interlaced: true}),
       imagemin.svgo({plugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]})
     ]))
     .pipe(gulp.dest(path.dist + 'images'))

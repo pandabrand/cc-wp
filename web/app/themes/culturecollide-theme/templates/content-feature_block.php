@@ -49,42 +49,29 @@
           $post = $travel_post_object;
         } else {
           global $post;
-          $exclude_cats[] = 'travel';
+          // $exclude_cats[] = 'travel';
           $args = array(
             'posts_per_page' => 5,
-            'offset' => rand(1, 9),
             'orderby' => 'date',
-            'post_type' => 'post',
-            'post_status' => 'publish',
+            'offset' => rand(1, 9),
+            'post_type' => ['city', 'post'],
             'category__not_in' => $exclude_cats,
-            'post__not_in' => $exclude_posts,
+            'tax_query' => array(
+              array (
+                'taxonomy' => 'category',
+                'field'    => 'slug',
+                'terms'    => array( 'travel' ),
+              )
+            ),
             'date_query' => array(
               array(
-                'before' => '1 month ago'
+                'before' => '9 month ago'
                 // 'year' => date('Y'),
                 // 'month' => date('M')
-              ),
-            )
-            // 'posts_per_page' => 5,
-            // 'orderby' => 'date',
-            // 'offset' => rand(1, 9),
-            // 'post_type' => ['city', 'post'],
-            // 'category__not_in' => $exclude_cats,
-            // 'tax_query' => array(
-            //   array (
-            //     'taxonomy' => 'category',
-            //     'field'    => 'slug',
-            //     'terms'    => array( 'travel' ),
-            //   )
-            // ),
-            // 'date_query' => array(
-            //   array(
-            //     'before' => '9 month ago'
-            //     // 'year' => date('Y'),
-            //     // 'month' => date('M')
-            //    ),
-            // ),
+               ),
+            ),
           );
+
 
           $travel_posts = get_posts( $args );
           $key = array_rand( $travel_posts, 1 );
