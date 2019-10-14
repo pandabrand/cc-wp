@@ -90,7 +90,7 @@
           $key = array_rand( $travel_posts, 1 );
           $post = $travel_posts[$key];
         }
-        $travel_post = true;
+        $travel_post = false;
         setup_postdata( $post );
   ?>
   <div class="col-md-12 col-lg-6">
