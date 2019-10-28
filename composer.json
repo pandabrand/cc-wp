@@ -80,7 +80,7 @@
     "wpackagist-plugin/ewww-image-optimizer": "dev-trunk",
     "wpackagist-plugin/jetpack":"6.8",
     "wpackagist-plugin/classic-editor":"1.3",
-    "wpackagist-plugin/instagram-feed":"dev-trunk"
+    "wpackagist-plugin/wd-instagram-feed":"dev-trunk"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
