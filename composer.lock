@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "961a58e2529b85b5a2a31e003b26e5d0",
+    "content-hash": "a291d05e495f391d7980efe20c194c89",
     "packages": [
         {
             "name": "composer/installers",
@@ -130,27 +130,28 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.3.3",
+            "version": "6.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba"
+                "reference": "0895c932405407fd3a7368b6910c09a24d26db11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/407b0cb880ace85c9b63c5f9551db498cb2d50ba",
-                "reference": "407b0cb880ace85c9b63c5f9551db498cb2d50ba",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/0895c932405407fd3a7368b6910c09a24d26db11",
+                "reference": "0895c932405407fd3a7368b6910c09a24d26db11",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "guzzlehttp/promises": "^1.0",
-                "guzzlehttp/psr7": "^1.4",
+                "guzzlehttp/psr7": "^1.6.1",
                 "php": ">=5.5"
             },
             "require-dev": {
                 "ext-curl": "*",
                 "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4 || ^7.0",
-                "psr/log": "^1.0"
+                "psr/log": "^1.1"
             },
             "suggest": {
                 "psr/log": "Required for using the Log middleware"
@@ -162,12 +163,12 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "src/functions_include.php"
-                ],
                 "psr-4": {
                     "GuzzleHttp\\": "src/"
-                }
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -191,7 +192,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2018-04-22T15:46:56+00:00"
+            "time": "2019-10-23T15:58:00+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -379,20 +380,20 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.9.11",
+            "version": "4.9.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "8b4fce1e9db12588e7e4daf7fdf01fc4e0a60605"
+                "reference": "e92ec10fcb0c1dd2690bd150df4fefdcefbff4d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/8b4fce1e9db12588e7e4daf7fdf01fc4e0a60605",
-                "reference": "8b4fce1e9db12588e7e4daf7fdf01fc4e0a60605",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/e92ec10fcb0c1dd2690bd150df4fefdcefbff4d9",
+                "reference": "e92ec10fcb0c1dd2690bd150df4fefdcefbff4d9",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "4.9.11",
+                "johnpbloch/wordpress-core": "4.9.12",
                 "johnpbloch/wordpress-core-installer": "^1.0",
                 "php": ">=5.6.20"
             },
@@ -414,27 +415,27 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-09-05T01:16:49+00:00"
+            "time": "2019-10-14T20:47:07+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "4.9.11",
+            "version": "4.9.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "b759041f9d1130bc262d33f55c30863a632d4a21"
+                "reference": "f277b90422f4d95f2bbb34406d01cdc969db530f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/b759041f9d1130bc262d33f55c30863a632d4a21",
-                "reference": "b759041f9d1130bc262d33f55c30863a632d4a21",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/f277b90422f4d95f2bbb34406d01cdc969db530f",
+                "reference": "f277b90422f4d95f2bbb34406d01cdc969db530f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "provide": {
-                "wordpress/core-implementation": "4.9.11"
+                "wordpress/core-implementation": "4.9.12"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -454,7 +455,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-09-05T01:16:45+00:00"
+            "time": "2019-10-14T20:47:04+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -855,16 +856,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
+                "reference": "bf73deb2b3b896a9d9c75f3f0d88185d2faa27e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
-                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/bf73deb2b3b896a9d9c75f3f0d88185d2faa27e2",
+                "reference": "bf73deb2b3b896a9d9c75f3f0d88185d2faa27e2",
                 "shasum": ""
             },
             "require": {
@@ -873,7 +874,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -898,7 +899,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2018-11-20T15:27:04+00:00"
+            "time": "2019-10-25T08:06:51+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -1084,16 +1085,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.31",
+            "version": "v3.4.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "2709bc2978ceb90f5180181f777f8a09125f2d89"
+                "reference": "9cf81798f857205c5bbb4c8c7895f838d40b0c4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/2709bc2978ceb90f5180181f777f8a09125f2d89",
-                "reference": "2709bc2978ceb90f5180181f777f8a09125f2d89",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/9cf81798f857205c5bbb4c8c7895f838d40b0c4b",
+                "reference": "9cf81798f857205c5bbb4c8c7895f838d40b0c4b",
                 "shasum": ""
             },
             "require": {
@@ -1151,7 +1152,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-26T16:07:57+00:00"
+            "time": "2019-09-27T15:47:48+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -1419,27 +1420,6 @@
             "homepage": "https://wordpress.org/plugins/import-external-attachments/"
         },
         {
-            "name": "wpackagist-plugin/instagram-feed",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/instagram-feed/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/instagram-feed.zip?timestamp=1570119022",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/instagram-feed/",
-            "time": "2019-10-03T16:10:22+00:00"
-        },
-        {
             "name": "wpackagist-plugin/jetpack",
             "version": "6.8",
             "source": {
@@ -1598,6 +1578,27 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/velvet-blues-update-urls/"
+        },
+        {
+            "name": "wpackagist-plugin/wd-instagram-feed",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wd-instagram-feed/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wd-instagram-feed.zip?timestamp=1568125312",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wd-instagram-feed/",
+            "time": "2019-09-10T14:21:52+00:00"
         },
         {
             "name": "xrstf/composer-php52",
@@ -1760,16 +1761,16 @@
         },
         {
             "name": "yoast/wordpress-seo",
-            "version": "12.2",
+            "version": "12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast-dist/wordpress-seo.git",
-                "reference": "32bfe7a8ff8c481519c88b1238737c0869f68747"
+                "reference": "d108a6608c741982a44ffc5cb0603363e6ff68ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast-dist/wordpress-seo/zipball/32bfe7a8ff8c481519c88b1238737c0869f68747",
-                "reference": "32bfe7a8ff8c481519c88b1238737c0869f68747",
+                "url": "https://api.github.com/repos/Yoast-dist/wordpress-seo/zipball/d108a6608c741982a44ffc5cb0603363e6ff68ae",
+                "reference": "d108a6608c741982a44ffc5cb0603363e6ff68ae",
                 "shasum": ""
             },
             "require": {
@@ -1824,7 +1825,7 @@
                 "seo",
                 "wordpress"
             ],
-            "time": "2019-10-01T07:13:48+00:00"
+            "time": "2019-10-15T09:07:50+00:00"
         }
     ],
     "packages-dev": [
@@ -1912,7 +1913,7 @@
     "stability-flags": {
         "pandabrand/cc-plugin": 20,
         "wpackagist-plugin/ewww-image-optimizer": 20,
-        "wpackagist-plugin/instagram-feed": 20
+        "wpackagist-plugin/wd-instagram-feed": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
