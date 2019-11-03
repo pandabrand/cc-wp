@@ -44,6 +44,11 @@ textarea {
     display: flex;
     justify-content: center;
   }
+
+  .wdi_feed_container {
+    height: 430px;
+    overflow-y: scroll;
+  }
 }
 
 a {
