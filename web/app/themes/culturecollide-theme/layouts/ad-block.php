@@ -5,7 +5,6 @@
   $has_ad_butler = array_filter($related_ad_widget, function($v){
     return ( strpos($v, 'adbutler') !== false || strpos($v, 'text') !== false );
   });
-  echo '<div class="sr-only">', $widget, '</div>';
   if( is_active_sidebar( 'related-ads' ) && !empty( $has_ad_butler ) && $widget === 'ad-butler' ):
 ?>
   <div class="ad">
