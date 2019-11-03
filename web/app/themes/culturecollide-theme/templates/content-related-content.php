@@ -1,6 +1,6 @@
 <div class="row cc-row related-content">
   <div class="col-sm-12 col-md-4 push-md-7 col-lg-3 push-lg-9">
-    <?php get_template_part('layouts/ad', 'block'); ?>
+    <?php include( locate_template( 'layouts/ad-block.php' ) ); ?>
   </div>
   <?php
     $exclude_posts = array();

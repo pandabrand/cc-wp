@@ -1,18 +1,20 @@
 <?php
   //get all widgets
   $all_widgets = wp_get_sidebars_widgets();
-  //get the related ads widget
   $related_ad_widget = $all_widgets['related-ads'];
-  //make sure this sidebar has an adbutler widget in it
-  $filter_result = array_filter($related_ad_widget, function($v){
+  $has_ad_butler = array_filter($related_ad_widget, function($v){
     return ( strpos($v, 'adbutler') !== false || strpos($v, 'text') !== false );
   });
-
-  if( is_active_sidebar( 'related-ads' ) && !empty( $filter_result ) ):
+  echo '<div class="sr-only">', $widget, '</div>';
+  if( is_active_sidebar( 'related-ads' ) && !empty( $has_ad_butler ) && $widget === 'ad-butler' ):
 ?>
   <div class="ad">
     <?php dynamic_sidebar('related-ads'); ?>
   </div>
+<?php elseif( $widget === 'instagram' ): ?>
+    <div class="ad">
+      <?php echo wdi_feed(array('id'=>'1')); ?>
+    </div>
 <?php
   else :
     $reservedObj = get_category_by_slug('reserved');
