@@ -14,6 +14,10 @@
     <div class="ad">
       <?php echo wdi_feed(array('id'=>'1')); ?>
     </div>
+<?php elseif( $widget === 'cc-ad' ): ?>
+    <div class="ad">
+      <?php dynamic_sidebar('related-ads'); ?>
+    </div>
 <?php
   else :
     $reservedObj = get_category_by_slug('reserved');
