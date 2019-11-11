@@ -150,3 +150,10 @@ em {
   object-fit: cover;
   object-position: 0 0;
 }
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
