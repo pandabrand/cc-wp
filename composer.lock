@@ -149,13 +149,16 @@
             "dist": {
                 "type": "path",
                 "url": "packages/advanced-custom-fields-pro",
-                "reference": "ff4dddbd4a975ec44670adca28854eb5f0e691af"
+                "reference": "abc5665e4f3b63523854c46cf14554edd9372eac"
             },
             "require": {
                 "composer/installers": ">=1.0.2",
                 "php": ">=5.3.2"
             },
-            "type": "wordpress-plugin"
+            "type": "wordpress-plugin",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -193,12 +196,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -251,12 +254,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -277,16 +280,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.7.0",
+            "version": "1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3"
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/53330f47520498c0ae1f61f7e2c90f55690c06a3",
-                "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/337e3ad8e5716c15f9657bd214d16cc5e69df268",
+                "reference": "337e3ad8e5716c15f9657bd214d16cc5e69df268",
                 "shasum": ""
             },
             "require": {
@@ -311,12 +314,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -324,12 +327,33 @@
             ],
             "authors": [
                 {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
                 },
                 {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://github.com/sagikazarmark"
+                },
+                {
                     "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
                     "homepage": "https://github.com/Tobion"
                 }
             ],
@@ -344,7 +368,21 @@
                 "uri",
                 "url"
             ],
-            "time": "2020-09-30T07:37:11+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/psr7",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-03-20T21:51:18+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -596,8 +634,8 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pandabrand/cc-plugin/zipball/origin/master",
-                "reference": "origin/master",
+                "url": "https://api.github.com/repos/pandabrand/cc-plugin/zipball/3782e425f715ac1d4dd33b77be86ae2b5f1bfbae",
+                "reference": "3782e425f715ac1d4dd33b77be86ae2b5f1bfbae",
                 "shasum": ""
             },
             "require": {
@@ -974,13 +1012,16 @@
             "dist": {
                 "type": "path",
                 "url": "packages/wp-all-import-pro",
-                "reference": "3908e5c05d7e5cfadfb369cab5aa96dd12df4aa4"
+                "reference": "b1ade4720582991f11ae3cfa7fd580f1c7f6059e"
             },
             "require": {
                 "composer/installers": ">=1.0.2",
                 "php": ">=5.3.2"
             },
-            "type": "wordpress-plugin"
+            "type": "wordpress-plugin",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "soflyy/wpai-acf-add-on",
@@ -988,13 +1029,16 @@
             "dist": {
                 "type": "path",
                 "url": "packages/wpai-acf-add-on",
-                "reference": "e8d84cc845d5b9b44a74036ac78fabae5374fb78"
+                "reference": "59f62d55c481199af638c93e248b298b892e7e2d"
             },
             "require": {
                 "composer/installers": ">=1.0.2",
                 "php": ">=5.3.2"
             },
-            "type": "wordpress-plugin"
+            "type": "wordpress-plugin",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "symfony/dependency-injection",
@@ -1107,12 +1151,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1185,12 +1229,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1267,12 +1311,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
-                },
                 "files": [
                     "bootstrap.php"
                 ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Normalizer\\": ""
+                },
                 "classmap": [
                     "Resources/stubs"
                 ]
@@ -1345,12 +1389,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1468,7 +1512,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/enhanced-media-library-pro",
-                "reference": "04176b077c661d36c2e2e0a65056cb3e11fbce82"
+                "reference": "cc144d24631a49c1ac86c5c6fd0766dbefaa85de"
             },
             "require": {
                 "composer/installers": "^1.0.12",
@@ -1528,7 +1572,7 @@
                 "url": "https://downloads.wordpress.org/plugin/bulk-delete.6.0.2.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/bulk-delete/"
@@ -1546,7 +1590,7 @@
                 "url": "https://downloads.wordpress.org/plugin/classic-editor.1.3.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/classic-editor/"
@@ -1564,7 +1608,7 @@
                 "url": "https://downloads.wordpress.org/plugin/enable-media-replace.3.5.0.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/enable-media-replace/"
@@ -1579,14 +1623,14 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/ewww-image-optimizer.zip?timestamp=1523569898"
+                "url": "https://downloads.wordpress.org/plugin/ewww-image-optimizer.zip?timestamp=1646765909"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/ewww-image-optimizer/",
-            "time": "2018-04-12T22:51:38+00:00"
+            "time": "2022-03-08T18:58:29+00:00"
         },
         {
             "name": "wpackagist-plugin/import-external-attachments",
@@ -1601,7 +1645,7 @@
                 "url": "https://downloads.wordpress.org/plugin/import-external-attachments.1.5.12.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/import-external-attachments/"
@@ -1619,7 +1663,7 @@
                 "url": "https://downloads.wordpress.org/plugin/jetpack.6.8.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/jetpack/"
@@ -1655,7 +1699,7 @@
                 "url": "https://downloads.wordpress.org/plugin/official-mailerlite-sign-up-forms.1.4.7.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/official-mailerlite-sign-up-forms/"
@@ -1673,7 +1717,7 @@
                 "url": "https://downloads.wordpress.org/plugin/query-monitor.2.17.0.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/query-monitor/"
@@ -1691,7 +1735,7 @@
                 "url": "https://downloads.wordpress.org/plugin/quick-featured-images.13.5.0.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/quick-featured-images/"
@@ -1709,7 +1753,7 @@
                 "url": "https://downloads.wordpress.org/plugin/redirection.3.7.3.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/redirection/"
@@ -1727,7 +1771,7 @@
                 "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.3.1.4.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
@@ -1745,7 +1789,7 @@
                 "url": "https://downloads.wordpress.org/plugin/velvet-blues-update-urls.3.2.10.zip"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/velvet-blues-update-urls/"
@@ -1760,14 +1804,14 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wd-instagram-feed.zip?timestamp=1568125312"
+                "url": "https://downloads.wordpress.org/plugin/wd-instagram-feed.zip?timestamp=1646065791"
             },
             "require": {
-                "composer/installers": "~1.0"
+                "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wd-instagram-feed/",
-            "time": "2019-09-10T14:21:52+00:00"
+            "time": "2022-02-28T16:29:51+00:00"
         },
         {
             "name": "yoast/i18n-module",
